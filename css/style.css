@@ -1,0 +1,339 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video { max-width: 100%; }
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img { width: 100%; }
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+.clear{
+	clear:both;
+}
+.gridContainer
+{
+	background-color: #e3ece9;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#maincontainer
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#insidecont
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#formcontent
+{
+	clear: both;
+	float: left;
+	margin: 1%;
+	display: block;
+	background-color: #FFF;
+	padding: 20px;
+	width: 95%;
+}
+#recomm
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #bccbc6;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 7px;
+}
+#calrecomm
+{
+clear: both;
+/* margin-left: 0; */
+width: 10%;
+display: block;
+background-color: #bccbc6;
+padding: 10px;
+text-align: center;
+margin-top: 5px;
+margin: 3px auto 7px auto !important;
+}
+#insidediv
+{
+clear: both;
+float: left;
+margin-left: 0;
+width: 100%;
+display: block;
+text-align:center;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer { }
+#maincontainer
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#insidecont
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#formcontent
+{
+	clear: both;
+	float: left;
+	margin: 1%;
+	display: block;
+	background-color: #FFF;
+	padding: 20px;
+	width: 95%;
+}
+#recomm
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #bccbc6;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 7px;
+}
+#calrecomm
+{
+clear: both;
+/* margin-left: 0; */
+width: 10%;
+display: block;
+background-color: #bccbc6;
+padding: 10px;
+text-align: center;
+margin-top: 5px;
+margin: 3px auto 7px auto !important;
+}
+#insidediv
+{
+clear: both;
+float: left;
+margin-left: 0;
+width: 100%;
+display: block;
+text-align:center;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer { margin: auto; }
+#maincontainer
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#insidecont
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#formcontent
+{
+	clear: both;
+	float: left;
+	margin: 1%;
+	display: block;
+	background-color: #FFF;
+	padding: 20px;
+	width: 95%;
+}
+#recomm
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #bccbc6;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 7px;
+}
+#calrecomm
+{
+clear: both;
+/* margin-left: 0; */
+width: 10%;
+display: block;
+background-color: #bccbc6;
+padding: 10px;
+text-align: center;
+margin-top: 5px;
+margin: 3px auto 7px auto !important;
+}
+#insidediv
+{
+clear: both;
+float: left;
+margin-left: 0;
+width: 100%;
+display: block;
+text-align:center;
+}
+}
+#contentsection
+{
+	background-image: url('../images/home.png');
+	background-repeat: no-repeat;
+	height: 800px;
+	width: 500px;
+	margin: auto;
+}
+.btmsection
+{
+	background-color: #e3ece9;
+	height: 30px;
+}
+.enterbtn { padding-top: 622px; }
+#header
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 99%;
+	display: block;
+	background-color: #278ebc;
+	height: 50px;
+	color: #FFF;
+	font-size: 17px;
+	padding-left: 1%;
+	word-spacing: 1px;
+}
+#header p { padding-left: 20px; }
+.submit-btn
+{
+	background-color: #278fbc !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#278fbc), to(#278fbc)) !important;
+	background-image: -webkit-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -moz-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -ms-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -o-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: linear-gradient(#278fbc, #278fbc) !important;
+	color: #FFF !important;
+	width: 80px;
+	height: 30px;
+	border: none;
+	margin-left: 50%;
+	cursor: pointer;
+	float:left;
+}
+.clear-btn{
+	background-color: #278fbc !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#278fbc), to(#278fbc)) !important;
+	background-image: -webkit-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -moz-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -ms-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -o-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: linear-gradient(#278fbc, #278fbc) !important;
+	color: #FFF !important;
+	width: 80px;
+	height: 30px;
+	border: none;
+	margin-left:20px;
+	cursor: pointer;
+}
+.recall{
+	background-color: #278fbc !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#278fbc), to(#278fbc)) !important;
+	background-image: -webkit-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -moz-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -ms-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: -o-linear-gradient(#278fbc, #278fbc) !important;
+	background-image: linear-gradient(#278fbc, #278fbc) !important;
+	color: #FFF !important;
+	width: 150px;
+	height: 30px;
+	border: none;
+	margin-left:20px;
+	cursor: pointer;
+}
+#aboutform
+{
+	width: 50%;
+	margin: auto;
+}
+.ui-body-c, .ui-overlay-c { text-shadow: none !important; }
+.ui-checkbox-on .ui-icon, .ui-radio-on .ui-icon { background-color: #278ebc !important; }
+.ui-btn-active
+{
+	border: none !important;
+	background: #278ebc !important;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+	text-shadow: none !important;
+	text-decoration: none;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#278ebc), to(#278ebc)) !important;
+	background-image: -webkit-linear-gradient(#278ebc, #278ebc) !important;
+	background-image: -moz-linear-gradient(#278ebc, #278ebc) !important;
+	background-image: -ms-linear-gradient(#278ebc, #278ebc) !important;
+	background-image: -o-linear-gradient(#278ebc, #278ebc) !important;
+	background-image: linear-gradient(#278ebc, #278ebc) !important;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#prev {
+float: left;
+margin-left:3%;
+}
+#next {
+float: right;
+margin-right: 3%;
+}
+.navigation {
+height: 20px;
+margin-bottom: 20px;
+}
+
+#insidediv p {
+padding: 10px;
+}
