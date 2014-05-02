@@ -32,12 +32,12 @@
      <label>Name</label>
      <input name="name" type="text" id="name">
      <label>Age</label>
-     <input name="age" type="text" id="age">
+     <input name="age" type="number" id="age">
      <label>Gender</label>
      <table width="200">
       <tr>
        <td><label>
-         <input type="radio" name="gender" value="male" id="gender_0" class="gender">
+         <input type="radio" name="gender" value="male" id="gender_0" class="gender" checked="checked">
          Male</label></td>
        <td><label>
          <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
@@ -45,40 +45,54 @@
       </tr>
      </table>
      <label>Are you pregnant?</label>
-     <div class="ui-field-contain">
-      <select name="pregnant" id="pregnant" data-role="slider">
-             <option value="no">No</option>
-       <option value="yes">Yes</option>
-
-      </select>
-     </div>
+     <table width="200">
+      <tr>
+       <td><label>
+         <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant" checked="checked">
+         No</label></td>
+       <td><label>
+         <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
+         Yes</label></td>
+      </tr>
+     </table>
      <label>Are you lactating?</label>
-     <div class="ui-field-contain">
-      <select name="lactating" id="lactating" data-role="slider">
-        <option value="no">No</option>
-       <option value="yes">Yes</option>
-     
-      </select>
-     </div>
-     <label>Are you achieved menopause?</label>
-     <div class="ui-field-contain">
-      <select name="menopause" id="menopause" data-role="slider">
-       <option value="no">No</option>
-       <option value="yes">Yes</option>
-      
-      </select>
-     </div>
+     <table width="200">
+      <tr>
+       <td><label>
+         <input type="radio" name="lactating" value="no" id="lactating_0" class="lactating" checked="checked">
+         No</label></td>
+       <td><label>
+         <input type="radio" name="lactating" value="yes" id="lactating_1" class="lactating">
+         Yes</label></td>
+      </tr>
+     </table>
+     <label>Have you achieved menopause?</label>
+     <table width="200">
+      <tr>
+       <td><label>
+         <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause" checked="checked">
+         No</label></td>
+       <td><label>
+         <input type="radio" name="menopause" value="yes" id="menopause_1" class="menopause">
+         Yes</label></td>
+      </tr>
+     </table>
      <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
-      <input name="clearbtn" type="button" value="Clear" class="clear-btn" data-role="none">
+     <input name="clearbtn" type="button" value="Clear" class="clear-btn" data-role="none">
     </form>
    </div>
    <div id="recomm">Your recommended calcium intake is</div>
    <div id="calrecomm">mg/day</div>
   </div>
-  <div class="clear"> </div>
+  <div class="clear">
+  </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-  <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/> </a></div>
-  <div id="next"><a href="recallentery.html" data-ajax="false"><img src="images/nextarrow.png"/> </a></div>
+   <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/>
+    </a>
+   </div>
+   <div id="next"><a href="recallentery.html" data-ajax="false"><img src="images/nextarrow.png"/>
+    </a>
+   </div>
   </div>
  </div>
 </div>

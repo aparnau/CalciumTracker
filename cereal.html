@@ -21,7 +21,6 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
-
 $(".savenxt").click(function(e) {
 		cereal();
   window.location='currydal.html';
@@ -51,192 +50,247 @@ $(".savenxt").click(function(e) {
       <div class="ui-field-contain">
        <label for="rice">Rice</label>
        <select name="rice" id="rice">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="ricefrac" id="ricefrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="khichari">Khichari</label>
        <select name="khichari" id="khichari">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="khicharifrac" id="khicharifrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="pulao">Pulao</label>
        <select name="pulao" id="pulao">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="pulaofrac" id="pulaofrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="paratha">Paratha</label>
        <select name="paratha" id="paratha">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="parathafrac" id="parathafrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="phulka">Phulka</label>
        <select name="phulka" id="phulka">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="phulkafrac" id="phulkafrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="puri">Puri</label>
        <select name="puri" id="puri">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="purifrac" id="purifrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="bhatura">Bhatura</label>
        <select name="bhatura" id="bhatura">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="bhaturafrac" id="bhaturafrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="pot_paratha">Potato paratha</label>
        <select name="pot_paratha" id="pot_paratha">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="pot_parathafrac" id="pot_parathafrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="ragiroti">Ragi roti</label>
        <select name="ragiroti" id="ragiroti">
-       <option value=""></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="ragirotifrac" id="ragirotifrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
+     
      </form>
     </div><!--optcontainer -->
    </div>
@@ -252,21 +306,23 @@ $(".savenxt").click(function(e) {
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
    <ul data-role="listview">
-    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
+  <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
+    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
+    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="snacks.html" data-ajax="false">Savory snacks</a>
+    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="sweets.html" data-ajax="false">Sweets</a>
+    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
     </li>
-    <li class="listitem" data-icon="false"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
     </li>
    </ul>
   </div>

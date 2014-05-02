@@ -18,9 +18,11 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
 $(".savenxt").click(function(e) {
+		sweets();
   window.location="nonveg.html";
 });
 });
@@ -48,75 +50,246 @@ $(".savenxt").click(function(e) {
       <div class="ui-field-contain">
        <label for="chikki">Chikki (sesame seeds)</label>
        <select name="chikki" id="chikki">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Pieces</option>
+        <option value="1">1 Pieces</option>
+        <option value="2">2 Pieces</option>
+        <option value="3">3 Pieces</option>
+        <option value="4">4 Pieces</option>
+        <option value="5">5 Pieces</option>
+        <option value="6">6 Pieces</option>
+        <option value="7">7 Pieces</option>
+        <option value="8">8 Pieces</option>
+        <option value="9">9 Pieces</option>
+        <option value="10">10 Pieces</option>
+        <option value="11">11 Pieces</option>
+        <option value="12">12 Pieces</option>
+        <option value="13">13 Pieces</option>
+        <option value="14">14 Pieces</option>
+        <option value="15">15 Pieces</option>
+       </select>
+       <select name="chikkifrac" id="chikkifrac">
+        <option value=".0">0 Pieces</option>
+        <option value=".25">1/4 Pieces</option>
+        <option value=".50">1/2 Pieces</option>
+        <option value=".75">3/4 Pieces</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="cake_fruit">Fruit cake</label>
        <select name="cake_fruit" id="cake_fruit">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Pieces</option>
+        <option value="1">1 Pieces</option>
+        <option value="2">2 Pieces</option>
+        <option value="3">3 Pieces</option>
+        <option value="4">4 Pieces</option>
+        <option value="5">5 Pieces</option>
+        <option value="6">6 Pieces</option>
+        <option value="7">7 Pieces</option>
+        <option value="8">8 Pieces</option>
+        <option value="9">9 Pieces</option>
+        <option value="10">10 Pieces</option>
+        <option value="11">11 Pieces</option>
+        <option value="12">12 Pieces</option>
+        <option value="13">13 Pieces</option>
+        <option value="14">14 Pieces</option>
+        <option value="15">15 Pieces</option>
+       </select>
+       <select name="cake_fruitfrac" id="cake_fruitfrac">
+        <option value=".0">0 Pieces</option>
+        <option value=".25">1/4 Pieces</option>
+        <option value=".50">1/2 Pieces</option>
+        <option value=".75">3/4 Pieces</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="biscuit_nut">Nut biscuits</label>
        <select name="biscuit_nut" id="biscuit_nut">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Nos</option>
+        <option value="1">1 Nos</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="biscuit_nutfrac" id="biscuit_nutfrac">
+        <option value=".0">0 Nos</option>
+        <option value=".25">1/4 Nos</option>
+        <option value=".50">1/2 Nos</option>
+        <option value=".75">3/4 Nos</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="breadpudd">Bread pudding</label>
        <select name="breadpudd" id="breadpudd">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="breadpudfrac" id="breadpudfrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="custard">Caramelised custard</label>
        <select name="custard" id="custard">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="custardfrac" id="custardfrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="dosa">Halwa</label>
-       <select name="dosa" id="dosa">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+       <label for="halwa">Halwa</label>
+       <select name="halwa" id="halwa">
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="halwafrac" id="halwafrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="payasam">Payasam</label>
        <select name="payasam" id="payasam">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="payasamfrac" id="payasamfrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="shrikhand">Shrikhand</label>
        <select name="shrikhand" id="shrikhand">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katori</option>
+        <option value="3">3 Katori</option>
+        <option value="4">4 Katori</option>
+        <option value="5">5 Katori</option>
+        <option value="6">6 Katori</option>
+        <option value="7">7 Katori</option>
+        <option value="8">8 Katori</option>
+        <option value="9">9 Katori</option>
+        <option value="10">10 Katori</option>
+        <option value="11">11 Katori</option>
+        <option value="12">12 Katori</option>
+        <option value="13">13 Katori</option>
+        <option value="14">14 Katori</option>
+        <option value="15">15 Katori</option>
+       </select>
+       <select name="shrikhandfrac" id="shrikhandfrac">
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katori</option>
+        <option value=".50">1/2 Katori</option>
+        <option value=".75">3/4 Katori</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="pooranpoli">Pooran poli</label>
        <select name="pooranpoli" id="pooranpoli">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="0">0 Nos</option>
+        <option value="1">1 Nos</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
        </select>
-      </div>     
+       <select name="pooranpolifrac" id="pooranpolifrac">
+        <option value=".0">0 Nos</option>
+        <option value=".25">1/4 Nos</option>
+        <option value=".50">1/2 Nos</option>
+        <option value=".75">3/4 Nos</option>
+       </select>
+      </div>
      </form>
     </div><!--optcontainer -->
    </div>
@@ -124,7 +297,7 @@ $(".savenxt").click(function(e) {
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="recallhome.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev"><a href="snacks.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
@@ -133,22 +306,24 @@ $(".savenxt").click(function(e) {
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
    <ul data-role="listview">
      <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-     </li>
-     <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-     </li>
-    </ul>
+    </li>
+    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
+    </li>
+   </ul>
   </div>
  </div>
 </div>

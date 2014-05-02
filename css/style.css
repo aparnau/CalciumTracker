@@ -23,6 +23,7 @@ img, object, embed, video { max-width: 100%; }
 
 /* Mobile Layout: 480px and below. */
 .clear { clear: both; }
+body { background-color: #e3ece9; }
 .gridContainer
 {
 	background-color: #e3ece9;
@@ -65,18 +66,19 @@ img, object, embed, video { max-width: 100%; }
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 7px;
+	font-size: 20px;
 }
 #calrecomm
 {
 	clear: both;
-	/* margin-left: 0; */
+	font-size: 20px;
 	width: 10%;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
 	text-align: center;
 	margin-top: 5px;
-	margin: 3px auto 7px auto !important;
+	margin: 3px auto 15px auto !important;
 }
 #insidediv
 {
@@ -138,18 +140,19 @@ img, object, embed, video { max-width: 100%; }
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 7px;
+	font-size: 20px;
 }
 #calrecomm
 {
 	clear: both;
-	/* margin-left: 0; */
+	font-size: 20px;
 	width: 10%;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
 	text-align: center;
 	margin-top: 5px;
-	margin: 3px auto 7px auto !important;
+	margin: 3px auto 15px auto !important;
 }
 #insidediv
 {
@@ -211,18 +214,19 @@ img, object, embed, video { max-width: 100%; }
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 7px;
+	font-size: 20px;
 }
 #calrecomm
 {
 	clear: both;
-	/* margin-left: 0; */
+	font-size: 20px;
 	width: 10%;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
 	text-align: center;
 	margin-top: 5px;
-	margin: 3px auto 7px auto !important;
+	margin: 0 auto !important;
 }
 #insidediv
 {
@@ -313,7 +317,7 @@ img, object, embed, video { max-width: 100%; }
 	margin-left: 20px;
 	cursor: pointer;
 }
-.recall,.savenxt
+.recall, .savenxt
 {
 	background-color: #278fbc !important;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#278fbc), to(#278fbc)) !important;
@@ -382,19 +386,19 @@ img, object, embed, video { max-width: 100%; }
 	height: 40px;
 	margin-bottom: 20px;
 }
-
-.navigation.ui-bar-a {
-border: 1px solid #e3ece9;
-background: #111;
-color: #fff;
-font-weight: 700;
-text-shadow: 0 0 0 #000;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#e3ece9), to(#e3ece9));
-background-image: -webkit-linear-gradient(#e3ece9, #e3ece9);
-background-image: -moz-linear-gradient(#e3ece9, #e3ece9);
-background-image: -ms-linear-gradient(#e3ece9, #e3ece9);
-background-image: -o-linear-gradient(#e3ece9, #e3ece9);
-background-image: linear-gradient(#e3ece9, #e3ece9);
+.navigation.ui-bar-a
+{
+	border: 1px solid #e3ece9;
+	background: #111;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 0 0 0 #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e3ece9), to(#e3ece9));
+	background-image: -webkit-linear-gradient(#e3ece9, #e3ece9);
+	background-image: -moz-linear-gradient(#e3ece9, #e3ece9);
+	background-image: -ms-linear-gradient(#e3ece9, #e3ece9);
+	background-image: -o-linear-gradient(#e3ece9, #e3ece9);
+	background-image: linear-gradient(#e3ece9, #e3ece9);
 }
 #insidediv p { padding: 10px; }
 .btngroup .listitem
@@ -461,7 +465,7 @@ background-image: linear-gradient(#e3ece9, #e3ece9);
 
 .optcontainer .ui-field-contain .ui-select
 {
-	width: 45%;
+	width: 20%;
 	margin: 5px 2% 0 0;
 }
 .optcontainer .ui-field-contain label.ui-select
@@ -485,7 +489,6 @@ background-image: linear-gradient(#e3ece9, #e3ece9);
 	background-image: linear-gradient(#b6d8e0, #b6d8e0) !important;
 	text-shadow: 0 0 0 !important;
 	margin: 1px;
-	height: 44px;
 }
 .optcontainer .ui-btn-up-c, .optcontainer .ui-btn-hover-c
 {
@@ -536,23 +539,78 @@ background-image: linear-gradient(#e3ece9, #e3ece9);
 	height: 40px;
 	font-size: 16px;
 }
-
-
-.ui-panel .ui-btn-up-c,.ui-panel .ui-btn-hover-c {
-border: 1px solid #ccc;
-background: #e3ece9 !important;
-font-weight: 700;
-color: #222;
-text-shadow: 0 1px 0 #fff;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#e3ece9), to(#e3ece9)) !important;
-background-image: -webkit-linear-gradient(#e3ece9, #e3ece9) !important;
-background-image: -moz-linear-gradient(#e3ece9, #e3ece9) !important;
-background-image: -ms-linear-gradient(#e3ece9, #e3ece9) !important;
-background-image: -o-linear-gradient(#e3ece9, #e3ece9) !important;
-background-image: linear-gradient(#e3ece9, #e3ece9) !important;
+.ui-panel .ui-btn-up-c, .ui-panel .ui-btn-hover-c
+{
+	border: 1px solid #ccc;
+	background: #e3ece9 !important;
+	font-weight: 700;
+	color: #222;
+	text-shadow: 0 1px 0 #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e3ece9), to(#e3ece9)) !important;
+	background-image: -webkit-linear-gradient(#e3ece9, #e3ece9) !important;
+	background-image: -moz-linear-gradient(#e3ece9, #e3ece9) !important;
+	background-image: -ms-linear-gradient(#e3ece9, #e3ece9) !important;
+	background-image: -o-linear-gradient(#e3ece9, #e3ece9) !important;
+	background-image: linear-gradient(#e3ece9, #e3ece9) !important;
 }
-
 /* fractional dropdown */
-.optcontainer#multi_cont .ui-select {
-width: 20%;
-} 
+
+
+.ui-icon-checkbox-off, .ui-icon-radio-off { background-color: #bccbc6 !important; }
+.ui-radio .ui-icon, .ui-radio .ui-icon-searchfield:after
+{
+	background-color: #278ebc;
+	background-image: none !important;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+/*result */
+
+.resulthead
+{
+	background-image: url('../images/result_dp.jpg');
+	background-repeat: no-repeat;
+	min-height: 100%;
+	background-position: center center;
+	height: 300px;
+	margin: auto;
+	background-color: #278fbc;
+}
+.resultmid
+{
+	background-image: url('../images/bottom_result.png');
+	background-repeat: no-repeat;
+	min-height: 100%;
+	background-position: center center;
+	height: 227px;
+	margin: auto;
+}
+.resulttext
+{
+	text-align: center;
+	color: #278ebb;
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	background-color: #b7d9e0;
+	height: 50px;
+}
+#resultval
+{
+	text-align: center;
+	color: #000000;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: #b7d9e0;
+}
+#resultbtm
+{
+	background-color: #e3ece8;
+	min-height: 100%;
+	height: 270px;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+#resultbtm p { font-size: 24px; }
