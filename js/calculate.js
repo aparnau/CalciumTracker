@@ -105,6 +105,7 @@ function cereal() {
 		
 cereal_total1=ricecal+khicharical+pulaocal+parathacal+phulkacal+purical+bhaturacal+pot_parathacal+ragirotical;
 
+
 localStorage.setItem("cereal_total", cereal_total1);
 }
 
@@ -137,7 +138,7 @@ function currydal() {
     chawalical = chawali * 38;
 		
 		var currydal_total=chanadalcal+mungdalcal+masurdalcal+turdalcal+spinachcal+sambarcal+kadhical+cholecal+mungwholecal+masurwholecal+rajmahcal+chawalical;
-	
+
 localStorage.setItem("currydal_total", currydal_total);
 	
 }
@@ -165,6 +166,7 @@ function veg_gravy() {
     paneermascal = paneermas * 72;
 		
    var veg_gravy_total=avialcal+bhagaracal+matarcal+aloomatarcal+potatocurrycal+koftacal+kurmacal+soupcal+paneermascal;
+	 
 	 localStorage.setItem("veg_gravy_total", veg_gravy_total);
 }
 
@@ -196,7 +198,8 @@ function veg_dry() {
     leafyveg4cal = leafyveg4 * 187;
 		
  var veg_dry_total=beanscal+baiganaloocal+mirchical+gopigaajarcal+bhindical+kadducal+baigancal+cabbagecal+leafyveg1cal+leafyveg2cal+leafyveg3cal+leafyveg4cal;
- 
+
+
   localStorage.setItem("veg_dry_total", veg_dry_total);
 }
 
@@ -232,7 +235,6 @@ function snacks() {
     puracal = pura * 50.4;
 
 var snacks_total=pohacal+upmacal+chatcal+dahivadacal+vadacal+dosacal+mas_dosacal+idlical+pot_vadacal+samosacal+sandwichcal+veg_puffcal+bajjical+puracal;
-
 
 localStorage.setItem("snacks_total", snacks_total);
 }
@@ -308,7 +310,7 @@ function milk() {
     applecal = apple * 125;
 		
 	var	milk_total=milk_buffalocal+milk_cowcal+skimmed_milkcal+curdcal+cheesecal+buttermilkcal+lassical+bananashakecal+strawberrycal+applecal;
-	
+
 		localStorage.setItem("milk_total", milk_total);
 }
 
@@ -321,22 +323,22 @@ function others() {
 
 var others_total=coc_chutneycal+	tillchutneycal;	
 			localStorage.setItem("others_total", others_total);
-	
+
 		window.location="result.html";
 }
 
 function calculate(){
 
-var cereal_tot=	 parseInt(localStorage.getItem("cereal_total"));
-var currydal_tot=	parseInt(localStorage.getItem("currydal_total"));
-var veg_gravy_tot=	parseInt(localStorage.getItem("veg_gravy_total"));
-var veg_dry_tot=	parseInt(localStorage.getItem("veg_dry_total"));
-var snacks_tot=	parseInt(localStorage.getItem("snacks_total"));
-var sweets_tot=parseInt(localStorage.getItem("sweets_total"));
-var nonveg_tot=	parseInt(localStorage.getItem("nonveg_total"));
-var milk_tot=	parseInt(localStorage.getItem("milk_total"));
-var others_tot=	parseInt(localStorage.getItem("others_total"));
 
+var cereal_tot=	 parseFloat(localStorage.getItem("cereal_total"));
+var currydal_tot=	parseFloat(localStorage.getItem("currydal_total"));
+var veg_gravy_tot=	parseFloat(localStorage.getItem("veg_gravy_total"));
+var veg_dry_tot=	parseFloat(localStorage.getItem("veg_dry_total"));
+var snacks_tot=	parseFloat(localStorage.getItem("snacks_total"));
+var sweets_tot=parseFloat(localStorage.getItem("sweets_total"));
+var nonveg_tot=	parseFloat(localStorage.getItem("nonveg_total"));
+var milk_tot=	parseFloat(localStorage.getItem("milk_total"));
+var others_tot=	parseFloat(localStorage.getItem("others_total"));
 
 var totalcalcium=cereal_tot+currydal_tot+veg_gravy_tot+veg_dry_tot+snacks_tot+sweets_tot+nonveg_tot+milk_tot+others_tot;
 
