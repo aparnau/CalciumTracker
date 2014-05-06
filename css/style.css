@@ -582,33 +582,17 @@ body { background-color: #e3ece9; }
 
 .resulthead
 {
-	background-image: url('../images/result_dp.jpg');
-	background-repeat: no-repeat;
-	min-height: 100%;
-	background-position: center center;
-	height: 300px;
-	margin: auto;
-	background-color: #278fbc;
+background-image: url('../images/result.png');
+background-repeat: no-repeat;
+min-height: 100%;
+background-position: center center;
+height: 615px;
+margin: auto;
+width: 500px;
 }
-.resultmid
+.bgstripresult
 {
-	background-image: url('../images/bgstrip.png');
-	background-repeat: repeat;
-	min-height: 100%;
-	height: 250px;
-	margin: auto;
-}
-.resulttext
-{
-	background-image: url('../images/bottom_result.png');
-	background-repeat: no-repeat;
-	text-align: center;
-	color: #278ebb;
-	font-size: 26px;
-	font-weight: bold;
-	margin: 0px 0px 0px 0px;
-	background-color: #b7d9e0;
-	height: 50px;
+  background-image:url('../images/bgstripresult.png');
 }
 #resultval
 {
@@ -616,7 +600,7 @@ body { background-color: #e3ece9; }
 	color: #000000;
 	font-size: 30px;
 	font-weight: bold;
-	background-color: #b7d9e0;
+padding-top: 504px;
 }
 #resultbtm
 {

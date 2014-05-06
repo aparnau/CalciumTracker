@@ -340,10 +340,52 @@ var nonveg_tot=	parseFloat(localStorage.getItem("nonveg_total"));
 var milk_tot=	parseFloat(localStorage.getItem("milk_total"));
 var others_tot=	parseFloat(localStorage.getItem("others_total"));
 
+
+if(isNaN(cereal_tot))
+{
+	cereal_tot=0;
+
+}
+if(isNaN(currydal_tot))
+{
+	currydal_tot=0;
+}
+if(isNaN(veg_gravy_tot))
+{
+		veg_gravy_tot=0;
+}
+if(isNaN(veg_dry_tot))
+{	
+veg_dry_tot=0;
+}
+if(isNaN(snacks_tot))
+{
+	snacks_tot=0;
+}
+if(isNaN(sweets_tot))
+{
+	sweets_tot=0;
+}
+if(isNaN(nonveg_tot))
+{
+	nonveg_tot=0;
+}
+if(isNaN(milk_tot))
+{
+	milk_tot=0;
+}
+ if(isNaN(others_tot))
+{
+	others_tot=0;
+}
+
+
+
 var totalcalcium=cereal_tot+currydal_tot+veg_gravy_tot+veg_dry_tot+snacks_tot+sweets_tot+nonveg_tot+milk_tot+others_tot;
 
 totalcalcium=totalcalcium/3;
 totalcalcium=totalcalcium.toFixed(2);
+
 
  $("#resultval").text(totalcalcium+"mg");
 
@@ -430,7 +472,7 @@ if(menosel == 'yes'){
 }
 
 //adult men
-if((agesel >= 19) || (age <= 65) && (gensel == 'male')){
+if((agesel >= 19) || (agesel <= 65) && (gensel == 'male')){
 
 	if(totalcalcium <= 600){
 		

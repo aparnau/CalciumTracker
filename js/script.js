@@ -1,4 +1,5 @@
 $(document).ready(function (e) {
+	
     $('#calrecomm').text('mg/day');
     $('input[name=pregnant]').attr("disabled", false);
         $('input[name=lactating]').attr("disabled", false);
