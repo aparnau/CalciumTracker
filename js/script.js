@@ -1,40 +1,59 @@
 $(document).ready(function (e) {
+
+
 	
     $('#calrecomm').text('mg/day');
-    $('input[name=pregnant]').attr("disabled", false);
-        $('input[name=lactating]').attr("disabled", false);
-				$('input[name=menopause]').attr("disabled", false);
+       $('input[name=pregnant]').attr("disabled", true);
+        $('input[name=lactating]').attr("disabled", true);
+				$('input[name=menopause]').attr("disabled", true);
+				
+				
     $(".submit-btn").click(function (e) {
 
+			var name=$("#name").val();
         var age = $("#age").val();
         var gender = $("input[name='gender']:checked").val();
         var preg = $("input[name='pregnant']:checked").val();
         var lact = $("input[name='lactating']:checked").val();
         var menopause = $("input[name='menopause']:checked").val();
-
 localStorage.setItem("age", age);
 localStorage.setItem("gender", gender);
 localStorage.setItem("preg", preg);
 localStorage.setItem("lact", lact);
 localStorage.setItem("menopause", menopause);
 
-				if (age >= 1 || age <= 9) {
-            children();       
+if(age=='' || name=='')
+{
+	alert('Please enter field values');
+//	document.getElementById("name").focus();
+}
+else{
+
+				if (age <= 9) {
+            children();      
+		return;
         }
-        if (age >= 10 || age <= 18) {
+
+        if ((age >= 10) &&(age <= 18)) {
             adult();
+		return;
         }
         if ((age >= 19) && (gender == 'male')) {
             men();
+		return;
         }
         if ((age >= 19) && (gender == 'female')) {
             women();
+		return;
         }
+
+}
+
     });
-    $("#age").bind("change", function () {
+/*    $("#age").bind("change", function () {
         var age = $("#age").val();
     }); //age change	
-  
+*/  
  
   $("input[name='gender']").change(function () {
         var gender = $("input[name='gender']:checked").val();
@@ -42,6 +61,7 @@ localStorage.setItem("menopause", menopause);
            $('input[name=pregnant]').attr("disabled", true);
 				   $('input[name=lactating]').attr("disabled", true);
 				   $('input[name=menopause]').attr("disabled", true);
+					 
         }
 				  if (gender == 'female') {
         $('input[name=pregnant]').attr("disabled", false);
@@ -51,8 +71,10 @@ localStorage.setItem("menopause", menopause);
     }); //gender change
 
     $(".clear-btn").on('click', function() {			
-    $("input[type='radio']").attr("checked",false).checkboxradio("refresh");
+    //$("input[type='radio']").attr("checked",false).checkboxradio("refresh");
 
+$('#name').val('');
+$('#age').val('');
        $('#calrecomm').text('mg/day');
     });
 }); //document ready
@@ -61,11 +83,13 @@ localStorage.setItem("menopause", menopause);
 
 /* Children */
 function children() {  
+
         $('#calrecomm').text('600 mg/day');
 }
 
 /* adult */
 function adult() {
+
     var age = $("#age").val();
     if ((age >= 10) && (age <= 18)) {
         $('#calrecomm').text('800 mg/day');
@@ -74,6 +98,7 @@ function adult() {
 
 /* men */
 function men() {
+
     var age = $("#age").val();
     if ((age >= 19) && (age <= 65)) {
         $('#calrecomm').text('600 mg/day');
@@ -88,8 +113,8 @@ function women() {
    var preg = $("input[name='pregnant']:checked").val();
    var lact = $("input[name='lactating']:checked").val();
    var menopause = $("input[name='menopause']:checked").val();
-		
-    $('#calrecomm').text('600 mg/day');
+
+		    $('#calrecomm').text('600 mg/day');
 		
     if (preg == 'yes') {
         $('#calrecomm').text('1200 mg/day');
@@ -103,3 +128,4 @@ function women() {
     }
 
 }
+
