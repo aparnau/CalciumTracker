@@ -233,7 +233,7 @@ body { background-color: #e3ece9; }
 	clear: both;
 	float: none;
 	margin: auto;
-	width: 50%;
+	width: 80%;
 	display: block;
 	text-align: center;
 }
@@ -484,17 +484,16 @@ body { background-color: #e3ece9; }
 
 .optcontainer .ui-field-contain .ui-select:nth-child(even)
 {
-width: 13%;
-
+width:200px;
 }
 .optcontainer .ui-field-contain .ui-select:nth-child(odd)
 {
-width:9%;
+width:150px;
 }
 .optcontainer .ui-field-contain label.ui-select
 {
-width: 40% !important;
-margin:10px 2% 0 23%;
+width: 35% !important;
+margin: 10px 2% 0 20%;
 }
 .optcontainer .ui-field-contain
 {
@@ -539,7 +538,7 @@ margin:10px 2% 0 23%;
 	margin-top: 0px !important;
 	right: 0px !important;
 }
-.optcontainer .ui-btn-inner { padding:0.3em 15px; }
+.optcontainer .ui-btn-inner { padding:0.3em 20px;font-size: 15px;height: 18px; }
 .head1
 {
 	width: 50%;
