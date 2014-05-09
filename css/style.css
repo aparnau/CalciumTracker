@@ -484,11 +484,11 @@ body { background-color: #e3ece9; }
 
 .optcontainer .ui-field-contain .ui-select:nth-child(even)
 {
-width:200px;
+width:23%;
 }
 .optcontainer .ui-field-contain .ui-select:nth-child(odd)
 {
-width:150px;
+width:12%;
 }
 .optcontainer .ui-field-contain label.ui-select
 {
@@ -538,7 +538,7 @@ margin: 10px 2% 0 20%;
 	margin-top: 0px !important;
 	right: 0px !important;
 }
-.optcontainer .ui-btn-inner { padding:0.3em 20px;font-size: 15px;height: 18px; }
+.optcontainer .ui-btn-inner { padding:0.3em 20px !important;font-size: 15px;height: 18px !important; }
 .head1
 {
 	width: 50%;
