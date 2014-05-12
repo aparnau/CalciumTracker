@@ -482,14 +482,14 @@ body { background-color: #e3ece9; }
 .listitem.ui-listview, .listitem.ui-panel-inner>.ui-listview { margin: 0px !important; }
 /* maincalculator */
 
-.optcontainer .ui-field-contain .ui-select:nth-child(even)
+/*.optcontainer .ui-field-contain .ui-select:nth-child(even)
 {
 width:23%;
 }
 .optcontainer .ui-field-contain .ui-select:nth-child(odd)
 {
 width:12%;
-}
+}*/
 .optcontainer .ui-field-contain label.ui-select
 {
 width: 35% !important;
