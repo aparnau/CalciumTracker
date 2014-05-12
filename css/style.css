@@ -630,3 +630,9 @@ margin: 10px 2% 0 20%;
 	width: 50%;
 	margin: auto;
 }
+
+
+.ui-select .ui-btn select {
+min-height: 100% !important;
+height:auto !important; 
+}
