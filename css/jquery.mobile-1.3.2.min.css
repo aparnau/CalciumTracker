@@ -606,8 +606,8 @@ a.ui-link-inherit { text-decoration: none!important }
 .ui-icon-search, .ui-icon-searchfield:after { background-position: -611px -1px }
 .ui-icon-checkbox-on { background-position: -647px -1px }
 .ui-icon-checkbox-off { background-position: -683px -1px }
-.ui-icon-radio-on { background-position: -718px -1px }
-.ui-icon-radio-off { background-position: -754px -1px }
+.ui-icon-radio-on { background-position: -718px -1px !important;}
+.ui-icon-radio-off { background-position:-754px -1px !important; }
 .ui-icon-bars { background-position: -788px -1px }
 .ui-icon-edit { background-position: -824px -1px }
 @media only screen and (-webkit-min-device-pixel-ratio:1.3), only screen and (min--moz-device-pixel-ratio:1.3), only screen and (min-resolution:200dpi) {
@@ -2388,7 +2388,7 @@ label.ui-submit
 }
 .ui-field-contain .ui-controlgroup-controls
 {
-	width: 78%;
+	width: 58%;
 	display: inline-block
 }
 .ui-field-contain .ui-controlgroup .ui-select
@@ -2808,7 +2808,7 @@ margin:0
 }
 .ui-field-contain input.ui-input-text, .ui-field-contain textarea.ui-input-text, .ui-field-contain .ui-input-search, .ui-field-contain div.ui-input-text
 {
-	width: 68%;
+	width: 48%;
 	display: inline-block
 }
 .ui-field-contain .ui-input-search, .ui-field-contain div.ui-input-text
