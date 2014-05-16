@@ -677,7 +677,7 @@ margin: 10px 2% 0 2%;
 	margin-top: 0px !important;
 	right: 0px !important;
 }
-.optcontainer .ui-btn-inner { padding:5px !important;font-size: 15px;height: 18px !important; }
+.optcontainer .ui-btn-inner { padding:5px 20px !important;font-size: 15px;height: 18px !important; }
 .head1
 {
 width: 50%;
@@ -779,21 +779,4 @@ color: #231f20;
 .ui-select .ui-btn select {
 min-height: 100% !important;
 height:auto !important; 
-}
-
-
-.resultnavigation
-{
-	height: 40px;
-	margin-bottom: 0px;
-}
-.resultnavigation.ui-bar-a
-{
-	border:none;
-	background: transparent;
-	color: #333;
-	font-weight: 700;
-	text-shadow: 0 0 0 #000;
-
-/*	border-bottom: 8px solid #9d8e94;*/
 }
