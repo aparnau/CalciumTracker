@@ -2700,7 +2700,7 @@ label.ui-select
 }
 .ui-field-contain .ui-select
 {
-	width:18%; /*78%;*/
+	width:20%; /*78%;*/
 	display: inline-block
 }
 .ui-hide-label .ui-select { width: 100% }
