@@ -23,6 +23,13 @@
 <script>
 $(document).ready(function(e) {
 		var name=localStorage.getItem("name");
+			var gender=localStorage.getItem("gender");
+			if(gender=='male'){
+					$("#resultname").append('Mr. ');
+			}
+			else if(gender=='female'){
+					$("#resultname").append('Ms. ');
+			}
 	$("#resultname").append(name);
 calculate(); 
 $("#testagainbtn").click(function(e) {

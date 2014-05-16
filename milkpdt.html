@@ -24,13 +24,16 @@ $(document).ready(function (e) {
 	var t=sessionStorage.getItem('se_milk_buffalo');
 	var name=localStorage.getItem("name");
 	$("#top-bar").append(name);
-/*$('#milk_buffalo option[value='+t+']').attr('selected', 'selected');*/
+	alert(t);
+$('#milk_buffalo option[value="'+t+'"]').prop('selected', true);
 
-$("#milk_buffalo").val(t).attr('selected', 'selected');
+
 $(".savenxt").click(function(e) {
  	milk();
  window.location="cereal.html";
 });
+
+
 });
 </script>
 </head>
@@ -353,7 +356,8 @@ $(".savenxt").click(function(e) {
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="recallhome.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev">
+   <a href="recallhome.html"><img src="images/prevarrow.png"/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
