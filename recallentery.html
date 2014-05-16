@@ -20,6 +20,8 @@
 <script src="js/respond.min.js"></script>
 <script>
 $(document).ready(function (e) {
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
 $(".recall").click(function (e) {
 window.location='recallhome.html';
 });
@@ -29,13 +31,19 @@ window.location='recallhome.html';
 <body>
 <div class="gridContainer clearfix">
  <div id="maincontainer">
+   
+  
   <div id="insidecont">
-   <div id="header"  data-role="header" data-position="fixed">
+<div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header"  data-role="header">
     <p>Tell us what you eat generally</p>
    </div>
-   <div id="insidediv"><p>Click below to enter  your 3-day dietary intake. Please enter total number of household measures for food items consumed in last three days.</p>
-   <div class="clear"> </div>
-    <input name="recallbtn" type="button" value="Dietary Recall" class="recall" data-role="none">
+   <div id="insidediv">
+    <p>Click below to enter  your 3-day dietary intake. Please enter total number of household measures for food items consumed in last three days.</p>
+    <div class="clear">
+    </div>
+<input name="recallbtn" type="button" value="Dietary Recall" class="recall" data-role="none">
    </div>
   </div>
   <div class="clear">

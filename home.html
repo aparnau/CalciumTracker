@@ -19,10 +19,89 @@
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
 <script src="js/script.js"></script>
-
 <script>
 $(document).ready(function(e) {
-    localStorage.clear();
+	
+    $('.pregnantblock').hide();
+    $('.lactatingblock').hide();
+    $('.menopauseblock').hide();
+
+    $('#calrecomm').text('mg/day');
+    $('input[name=pregnant]').attr("disabled", true);
+    $('input[name=lactating]').attr("disabled", true);
+    $('input[name=menopause]').attr("disabled", true);
+
+var namesel=localStorage.getItem("name");
+var agesel=localStorage.getItem("age");
+
+
+
+if (namesel !== null) {$('#name').val(namesel); }
+if (agesel !== null) {$('#age').val(agesel);}
+
+
+
+    $(".submit-btn").click(function (e) {
+
+        var name = $("#name").val();
+        var age = $("#age").val();
+        var gender = $("input[name='gender']:checked").val();
+        var preg = $("input[name='pregnant']:checked").val();
+        var lact = $("input[name='lactating']:checked").val();
+        var menopause = $("input[name='menopause']:checked").val();
+				localStorage.setItem("name", name);
+        localStorage.setItem("age", age);
+        localStorage.setItem("gender", gender);
+        localStorage.setItem("preg", preg);
+        localStorage.setItem("lact", lact);
+        localStorage.setItem("menopause", menopause);
+        var regex = /^[a-zA-Z]*$/;
+
+        if (age == '') {
+            alert('Please enter valid age');
+            document.aboutform.age.focus();
+        } else if (name == '') {
+            alert('Please enter valid name');
+            document.aboutform.name.focus();
+        } else if (!regex.test(document.aboutform.name.value)) {
+            alert('Please enter valid name');
+            document.aboutform.name.focus();
+        } else {
+					
+ 						window.location='recallentery.html';          
+        }
+    });
+    /*    $("#age").bind("change", function () {
+        var age = $("#age").val();
+    }); //age change	
+*/
+
+    $("input[name='gender']").change(function () {
+        var gender = $("input[name='gender']:checked").val();
+        if (gender == 'male') {
+            $('.pregnantblock').hide();
+            $('.lactatingblock').hide();
+            $('.menopauseblock').hide();
+
+
+        }
+        if (gender == 'female') {
+            $('.pregnantblock').show();
+            $('.lactatingblock').show();
+            $('.menopauseblock').show();
+            $('input[name=pregnant]').attr("disabled", false);
+            $('input[name=lactating]').attr("disabled", false);
+            $('input[name=menopause]').attr("disabled", false);
+
+        }
+    }); //gender change
+
+    $(".clear-btn").on('click', function () {
+        $('#name').val('');
+        $('#age').val('');
+				$('#calrecomm').text('mg/day');
+    });
+
 });
 
 </script>
@@ -35,68 +114,80 @@ $(document).ready(function(e) {
     <p>Tell us about yourself</p>
    </div>
    <div id="formcontent">
-    <form action="" method="post" name="aboutform" id="aboutform" novalidate>
-     <label>Name</label>
-     <input name="name" type="text" id="name">
-     <label>Age</label>
-     <input name="age" type="number" id="age" >
-     <label>Gender</label>
-     <table width="200">
-      <tr>
-       <td><label>
-         <input type="radio" name="gender" value="male" id="gender_0" class="gender" checked="checked">
-         Male</label></td>
-       <td><label>
-         <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
-         Female</label></td>
-      </tr>
-     </table>
-     <label>Are you pregnant?</label>
-     <table width="200">
-      <tr>
-       <td><label>
-         <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant">
-         No</label></td>
-       <td><label>
-         <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
-         Yes</label></td>
-      </tr>
-     </table>
-     <label>Are you lactating?</label>
-     <table width="200">
-      <tr>
-       <td><label>
-         <input type="radio" name="lactating" value="no" id="lactating_0" class="lactating">
-         No</label></td>
-       <td><label>
-         <input type="radio" name="lactating" value="yes" id="lactating_1" class="lactating">
-         Yes</label></td>
-      </tr>
-     </table>
-     <label>Have you achieved menopause?</label>
-     <table width="200">
-      <tr>
-       <td><label>
-         <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
-         No</label></td>
-       <td><label>
-         <input type="radio" name="menopause" value="yes" id="menopause_1" class="menopause">
-         Yes</label></td>
-      </tr>
-     </table>
+    <form action="" method="" name="aboutform" id="aboutform">
+     <div data-role="fieldcontain">
+      <label>Name</label>
+      <input name="name" type="text" id="name">
+     </div>
+     <div data-role="fieldcontain">
+      <label>Age</label>
+      <input name="age" type="number" id="age" >
+     </div>
+     <div data-role="fieldcontain">
+      <label>Gender</label>
+      <table width="200">
+       <tr>
+        <td><label>
+          <input type="radio" name="gender" value="male" id="gender_0" class="gender" checked="checked">
+          Male</label></td>
+        <td><label>
+          <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
+          Female</label></td>
+       </tr>
+      </table>
+     </div>
+     <div data-role="fieldcontain">
+      <label class="pregnantblock">Are you pregnant?</label>
+      <table width="200" class="pregnantblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
+          Yes</label></td>
+       </tr>
+      </table>
+     </div>
+     <div data-role="fieldcontain">
+      <label class="lactatingblock">Are you lactating?</label>
+      <table width="200" class="lactatingblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="lactating" value="no" id="lactating_0" class="lactating">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="lactating" value="yes" id="lactating_1" class="lactating">
+          Yes</label></td>
+       </tr>
+      </table>
+     </div>
+     <div data-role="fieldcontain">
+      <label class="menopauseblock">Have you achieved menopause?</label>
+      <table width="200" class="menopauseblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="menopause" value="yes" id="menopause_1" class="menopause">
+          Yes</label></td>
+       </tr>
+      </table>
+     </div>
      <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
      <input name="clearbtn" type="button" value="Clear" class="clear-btn" data-role="none">
     </form>
    </div>
-   <div id="recomm">Your recommended calcium intake is</div>
-   <div id="calrecomm">mg/day</div>
+   
+   
   </div>
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/>
+  <!-- <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/>
     </a>
-   </div>
+   </div>-->
    <div id="next"><a href="recallentery.html" data-ajax="false"><img src="images/nextarrow.png"/>
     </a>
    </div>

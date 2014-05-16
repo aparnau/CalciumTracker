@@ -20,7 +20,8 @@
 <script src="js/respond.min.js"></script>
 <script>
 $(document).ready(function (e) {
-
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
 });
 </script>
 </head>
@@ -28,12 +29,16 @@ $(document).ready(function (e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header"  data-role="header" data-position="fixed">
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header"  data-role="header" >
     <p>Dietary Intake</p>
    </div>
    <div class="clear"></div>
    <div class="btngroup">
     <ul data-role="listview">
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+     </li>
      <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
      </li>
      <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
@@ -48,8 +53,7 @@ $(document).ready(function (e) {
      </li>
      <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-     </li>
+     
      <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
     </li>
     </ul>
@@ -61,7 +65,7 @@ $(document).ready(function (e) {
    <div id="prev"><a href="recallentery.html" data-ajax="false"><img src="images/prevarrow.png"/>
     </a>
    </div>
-   <div id="next"><a href="recallhome.html" data-ajax="false"><img src="images/nextarrow.png"/>
+   <div id="next"><a href="milkpdt.html" data-ajax="false"><img src="images/nextarrow.png"/>
     </a>
    </div>
   </div>

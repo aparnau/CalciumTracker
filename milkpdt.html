@@ -21,9 +21,15 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
+	var t=sessionStorage.getItem('se_milk_buffalo');
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+/*$('#milk_buffalo option[value='+t+']').attr('selected', 'selected');*/
+
+$("#milk_buffalo").val(t).attr('selected', 'selected');
 $(".savenxt").click(function(e) {
  	milk();
-  window.location="others.html";
+ window.location="cereal.html";
 });
 });
 </script>
@@ -32,7 +38,10 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header" data-role="header"  data-position="fixed">
+  
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header" data-role="header">
     <p>Milk and milk products</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
@@ -49,7 +58,8 @@ $(".savenxt").click(function(e) {
      <form>
       <div class="ui-field-contain">
        <label for="milk_buffalo">Milk (Buffalo)</label>
-       <select name="milk_buffalo" id="milk_buffalo"> <option value="">&nbsp;</option>
+       <select name="milk_buffalo" id="milk_buffalo">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Cup</option>
         <option value="2">2 Cup</option>
@@ -69,7 +79,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="milk_buffalofrac" id="milk_buffalofrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Cup</option>
         <option value=".50">1/2 Cup</option>
         <option value=".75">3/4 Cup</option>
@@ -77,7 +87,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="milk_cow">Milk (Cow)</label>
-       <select name="milk_cow" id="milk_cow"> <option value="">&nbsp;</option>
+       <select name="milk_cow" id="milk_cow">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -97,7 +108,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="milk_cowfrac" id="milk_cowfrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -105,7 +116,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="skimmed_milk">Skimmed milk</label>
-       <select name="skimmed_milk" id="skimmed_milk"> <option value="">&nbsp;</option>
+       <select name="skimmed_milk" id="skimmed_milk">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -125,7 +137,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="skimmed_milkfrac" id="skimmed_milkfrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -133,7 +145,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="curd">Curd (Cow’s milk)</label>
-       <select name="curd" id="curd"> <option value="">&nbsp;</option>
+       <select name="curd" id="curd">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
         <option value="2">2 Katori</option>
@@ -153,7 +166,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="curdfrac" id="curdfrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Katori</option>
         <option value=".50">1/2 Katori</option>
         <option value=".75">3/4 Katori</option>
@@ -161,7 +174,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="cheese">Cheese</label>
-       <select name="cheese" id="cheese"> <option value="">&nbsp;</option>
+       <select name="cheese" id="cheese">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Slice</option>
         <option value="2">2 Slice</option>
@@ -181,7 +195,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="cheesefrac" id="cheesefrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Slice</option>
         <option value=".50">1/2 Slice</option>
         <option value=".75">3/4 Slice</option>
@@ -189,7 +203,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="buttermilk">Buttermilk</label>
-       <select name="buttermilk" id="buttermilk"> <option value="">&nbsp;</option>
+       <select name="buttermilk" id="buttermilk">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -209,7 +224,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="buttermilkfrac" id="buttermilkfrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -217,7 +232,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="lassi">Lassi</label>
-       <select name="lassi" id="lassi"> <option value="">&nbsp;</option>
+       <select name="lassi" id="lassi">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -237,7 +253,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="lassifrac" id="lassifrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -245,7 +261,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="bananashake">Banana milk shake </label>
-       <select name="bananashake" id="bananashake"> <option value="">&nbsp;</option>
+       <select name="bananashake" id="bananashake">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -265,7 +282,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="bananashakefrac" id="bananashakefrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -273,7 +290,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="strawberry">Strawberry milk shake </label>
-       <select name="strawberry" id="strawberry"> <option value="">&nbsp;</option>
+       <select name="strawberry" id="strawberry">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -293,7 +311,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="strawberryfrac" id="strawberryfrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -301,7 +319,8 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="apple">Apple milk shake</label>
-       <select name="apple" id="apple"> <option value="">&nbsp;</option>
+       <select name="apple" id="apple">
+        <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
         <option value="2">2 Glass</option>
@@ -321,7 +340,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="applefrac" id="applefrac">
         <option value="">&nbsp;</option>
-<option value=".0">0 </option>
+        <option value=".0">0 </option>
         <option value=".25">1/4 Glass</option>
         <option value=".50">1/2 Glass</option>
         <option value=".75">3/4 Glass</option>
@@ -334,7 +353,7 @@ $(".savenxt").click(function(e) {
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="nonveg.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev"><a href="recallhome.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
@@ -342,7 +361,9 @@ $(".savenxt").click(function(e) {
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
    <ul data-role="listview">
-     <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
     </li>
     <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
     </li>
@@ -355,8 +376,6 @@ $(".savenxt").click(function(e) {
     <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
     </li>
     <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
     </li>
     <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
     </li>

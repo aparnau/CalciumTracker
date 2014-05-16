@@ -245,13 +245,13 @@
 	border: 1px solid #aaa;
 	color: #333;
 	text-shadow: 0 1px 0 #fff;
-	background: #f9f9f9;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#eee));
-	background-image: -webkit-linear-gradient(#f9f9f9, #eee);
-	background-image: -moz-linear-gradient(#f9f9f9, #eee);
-	background-image: -ms-linear-gradient(#f9f9f9, #eee);
-	background-image: -o-linear-gradient(#f9f9f9, #eee);
-	background-image: linear-gradient(#f9f9f9, #eee)
+	background: #e1ecf6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ecf6), to(#e1ecf6));
+	background-image: -webkit-linear-gradient(#e1ecf6, #e1ecf6);
+	background-image: -moz-linear-gradient(#e1ecf6, #e1ecf6);
+	background-image: -ms-linear-gradient(#e1ecf6, #e1ecf6);
+	background-image: -o-linear-gradient(#e1ecf6, #e1ecf6);
+	background-image: linear-gradient(#e1ecf6, #e1ecf6)
 }
 .ui-overlay-c
 {
@@ -2808,7 +2808,7 @@ margin:0
 }
 .ui-field-contain input.ui-input-text, .ui-field-contain textarea.ui-input-text, .ui-field-contain .ui-input-search, .ui-field-contain div.ui-input-text
 {
-	width: 78%;
+	width: 68%;
 	display: inline-block
 }
 .ui-field-contain .ui-input-search, .ui-field-contain div.ui-input-text
