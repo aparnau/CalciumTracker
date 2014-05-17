@@ -692,7 +692,6 @@ var gender=localStorage.getItem("gender");
                
             }
             if ((age >= 19) && (gender == 'male')) {
-						
                 men();
 
             }
@@ -709,7 +708,7 @@ function children() {
 /* adult */
 function adult() {
 
-   var age=localStorage.getItem("age"); 
+    var age = $("#age").val();
     if ((age >= 10) && (age <= 18)) {
         $('#calrecomm').text('800 mg/day');
     }
@@ -717,12 +716,12 @@ function adult() {
 
 /* men */
 function men() {
- var age=localStorage.getItem("age"); 
+
+    var age = $("#age").val();
     if ((age >= 19)) {
         $('#calrecomm').text('600 mg/day');
 
     }
-		
 }
 
 /* Women */

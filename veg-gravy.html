@@ -21,8 +21,6 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
 $(".savenxt").click(function(e) {
 	veg_gravy();
   window.location="veg-dry.html";
@@ -35,9 +33,7 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-     <div id="top-bar" class="top-bar">Welcome </div>
-  <div class="clear">  </div>
-   <div id="header" data-role="header">
+   <div id="header" data-role="header"  data-position="fixed">
     <p>Vegetables - gravy</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"

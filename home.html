@@ -21,7 +21,7 @@
 <script src="js/script.js"></script>
 <script>
 $(document).ready(function(e) {
-	$("#next").hide();
+	
     $('.pregnantblock').hide();
     $('.lactatingblock').hide();
     $('.menopauseblock').hide();
@@ -33,18 +33,16 @@ $(document).ready(function(e) {
 
 var namesel=localStorage.getItem("name");
 var agesel=localStorage.getItem("age");
-var gendersel=localStorage.getItem("gender");
-var pregsel=localStorage.getItem("preg");
-var lactsel=localStorage.getItem("lact");
-var menopausesel=localStorage.getItem("menopause");
+
+
 
 if (namesel !== null) {$('#name').val(namesel); }
 if (agesel !== null) {$('#age').val(agesel);}
 
 
-if(gendersel=='female'){ document.aboutform.gender[0].checked = true;}
 
     $(".submit-btn").click(function (e) {
+
         var name = $("#name").val();
         var age = $("#age").val();
         var gender = $("input[name='gender']:checked").val();
@@ -69,7 +67,7 @@ if(gendersel=='female'){ document.aboutform.gender[0].checked = true;}
             alert('Please enter valid name');
             document.aboutform.name.focus();
         } else {
-					
+						alert('hi');
  						window.location='recallentery.html';          
         }
     });
@@ -127,51 +125,67 @@ if(gendersel=='female'){ document.aboutform.gender[0].checked = true;}
      </div>
      <div data-role="fieldcontain">
       <label>Gender</label>
-      <fieldset data-role="controlgroup">
-       <input type="radio" name="gender" value="male" id="gender_0" class="gender">
-       <label for="gender_0"> Male</label>
-       <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
-       <label for="gender_1">Female</label>
-      </fieldset>
+      <table width="200">
+       <tr>
+        <td><label>
+          <input type="radio" name="gender" value="male" id="gender_0" class="gender" checked="checked">
+          Male</label></td>
+        <td><label>
+          <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
+          Female</label></td>
+       </tr>
+      </table>
      </div>
-     <div data-role="fieldcontain"  class="pregnantblock">
-      <label>Are you pregnant?</label>
-      <fieldset data-role="controlgroup">
-       <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant">
-       <label for="pregnant_0"> No</label>
-       <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
-       <label for="pregnant_1"> Yes</label>
-      </fieldset>
+     <div data-role="fieldcontain">
+      <label class="pregnantblock">Are you pregnant?</label>
+      <table width="200" class="pregnantblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
+          Yes</label></td>
+       </tr>
+      </table>
      </div>
-     <div data-role="fieldcontain"  class="lactatingblock">
-      <label>Are you lactating?</label>
-      <fieldset data-role="controlgroup">
-       <input type="radio" name="lactating" value="no" id="lactating_0" class="lactating">
-       <label for="lactating_0"> No</label>
-       <input type="radio" name="lactating" value="yes" id="lactating_1" class="lactating">
-       <label for="lactating_1"> Yes</label>
-      </fieldset>
+     <div data-role="fieldcontain">
+      <label class="lactatingblock">Are you lactating?</label>
+      <table width="200" class="lactatingblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="lactating" value="no" id="lactating_0" class="lactating">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="lactating" value="yes" id="lactating_1" class="lactating">
+          Yes</label></td>
+       </tr>
+      </table>
      </div>
-     <div data-role="fieldcontain" class="menopauseblock">
-      <label>Have you achieved menopause?</label>
-      <fieldset data-role="controlgroup">
-       <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
-       <label for="menopause_0"> No</label>
-       <input type="radio" name="menopause" value="yes" id="menopause_1" class="menopause">
-       <label for="menopause_1"> Yes</label>
-      </fieldset>
+     <div data-role="fieldcontain">
+      <label class="menopauseblock">Have you achieved menopause?</label>
+      <table width="200" class="menopauseblock">
+       <tr>
+        <td><label>
+          <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
+          No</label></td>
+        <td><label>
+          <input type="radio" name="menopause" value="yes" id="menopause_1" class="menopause">
+          Yes</label></td>
+       </tr>
+      </table>
      </div>
-     <div class="btn-container">
-      <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
-      <input name="clearbtn" type="button" value="Reset" class="clear-btn" data-role="none">
-     </div>
+     <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
+     <input name="clearbtn" type="button" value="Clear" class="clear-btn" data-role="none">
     </form>
    </div>
+   
+   
   </div>
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <!-- <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/>
+  <!-- <div id="prev"><a href="#" data-ajax="false"><img src="images/prevarrow.png"/>
     </a>
    </div>-->
    <div id="next"><a href="recallentery.html" data-ajax="false"><img src="images/nextarrow.png"/>
