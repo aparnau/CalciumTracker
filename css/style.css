@@ -704,7 +704,7 @@ text-align:left;
 {
 	width: 50%;
 	float: left;
-	padding: 10px;
+	padding: 8px;
 	text-align: left;
 }
 .head2
@@ -712,7 +712,7 @@ text-align:left;
 	width: 40%;
 	float: left;
 	text-align: center;
-	padding: 10px;
+	padding: 8px;
 }
 .head1 span, .head2 span { /*margin-left: 20px;*/
 }
