@@ -21,15 +21,78 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
-	var t=sessionStorage.getItem('se_milk_buffalo');
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	
+var se_milk_buffalo=sessionStorage.getItem('se_milk_buffalo');
+var se_milk_cow=sessionStorage.getItem('se_milk_cow');
+var se_skimmed_milk=sessionStorage.getItem('se_skimmed_milk');
+var se_curd=sessionStorage.getItem('se_curd');
+var se_cheese=sessionStorage.getItem('se_cheese');
+var se_buttermilk=sessionStorage.getItem('se_buttermilk');
+var se_lassi=sessionStorage.getItem('se_lassi');
+var se_bananashake=sessionStorage.getItem('se_bananashake');
+var se_strawberry=sessionStorage.getItem('se_strawberry');
+var se_apple=sessionStorage.getItem('se_apple');
+var se_milk_buffalo_frac=sessionStorage.getItem('se_milk_buffalo_frac');
+var se_milk_cow_frac=sessionStorage.getItem('se_milk_cow_frac');
+var se_skimmed_milk_frac=sessionStorage.getItem('se_skimmed_milk_frac');
+var se_curd_frac=sessionStorage.getItem('se_curd_frac');
+var se_cheese_frac=sessionStorage.getItem('se_cheese_frac');
+var se_buttermilk_frac=sessionStorage.getItem('se_buttermilk_frac');
+var se_lassi_frac=sessionStorage.getItem('se_lassi_frac');
+var se_bananashake_frac=sessionStorage.getItem('se_bananashake_frac');
+var se_strawberry_frac=sessionStorage.getItem('se_strawberry_frac');
+var se_apple_frac=sessionStorage.getItem('se_apple_frac');
 
-/*$('#milk_buffalo option[value='+t+']').attr('selected', 'selected');*/
+$('#milk_buffalo option[value="'+se_milk_buffalo+'"]').prop('selected', true);
+$('#milk_buffalofrac option[value="'+se_milk_buffalo_frac+'"]').prop('selected', true);
+$('#milk_cow option[value="'+se_milk_cow+'"]').prop('selected', true);
+$('#milk_cowfrac option[value="'+se_milk_cow_frac+'"]').prop('selected', true);
+$('#skimmed_milk option[value="'+se_skimmed_milk+'"]').prop('selected', true);
+$('#skimmed_milkfrac option[value="'+se_skimmed_milk_frac+'"]').prop('selected', true);
+$('#curd option[value="'+se_curd+'"]').prop('selected', true);
+$('#curdfrac option[value="'+se_curd_frac+'"]').prop('selected', true);
+$('#cheese option[value="'+se_cheese+'"]').prop('selected', true);
+$('#cheesefrac option[value="'+se_cheese_frac+'"]').prop('selected', true);
+$('#buttermilk option[value="'+se_buttermilk+'"]').prop('selected', true);
+$('#buttermilkfrac option[value="'+se_buttermilk_frac+'"]').prop('selected', true);
+$('#lassi option[value="'+se_lassi+'"]').prop('selected', true);
+$('#lassifrac option[value="'+se_lassi_frac+'"]').prop('selected', true);
+$('#bananashake option[value="'+se_bananashake+'"]').prop('selected', true);
+$('#bananashakefrac option[value="'+se_bananashake_frac+'"]').prop('selected', true);
+$('#strawberry option[value="'+se_strawberry+'"]').prop('selected', true);
+$('#strawberryfrac option[value="'+se_strawberry_frac+'"]').prop('selected', true);
+$('#apple option[value="'+se_apple+'"]').prop('selected', true);
+$('#applefrac option[value="'+se_apple_frac+'"]').prop('selected', true);
 
-$("#milk_buffalo").val(t).attr('selected', 'selected');
+$("#milk_buffalo").selectmenu("refresh");
+$("#milk_buffalofrac").selectmenu("refresh");
+$("#milk_cow").selectmenu("refresh");
+$("#milk_cowfrac").selectmenu("refresh");
+$("#skimmed_milk").selectmenu("refresh");
+$("#skimmed_milkfrac").selectmenu("refresh");
+$("#curd").selectmenu("refresh");
+$("#curdfrac").selectmenu("refresh");
+$("#cheese").selectmenu("refresh");
+$("#cheesefrac").selectmenu("refresh");
+$("#buttermilk").selectmenu("refresh");
+$("#buttermilkfrac").selectmenu("refresh");
+$("#lassi").selectmenu("refresh");
+$("#lassifrac").selectmenu("refresh");
+$("#bananashake").selectmenu("refresh");
+$("#bananashakefrac").selectmenu("refresh");
+$("#strawberry").selectmenu("refresh");
+$("#strawberryfrac").selectmenu("refresh");
+$("#apple").selectmenu("refresh");
+$("#applefrac").selectmenu("refresh");
+
 $(".savenxt").click(function(e) {
  	milk();
  window.location="cereal.html";
 });
+
+
 });
 </script>
 </head>
@@ -37,7 +100,10 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header" data-role="header"  data-position="fixed">
+  
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header" data-role="header">
     <p>Milk and milk products</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
@@ -53,61 +119,61 @@ $(".savenxt").click(function(e) {
      <div class="clear"></div>
      <form>
       <div class="ui-field-contain">
-       <label for="milk_buffalo">Milk (Buffalo)</label>
+       <label for="milk_buffalo">Milk (buffalo)</label>
        <select name="milk_buffalo" id="milk_buffalo">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Cup</option>
-        <option value="2">2 Cup</option>
-        <option value="3">3 Cup</option>
-        <option value="4">4 Cup</option>
-        <option value="5">5 Cup</option>
-        <option value="6">6 Cup</option>
-        <option value="7">7 Cup</option>
-        <option value="8">8 Cup</option>
-        <option value="9">9 Cup</option>
-        <option value="10">10 Cup</option>
-        <option value="11">11 Cup</option>
-        <option value="12">12 Cup</option>
-        <option value="13">13 Cup</option>
-        <option value="14">14 Cup</option>
-        <option value="15">15 Cup</option>
+        <option value="2">2 Cups</option>
+        <option value="3">3 Cups</option>
+        <option value="4">4 Cups</option>
+        <option value="5">5 Cups</option>
+        <option value="6">6 Cups</option>
+        <option value="7">7 Cups</option>
+        <option value="8">8 Cups</option>
+        <option value="9">9 Cups</option>
+        <option value="10">10 Cups</option>
+        <option value="11">11 Cups</option>
+        <option value="12">12 Cups</option>
+        <option value="13">13 Cups</option>
+        <option value="14">14 Cups</option>
+        <option value="15">15 Cups</option>
        </select>
        <select name="milk_buffalofrac" id="milk_buffalofrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Cup</option>
-        <option value=".50">1/2 Cup</option>
-        <option value=".75">3/4 Cup</option>
+        <option value=".25">1/4 Cups</option>
+        <option value=".50">1/2 Cups</option>
+        <option value=".75">3/4 Cups</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="milk_cow">Milk (Cow)</label>
+       <label for="milk_cow">Milk (cow)</label>
        <select name="milk_cow" id="milk_cow">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="milk_cowfrac" id="milk_cowfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -116,56 +182,56 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="skimmed_milkfrac" id="skimmed_milkfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="curd">Curd (Cow’s milk)</label>
+       <label for="curd">Curd (cow’s milk)</label>
        <select name="curd" id="curd">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="curdfrac" id="curdfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -174,27 +240,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Slice</option>
-        <option value="2">2 Slice</option>
-        <option value="3">3 Slice</option>
-        <option value="4">4 Slice</option>
-        <option value="5">5 Slice</option>
-        <option value="6">6 Slice</option>
-        <option value="7">7 Slice</option>
-        <option value="8">8 Slice</option>
-        <option value="9">9 Slice</option>
-        <option value="10">10 Slice</option>
-        <option value="11">11 Slice</option>
-        <option value="12">12 Slice</option>
-        <option value="13">13 Slice</option>
-        <option value="14">14 Slice</option>
-        <option value="15">15 Slice</option>
+        <option value="2">2 Slices</option>
+        <option value="3">3 Slices</option>
+        <option value="4">4 Slices</option>
+        <option value="5">5 Slices</option>
+        <option value="6">6 Slices</option>
+        <option value="7">7 Slices</option>
+        <option value="8">8 Slices</option>
+        <option value="9">9 Slices</option>
+        <option value="10">10 Slices</option>
+        <option value="11">11 Slices</option>
+        <option value="12">12 Slices</option>
+        <option value="13">13 Slices</option>
+        <option value="14">14 Slices</option>
+        <option value="15">15 Slices</option>
        </select>
        <select name="cheesefrac" id="cheesefrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Slice</option>
-        <option value=".50">1/2 Slice</option>
-        <option value=".75">3/4 Slice</option>
+        <option value=".25">1/4 Slices</option>
+        <option value=".50">1/2 Slices</option>
+        <option value=".75">3/4 Slices</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -203,27 +269,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="buttermilkfrac" id="buttermilkfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -232,27 +298,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="lassifrac" id="lassifrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -261,27 +327,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="bananashakefrac" id="bananashakefrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -290,27 +356,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="strawberryfrac" id="strawberryfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -319,27 +385,27 @@ $(".savenxt").click(function(e) {
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
-        <option value="2">2 Glass</option>
-        <option value="3">3 Glass</option>
-        <option value="4">4 Glass</option>
-        <option value="5">5 Glass</option>
-        <option value="6">6 Glass</option>
-        <option value="7">7 Glass</option>
-        <option value="8">8 Glass</option>
-        <option value="9">9 Glass</option>
-        <option value="10">10 Glass</option>
-        <option value="11">11 Glass</option>
-        <option value="12">12 Glass</option>
-        <option value="13">13 Glass</option>
-        <option value="14">14 Glass</option>
-        <option value="15">15 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
        </select>
        <select name="applefrac" id="applefrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
-        <option value=".25">1/4 Glass</option>
-        <option value=".50">1/2 Glass</option>
-        <option value=".75">3/4 Glass</option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
        </select>
       </div>
      </form>
@@ -349,7 +415,8 @@ $(".savenxt").click(function(e) {
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="recallhome.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev">
+   <a href="recallhome.html"><img src="images/prevarrow.png"/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
@@ -363,7 +430,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
     </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
     </li>
     <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
     </li>
@@ -373,7 +440,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
     </li>
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
     </li>
    </ul>
   </div>

@@ -22,6 +22,15 @@
 <script src="js/script.js"> </script>
 <script>
 $(document).ready(function(e) {
+		var name=localStorage.getItem("name");
+			var gender=localStorage.getItem("gender");
+			if(gender=='male'){
+					$("#resultname").append('Mr. ');
+			}
+			else if(gender=='female'){
+					$("#resultname").append('Ms. ');
+			}
+	$("#resultname").append(name);
 calculate(); 
 $("#testagainbtn").click(function(e) {
   window.location='index.html';
@@ -39,7 +48,8 @@ $("#testagainbtn").click(function(e) {
     </div>
 
       <div class="clear">  </div>
-     <div id="resultbtm"> 
+     <div id="resultname"></div>
+<div id="resultbtm"> 
      <div id="recomm">Your recommended calcium intake is</div>
    <div id="calrecomm">mg/day</div>
      <p>Did you get enough calcium? </p>
@@ -50,7 +60,9 @@ $("#testagainbtn").click(function(e) {
 
   <div class="clear">  </div>
  </div>
+ <div class="resultnavigation" data-role="footer" data-position="fixed">
   <input name="testagain" type="button" value="Take test" class="testagainbtn" id="testagainbtn" data-role="none">
+  </div>
 </div>
 </body>
 </html>

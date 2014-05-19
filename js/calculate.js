@@ -1,6 +1,3 @@
-
-
-
 var ricecal;
 var khicharical;
 var pulaocal;
@@ -149,7 +146,8 @@ sessionStorage.setItem('se_skimmed_milk_frac',se_skimmed_milk_frac);
 sessionStorage.setItem('se_curd_frac',se_curd_frac);
 sessionStorage.setItem('se_cheese_frac',se_cheese_frac);
 sessionStorage.setItem('se_buttermilk_frac',se_buttermilk_frac);
-sessionStorage.setItem('se_bananashake_frac',se_bananashake_frac);
+sessionStorage.setItem('se_buttermilk_frac',se_buttermilk_frac);
+sessionStorage.setItem('se_lassi_frac',se_lassi_frac);
 sessionStorage.setItem('se_strawberry_frac',se_strawberry_frac);
 sessionStorage.setItem('se_apple_frac',se_apple_frac);
 
@@ -186,6 +184,7 @@ var se_paratha = $("#paratha option:selected").val();
 var se_phulka = $("#phulka option:selected").val();
 var se_puri = $("#puri option:selected").val();
 var se_bhatura = $("#bhatura option:selected").val();
+var se_pot_paratha = $("#pot_paratha option:selected").val();
 var se_ragiroti = $("#ragiroti option:selected").val();
 
 var se_ricefrac = $("#ricefrac option:selected").val();
@@ -623,6 +622,7 @@ localStorage.setItem("sweets_total", sweets_total);
 
 
 function nonveg() {
+
     var fishfillet = $("#fishfillet").val() + $("#fishfilletfrac").val();
     var fishfried = $("#fishfried").val() + $("#fishfriedfrac").val();
     var muttoncurry = $("#muttoncurry").val() * $("#muttoncurryfrac").val();
@@ -647,10 +647,21 @@ var se_dumchicken = $("#dumchicken option:selected").val();
 
 var se_fishfilletfrac = $("#fishfilletfrac option:selected").val();
 var se_fishfriedfrac= $("#fishfriedfrac option:selected").val();
-var se_muttoncurry = $("#muttoncurryfrac option:selected").val();
+var se_muttoncurryfrac = $("#muttoncurryfrac option:selected").val();
 var se_prawncurryfrac = $("#prawncurryfrac option:selected").val();
 var se_dumchickenfrac = $("#dumchickenfrac option:selected").val();
 
+
+sessionStorage.setItem('se_fishfillet',se_fishfillet);
+sessionStorage.setItem('se_fishfilletfrac',se_fishfilletfrac);
+sessionStorage.setItem('se_fishfried',se_fishfried);
+sessionStorage.setItem('se_fishfriedfrac',se_fishfriedfrac);
+sessionStorage.setItem('se_muttoncurry',se_muttoncurry);
+sessionStorage.setItem('se_muttoncurryfrac',se_muttoncurryfrac);
+sessionStorage.setItem('se_prawncurry',se_prawncurry);
+sessionStorage.setItem('se_prawncurryfrac',se_prawncurryfrac);
+sessionStorage.setItem('se_dumchicken',se_dumchicken);
+sessionStorage.setItem('se_dumchickenfrac',se_dumchickenfrac);
 
 
 localStorage.setItem("nonveg_total", nonveg_total);
@@ -673,6 +684,12 @@ var se_tillchutney= $("#tillchutney option:selected").val();
 var se_coc_chutneyfrac = $("#coc_chutneyfrac option:selected").val();
 var se_tillchutneyfrac= $("#tillchutneyfrac option:selected").val();
 
+sessionStorage.setItem('se_coc_chutney',se_coc_chutney);
+sessionStorage.setItem('se_coc_chutneyfrac',se_coc_chutneyfrac);
+sessionStorage.setItem('se_tillchutney',se_tillchutney);
+sessionStorage.setItem('se_tillchutneyfrac',se_tillchutneyfrac);
+
+
 localStorage.setItem("others_total", others_total);
 
 		window.location="result.html";
@@ -692,6 +709,7 @@ var gender=localStorage.getItem("gender");
                
             }
             if ((age >= 19) && (gender == 'male')) {
+						
                 men();
 
             }
@@ -708,7 +726,7 @@ function children() {
 /* adult */
 function adult() {
 
-    var age = $("#age").val();
+   var age=localStorage.getItem("age"); 
     if ((age >= 10) && (age <= 18)) {
         $('#calrecomm').text('800 mg/day');
     }
@@ -716,12 +734,12 @@ function adult() {
 
 /* men */
 function men() {
-
-    var age = $("#age").val();
+ var age=localStorage.getItem("age"); 
     if ((age >= 19)) {
         $('#calrecomm').text('600 mg/day');
 
     }
+		
 }
 
 /* Women */

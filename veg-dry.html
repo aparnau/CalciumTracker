@@ -21,6 +21,88 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
+		var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	
+	
+var se_beans=sessionStorage.getItem('se_beans');
+var se_beansfrac=sessionStorage.getItem('se_beansfrac');
+var se_baiganaloo=sessionStorage.getItem('se_baiganaloo');
+var se_baiganaloofrac=sessionStorage.getItem('se_baiganaloofrac');
+var se_mirchi=sessionStorage.getItem('se_mirchi');
+var se_mirchifrac=sessionStorage.getItem('se_mirchifrac');
+var se_gopigaajar=sessionStorage.getItem('se_gopigaajar');
+var se_gopigaajarfrac=sessionStorage.getItem('se_gopigaajarfrac');
+var se_bhindi=sessionStorage.getItem('se_bhindi');
+var se_bhindifrac=sessionStorage.getItem('se_bhindifrac');
+var se_kaddu=sessionStorage.getItem('se_kaddu');
+var se_kaddufrac=sessionStorage.getItem('se_kaddufrac');
+var se_baigan=sessionStorage.getItem('se_baigan');
+var se_baiganfrac=sessionStorage.getItem('se_baiganfrac');
+var se_cabbage=sessionStorage.getItem('se_cabbage');
+var se_cabbagefrac=sessionStorage.getItem('se_cabbagefrac');
+var se_leafyveg1=sessionStorage.getItem('se_leafyveg1');
+var se_leafyveg1frac=sessionStorage.getItem('se_leafyveg1frac');
+var se_leafyveg2=sessionStorage.getItem('se_leafyveg2');
+var se_leafyveg2frac=sessionStorage.getItem('se_leafyveg2frac');
+var se_leafyveg3=sessionStorage.getItem('se_leafyveg3');
+var se_leafyveg3frac=sessionStorage.getItem('se_leafyveg3frac');
+var se_leafyveg4=sessionStorage.getItem('se_leafyveg4');
+var se_leafyveg4frac=sessionStorage.getItem('se_leafyveg4frac');
+
+$('#beans option[value="'+se_beans+'"]').prop('selected', true);
+$('#beansfrac option[value="'+se_beansfrac+'"]').prop('selected', true);
+$('#baiganaloo option[value="'+se_baiganaloo+'"]').prop('selected', true);
+$('#baiganaloofrac option[value="'+se_baiganaloofrac+'"]').prop('selected', true);
+$('#mirchi option[value="'+se_mirchi+'"]').prop('selected', true);
+$('#mirchifrac option[value="'+se_mirchifrac+'"]').prop('selected', true);
+$('#gopigaajar option[value="'+se_gopigaajar+'"]').prop('selected', true);
+$('#gopigaajarfrac option[value="'+se_gopigaajarfrac+'"]').prop('selected', true);
+$('#bhindi option[value="'+se_bhindi+'"]').prop('selected', true);
+$('#bhindifrac option[value="'+se_bhindifrac+'"]').prop('selected', true);
+$('#kaddu option[value="'+se_kaddu+'"]').prop('selected', true);
+$('#kaddufrac option[value="'+se_kaddufrac+'"]').prop('selected', true);
+$('#baigan option[value="'+se_baigan+'"]').prop('selected', true);
+$('#baiganfrac option[value="'+se_baiganfrac+'"]').prop('selected', true);
+$('#cabbage option[value="'+se_cabbage+'"]').prop('selected', true);
+$('#cabbagefrac option[value="'+se_cabbagefrac+'"]').prop('selected', true);
+$('#leafyveg1 option[value="'+se_leafyveg1+'"]').prop('selected', true);
+$('#leafyveg1frac option[value="'+se_leafyveg1frac+'"]').prop('selected', true);
+$('#leafyveg2 option[value="'+se_leafyveg2+'"]').prop('selected', true);
+$('#leafyveg2frac option[value="'+se_leafyveg2frac+'"]').prop('selected', true);
+$('#leafyveg3 option[value="'+se_leafyveg3+'"]').prop('selected', true);
+$('#leafyveg3frac option[value="'+se_leafyveg3frac+'"]').prop('selected', true);
+$('#leafyveg4 option[value="'+se_leafyveg4+'"]').prop('selected', true);
+$('#leafyveg4frac option[value="'+se_leafyveg4frac+'"]').prop('selected', true);
+
+
+$("#beans").selectmenu("refresh");
+$("#beansfrac").selectmenu("refresh");
+$("#baiganaloo").selectmenu("refresh");
+$("#baiganaloofrac").selectmenu("refresh");
+$("#mirchi").selectmenu("refresh");
+$("#mirchifrac").selectmenu("refresh");
+$("#gopigaajar").selectmenu("refresh");
+$("#gopigaajarfrac").selectmenu("refresh");
+$("#bhindi").selectmenu("refresh");
+$("#bhindifrac").selectmenu("refresh");
+$("#kaddu").selectmenu("refresh");
+$("#kaddufrac").selectmenu("refresh");
+$("#baigan").selectmenu("refresh");
+$("#baiganfrac").selectmenu("refresh");
+$("#cabbage").selectmenu("refresh");
+$("#cabbagefrac").selectmenu("refresh");
+$("#leafyveg1").selectmenu("refresh");
+$("#leafyveg1frac").selectmenu("refresh");
+$("#leafyveg2").selectmenu("refresh");
+$("#leafyveg2frac").selectmenu("refresh");
+$("#leafyveg3").selectmenu("refresh");
+$("#leafyveg3frac").selectmenu("refresh");
+$("#leafyveg4").selectmenu("refresh");
+$("#leafyveg4frac").selectmenu("refresh");
+	
+	
+	
 $(".savenxt").click(function(e) {
 	veg_dry();
   window.location='snacks.html';
@@ -33,7 +115,10 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header" data-role="header"  data-position="fixed">
+
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header" data-role="header">
     <p>Vegetables - dry</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
@@ -53,27 +138,27 @@ $(".savenxt").click(function(e) {
        <select name="beans" id="beans"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="beansfrac" id="beansfrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -81,27 +166,27 @@ $(".savenxt").click(function(e) {
        <select name="baiganaloo" id="baiganaloo"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="baiganaloofrac" id="baiganaloofrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -109,27 +194,27 @@ $(".savenxt").click(function(e) {
        <select name="mirchi" id="mirchi"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="mirchifrac" id="mirchifrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -137,27 +222,27 @@ $(".savenxt").click(function(e) {
        <select name="gopigaajar" id="gopigaajar"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="gopigaajarfrac" id="gopigaajarfrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -165,27 +250,27 @@ $(".savenxt").click(function(e) {
        <select name="bhindi" id="bhindi"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="bhindifrac" id="bhindifrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -193,27 +278,27 @@ $(".savenxt").click(function(e) {
        <select name="kaddu" id="kaddu"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="kaddufrac" id="kaddufrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -221,27 +306,27 @@ $(".savenxt").click(function(e) {
        <select name="baigan" id="baigan"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="baiganfrac" id="baiganfrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -249,27 +334,27 @@ $(".savenxt").click(function(e) {
        <select name="cabbage" id="cabbage"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="cabbagefrac" id="cabbagefrac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -277,27 +362,27 @@ $(".savenxt").click(function(e) {
        <select name="leafyveg1" id="leafyveg1"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="leafyveg1frac" id="leafyveg1frac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -305,27 +390,27 @@ $(".savenxt").click(function(e) {
        <select name="leafyveg2" id="leafyveg2"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="leafyveg2frac" id="leafyveg2frac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -333,27 +418,27 @@ $(".savenxt").click(function(e) {
        <select name="leafyveg3" id="leafyveg3"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="leafyveg3frac" id="leafyveg3frac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
       <div class="ui-field-contain">
@@ -361,27 +446,27 @@ $(".savenxt").click(function(e) {
        <select name="leafyveg4" id="leafyveg4"> <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Katori</option>
-        <option value="2">2 Katori</option>
-        <option value="3">3 Katori</option>
-        <option value="4">4 Katori</option>
-        <option value="5">5 Katori</option>
-        <option value="6">6 Katori</option>
-        <option value="7">7 Katori</option>
-        <option value="8">8 Katori</option>
-        <option value="9">9 Katori</option>
-        <option value="10">10 Katori</option>
-        <option value="11">11 Katori</option>
-        <option value="12">12 Katori</option>
-        <option value="13">13 Katori</option>
-        <option value="14">14 Katori</option>
-        <option value="15">15 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
        </select>
        <select name="leafyveg4frac" id="leafyveg4frac">
         <option value="">&nbsp;</option>
 <option value=".0">0 </option>
-        <option value=".25">1/4 Katori</option>
-        <option value=".50">1/2 Katori</option>
-        <option value=".75">3/4 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
        </select>
       </div>
      </form>
@@ -405,7 +490,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
     </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
     </li>
     <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
     </li>
@@ -415,7 +500,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
     </li>   
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
     </li>
    </ul>
   </div>

@@ -20,7 +20,8 @@
 <script src="js/respond.min.js"></script>
 <script>
 $(document).ready(function (e) {
-
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
 });
 </script>
 </head>
@@ -28,7 +29,9 @@ $(document).ready(function (e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header"  data-role="header" data-position="fixed">
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header"  data-role="header" >
     <p>Dietary Intake</p>
    </div>
    <div class="clear"></div>
@@ -40,7 +43,7 @@ $(document).ready(function (e) {
      </li>
      <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+     <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
      </li>
      <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
      </li>
@@ -51,7 +54,7 @@ $(document).ready(function (e) {
      <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
      </li>
      
-     <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
+     <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
     </li>
     </ul>
    </div>

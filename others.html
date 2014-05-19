@@ -21,9 +21,28 @@
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
+		var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	
+var se_coc_chutney=sessionStorage.getItem('se_coc_chutney');
+var se_coc_chutneyfrac=sessionStorage.getItem('se_coc_chutneyfrac');
+var se_tillchutney=sessionStorage.getItem('se_tillchutney');
+var se_tillchutneyfrac=sessionStorage.getItem('se_tillchutneyfrac');
+
+$('#coc_chutney option[value="'+se_coc_chutney+'"]').prop('selected', true);
+$('#coc_chutneyfrac option[value="'+se_coc_chutneyfrac+'"]').prop('selected', true);
+$('#tillchutney option[value="'+se_tillchutney+'"]').prop('selected', true);
+$('#tillchutneyfrac option[value="'+se_tillchutneyfrac+'"]').prop('selected', true);
+
+
+$("#coc_chutney").selectmenu("refresh");
+$("#coc_chutneyfrac").selectmenu("refresh");
+$("#tillchutney").selectmenu("refresh");
+$("#tillchutneyfrac").selectmenu("refresh");
+
+	
 $(".savenxt").click(function(e) {
-	others();
- 
+	others(); 
 });
 });
 </script>
@@ -32,8 +51,10 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header" data-role="header"  data-position="fixed">
-    <p>Other Preparations</p>
+  <div id="top-bar" class="top-bar">Welcome </div>
+  <div class="clear">  </div>
+   <div id="header" data-role="header">
+    <p>Other preparations</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
         data-iconpos="notext" class="ui-btn-right">Menu </a>
@@ -112,7 +133,7 @@ $(".savenxt").click(function(e) {
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer" data-position="fixed">
-   <div id="prev"><a href="milkpdt.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev"><a href="nonveg.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
@@ -126,7 +147,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
     </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - curry</a>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
     </li>
     <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
     </li>
@@ -136,7 +157,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
     </li>   
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other Preparations</a>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
     </li>
    </ul>
   </div>
