@@ -2020,8 +2020,8 @@ transform:translateX(0) scale(1)
 }
 .ui-fullsize .ui-btn-inner, .ui-fullsize .ui-btn-inner
 {
-	font-size: 16px;
-	padding: .6em 20px
+	font-size:14px;/* 16px;*/
+	padding:.6em 0px;/* .6em 20px*/
 }
 .ui-btn-icon-notext
 {

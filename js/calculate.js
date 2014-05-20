@@ -89,10 +89,11 @@ function milk() {
     var cheese = $("#cheese").val() + $("#cheesefrac").val();
     var buttermilk = $("#buttermilk").val() + $("#buttermilkfrac").val();
     var lassi = $("#lassi").val() + $("#lassifrac").val();
-    var bananashake = $("#bananashake").val() * $("#bananashakefrac").val();
+    var bananashake = $("#bananashake").val() + $("#bananashakefrac").val();
     var strawberry = $("#strawberry").val() + $("#strawberryfrac").val();
     var apple = $("#apple").val() + $("#applefrac").val();
-
+		
+		
     milk_buffalocal = milk_buffalo * 315;
     milk_cowcal = milk_cow * 180;
     skimmed_milkcal = skimmed_milk * 180;
@@ -105,7 +106,7 @@ function milk() {
     applecal = apple * 125;
 		
 	var	milk_total=milk_buffalocal+milk_cowcal+skimmed_milkcal+curdcal+cheesecal+buttermilkcal+lassical+bananashakecal+strawberrycal+applecal;
-	
+
 	
 	/*session storage */
     var se_milk_buffalo = $("#milk_buffalo option:selected").val();
@@ -818,7 +819,7 @@ totalcalcium=totalcalcium/3;
 totalcalcium=totalcalcium.toFixed(2);
 
 
- $("#resultval").text(totalcalcium+"mg");
+ $("#resultval").text(totalcalcium+" mg/day");
 
 var agesel=localStorage.getItem("age");
 var gensel= localStorage.getItem("gender");
@@ -903,7 +904,7 @@ if(menosel == 'yes'){
 }
 
 //adult men
-if((agesel >= 19) || (agesel <= 65) && (gensel == 'male')){
+if((agesel >= 19)  && (gensel == 'male')){
 
 	if(totalcalcium <= 600){
 		
@@ -914,11 +915,11 @@ if((agesel >= 19) || (agesel <= 65) && (gensel == 'male')){
 	}
 }
 //adult men 65+
-if((agesel > 65) && (gensel == 'male')){
+/*if((agesel > 65) && (gensel == 'male')){
 
 	if(totalcalcium <= 600){
 		
 		$(".resultcom").html("Not Available");
 	}
-}
+}*/
 }//calculate

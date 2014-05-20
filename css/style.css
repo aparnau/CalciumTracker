@@ -5,7 +5,8 @@
 */
 img, object, embed, video
 {
-	max-width: 100%;
+	/*max-width: 100%;
+	width: 100%;*/
 	vertical-align: baseline;
 }
 /* IE 6 does not support max-width so default to width 100% */
@@ -27,7 +28,11 @@ img, object, embed, video
 
 /* Mobile Layout: 480px and below. */
 .clear { clear: both; }
-body { background-color: #e3ece9; }
+body
+{
+	background-color: #e3ece9;
+	max-width: 100%;
+}
 .gridContainer
 {
 	background-color: #e1ecf6;
@@ -58,6 +63,7 @@ body { background-color: #e3ece9; }
 	background-color: #FFF;
 	padding: 20px;
 	width: 95%;
+	text-align: center;
 }
 #recomm
 {
@@ -76,7 +82,7 @@ body { background-color: #e3ece9; }
 {
 	clear: both;
 	font-size: 20px;
-	width: 10%;
+	width: 40%;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
@@ -131,6 +137,19 @@ body { background-color: #e3ece9; }
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 
 @media only screen and (min-width: 481px) {
+#aboutform label
+{
+	font-size: 17px;
+	/* vertical-align: top; 
+	float: left;*/
+	display: inline-block;
+	/* margin-right: 20px;
+	width: 190px; */
+	text-align: right;
+	color: #231f20;
+	cursor: auto;
+	margin-top: 4px;
+}
 .gridContainer { }
 #maincontainer
 {
@@ -157,6 +176,7 @@ body { background-color: #e3ece9; }
 	background-color: #FFF;
 	padding: 20px;
 	width: 95%;
+	text-align: center;
 }
 #recomm
 {
@@ -175,7 +195,7 @@ body { background-color: #e3ece9; }
 {
 	clear: both;
 	font-size: 20px;
-	width: 10%;
+	width: 30%;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
@@ -230,6 +250,20 @@ body { background-color: #e3ece9; }
 /* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 769px) {
+#aboutform label
+{
+	font-size: 17px;
+	/* vertical-align: top; */
+	float: left;
+	display: inline-block;
+	/* margin-right: 20px;
+	width: 190px; */
+	text-align: right;
+	color: #231f20;
+	cursor: auto;
+	margin-top: 4px;
+	width: 300px;
+}
 .gridContainer { margin: auto; }
 #maincontainer
 {
@@ -323,7 +357,7 @@ body { background-color: #e3ece9; }
 	display: block;
 	text-align: center;
 	font-size: 19px;
-margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 }
 #contentsection
@@ -464,19 +498,6 @@ float: left;*/
 	right: 20px;
 	float: right;
 }
-#aboutform label
-{
-	font-size: 17px;
-	/* vertical-align: top; */
-	float: left;
-	display: inline-block;
-	/* margin-right: 20px; */
-/* text-align: right; */
-	color: #231f20;
-	cursor: auto;
-	margin-top: 4px;
-	width: 190px;
-}
 #aboutform .ui-radio label
 {
 	float: none;
@@ -536,10 +557,7 @@ float: left;*/
 	margin-right: 3%;
 }
 /* footer */
-.navigation
-{
-	height: 40px;
-	margin-bottom: 20px;
+.navigation { height: 40px;/*	margin-bottom: 20px;*/
 }
 .navigation.ui-bar-a
 {
@@ -657,6 +675,7 @@ width:12%;
 	background-image: linear-gradient(#FFF4F8, #FFF4F8) !important;
 	text-shadow: 0 0 0 !important;
 	margin: 0px 0px 0px 0px !important;
+	overflow: auto;
 }
 .optcontainer .ui-btn-up-c, .optcontainer .ui-btn-hover-c
 {
@@ -689,15 +708,27 @@ width:12%;
 	padding: 5px !important;
 	font-size: 15px;
 	height: 18px !important;
-	
 }
  @media screen and (max-device-width : 770px) {
+#aboutform label
+{
+	font-size: 17px;
+	/* vertical-align: top; 
+	float: left;*/
+	display: inline-block;
+	/* margin-right: 20px;
+	width: 190px; */
+	text-align: right;
+	color: #231f20;
+	cursor: auto;
+	margin-top: 4px;
+}
 .optcontainer .ui-btn-inner
 {
 	padding-left: 9px !important;
-font-size: 14px;
-height: 20px !important;
-text-align:left;
+	font-size: 14px;
+	height: 20px !important;
+	text-align: left;
 }
 }
 .head1
@@ -714,8 +745,7 @@ text-align:left;
 	text-align: center;
 	padding: 8px;
 }
-.head1 span, .head2 span { /*margin-left: 20px;*/
-}
+.head1 span, .head2 span { /*margin-left: 20px;*/ }
 #headcontainer
 {
 	background-color: #da7bb1;
@@ -759,7 +789,7 @@ text-align:left;
 {
 	text-align: center;
 	color: #FFFFFF;
-	font-size: 26px;
+	font-size: 23px;
 	font-weight: bold;
 	padding-top: 504px;
 }
@@ -821,4 +851,157 @@ text-align:left;
 	width: 100px;
 	float: left;
 	clear: none;
+}
+
+
+
+/* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (max-width: 481px) {
+#aboutform .ui-field-contain { text-align: left !important; }
+.ui-field-contain .ui-select
+{
+	width: 20% !important; /*78%;*/
+	display: inline-block;
+}
+.head2
+{
+	width: 42%;
+	float: left;
+	text-align: center;
+	padding: 2px;
+}
+.head1
+{
+	width: 47%;
+	padding: 2px;
+	text-align: left;
+}
+#header p
+{
+	padding-left: 0px;
+	text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
+.optcontainer .ui-btn-inner
+{
+	padding-left: 3px !important;
+	font-size: 14px;
+	height: 20px !important;
+	text-align: left;
+}
+.ui-select .ui-btn-text
+{
+	text-overflow: ellipsis;
+	overflow: visible;
+	white-space: nowrap;
+}
+.resulthead
+{
+	background-image: url('../images/result.png');
+	background-repeat: no-repeat;
+	min-height: 100%;
+	background-position: center center;
+	/* height: 615px; */
+	margin: auto;
+	width: 500px;
+	max-width: 100%;
+	background-size: cover;
+}
+#resultval
+{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	/* padding-top: 374px; */
+	position: absolute;
+	left: 116px;
+}
+#aboutform label
+{
+	font-size: 17px;
+	display: inline-block;
+	text-align: left;
+	color: #231f20;
+	cursor: auto;
+	margin-top: 4px;
+}
+}
+
+/* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-device-width : 450px) and (max-device-width : 780px) {
+#aboutform .ui-field-contain { text-align: left !important; }
+.ui-field-contain .ui-select
+{
+	width: 20% !important; /*78%;*/
+	display: inline-block;
+}
+.head2
+{
+	width: 42%;
+	float: left;
+	text-align: center;
+	padding: 2px;
+}
+.head1
+{
+	width: 47%;
+	padding: 2px;
+	text-align: left;
+}
+#header p
+{
+	padding-left: 0px;
+	text-align: center;
+	margin-top: 15px;
+	font-size: 20px;
+}
+.optcontainer .ui-btn-inner
+{
+	padding-left: 3px !important;
+	font-size: 14px;
+	height: 20px !important;
+	text-align: left;
+}
+.ui-select .ui-btn-text
+{
+	text-overflow: ellipsis;
+	overflow: visible;
+	white-space: nowrap;
+}
+.resulthead
+{
+	background-image: url('../images/result.png');
+	background-repeat: no-repeat;
+	min-height: 100%;
+	background-position: center center;
+	/* height: 615px; */
+	margin: auto;
+	width: 500px;
+	max-width: 100%;
+	background-size: cover;
+}
+#resultval
+{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	/* padding-top: 374px; */
+	position: absolute;
+	left: 116px;
+}
+#aboutform label
+{
+	font-size: 17px;
+	display: inline-block;
+	text-align: left;
+	color: #231f20;
+	cursor: auto;
+	width: 130px;
+	margin-top: 4px;
+}
 }
