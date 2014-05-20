@@ -6,7 +6,11 @@
 	        version   = "2.0.0">
  <name>CalciumTracker</name>
  <description>Test CalciumTracker</description>
- <author href="http://www.bioquestglobal.com/" email="aparna.u@bioquestglobal.com">BioQuest Solutions Pvt. Ltd.</author>
+ <author href="http://www.bioquestglobal.com/" email="ashok.gowda@bioquestglobal.com">BioQuest Solutions Pvt. Ltd.</author>
  <preference name="Orientation" value="landscape" />
  <content src="index.html" />
+ <platform name="android">
+              <icon src="images/icon.png" density="ldpi" />
+              
+     </platform>
 </widget>
