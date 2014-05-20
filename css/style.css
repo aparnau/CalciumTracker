@@ -82,13 +82,14 @@ p.mid_two
 {
 	text-align: center;
 	height: 85px;
-	border-left: 8px solid #FFFFFF;
-	border-right: 8px solid #FFFFFF;
-	border-bottom: 8px solid #FFFFFF;
+
 	background-color: #eb008b;
-	border-radius: 0px 0px 90px 90px;
-	-moz-border-radius: 0px 0px 90px 90px;
-	-webkit-border-radius: 0px 0px 90px 90px;
+-webkit-border-bottom-right-radius: 90px;
+-webkit-border-bottom-left-radius: 90px;
+-moz-border-radius-bottomright: 90px;
+-moz-border-radius-bottomleft: 90px;
+border-bottom-right-radius: 90px;
+border-bottom-left-radius: 90px;
 }
 #enterbtn a
 {
@@ -321,7 +322,7 @@ p.mid_two
 	color: #231f20;
 	cursor: auto;
 	margin-top: 4px;
-	width: 300px;
+	width: 130px;
 }
 .gridContainer { margin: auto; }
 #maincontainer
@@ -869,13 +870,14 @@ margin-top: 0px;
 	font-size: 23px;
 	font-weight: bold;
 	height: 70px;
-	border-left: 8px solid #FFFFFF;
-	border-right: 8px solid #FFFFFF;
-	border-bottom: 8px solid #FFFFFF;
+
 	background-color: #eb008b;
-	border-radius: 0px 0px 90px 90px;
-	-moz-border-radius: 0px 0px 90px 90px;
-	-webkit-border-radius: 0px 0px 90px 90px;
+-webkit-border-bottom-right-radius: 90px;
+-webkit-border-bottom-left-radius: 90px;
+-moz-border-radius-bottomright: 90px;
+-moz-border-radius-bottomleft: 90px;
+border-bottom-right-radius: 90px;
+border-bottom-left-radius: 90px;
 	width: 180px;
 	margin: auto;
 }
@@ -944,6 +946,11 @@ margin-top: 0px;
 
 @media only screen and (max-width: 481px) {
 #aboutform .ui-field-contain { text-align: left !important; }
+#aboutform label
+{
+
+	width: 300px;
+}
 .ui-field-contain .ui-select
 {
 	width: 20% !important; /*78%;*/
@@ -996,13 +1003,14 @@ color: #FFFFFF;
 font-size: 23px;
 font-weight: bold;
 height: 70px;
-border-left: 1px solid #FFFFFF;
-border-right: 1px solid #FFFFFF;
-border-bottom: 1px solid #FFFFFF;
+
 background-color: #eb008b;
-border-radius: 0px 0px 90px 90px;
--moz-border-radius: 0px 0px 90px 90px;
--webkit-border-radius: 0px 0px 90px 90px;
+-webkit-border-bottom-right-radius: 90px;
+-webkit-border-bottom-left-radius: 90px;
+-moz-border-radius-bottomright: 90px;
+-moz-border-radius-bottomleft: 90px;
+border-bottom-right-radius: 90px;
+border-bottom-left-radius: 90px;
 width: 180px;
 margin: auto;}
 #aboutform label
@@ -1078,13 +1086,14 @@ color: #FFFFFF;
 font-size: 23px;
 font-weight: bold;
 height: 70px;
-border-left: 8px solid #FFFFFF;
-border-right: 8px solid #FFFFFF;
-border-bottom: 8px solid #FFFFFF;
+
 background-color: #eb008b;
-border-radius: 0px 0px 90px 90px;
--moz-border-radius: 0px 0px 90px 90px;
--webkit-border-radius: 0px 0px 90px 90px;
+-webkit-border-bottom-right-radius: 90px;
+-webkit-border-bottom-left-radius: 90px;
+-moz-border-radius-bottomright: 90px;
+-moz-border-radius-bottomleft: 90px;
+border-bottom-right-radius: 90px;
+border-bottom-left-radius: 90px;
 width: 180px;
 margin: auto;
 }
@@ -1095,7 +1104,7 @@ margin: auto;
 	text-align: left;
 	color: #231f20;
 	cursor: auto;
-	width: 130px;
+	width: 180px;
 	margin-top: 4px;
 }
 }
