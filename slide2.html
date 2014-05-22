@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script src="js/respond.min.js"></script>
+<script>
+$(document).ready(function (e) {
+	var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	$(".nextbutton").click(function(e) {
+    window.location='slide3.html';
+  });
+	$(".prevbutton").click(function(e) {
+    window.location='slide1.html';
+  });
+});
+	</script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+ <div id="maincontainer">
+  <div id="slideinside">
+   <div id="top-bar" class="top-bar">
+   </div>
+   <div class="clear">
+   </div>
+   <div id="header"  data-role="header">
+    <p>What happens if you don’t get enough calcium?</p>
+   </div>
+   <div id="slidecontainer">
+    <p>
+    </p>
+    <ul>
+     <li>Inadequate intake of calcium may not show obvious symptoms in the short-term because the human body maintains calcium levels in the blood by taking it from bone. </li>
+     <li>Over a long period, calcium intake below the recommended level can lead to low bone mass (osteopenia) and increase the risks of osteoporosis and bone fractures. </li>
+     <li>Symptoms of severe calcium deficiency include numbness and tingling in the fingers, convulsions and abnormal heart rhythms. </li>
+    </ul>
+    <h4><b>Source:</b> NIH. Calcium: Fact sheet for consumers. Available at: <a href="http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6" target="_blank">http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6</a>
+    </h4>
+    <input name="prevbtn" type="button" value="Previous" class="prevbutton" data-role="none">
+    <input name="nextbtn" type="button" value="Next" class="nextbutton" data-role="none">
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+</body>
+</html>
