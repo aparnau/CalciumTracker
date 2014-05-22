@@ -9,12 +9,13 @@
  <author href="http://www.bioquestglobal.com/" email="ashok.gowda@bioquestglobal.com">BioQuest Solutions Pvt. Ltd.</author>
  <feature name="http://api.phonegap.com/1.0/device" />
  
+
  <!--
 If you do not want any permissions to be added to your app, add the
 following tag to your config.xml; you will still have the INTERNET
 permission on your app, which PhoneGap requires.
 -->
- <preference name="permissions" value="none"/>
+ <preference name="permissions" value="3.1.0"/>
  
  <!-- Customize your app and platform with the preference element. -->
  <preference name="phonegap-version" value="2.5.0" />
