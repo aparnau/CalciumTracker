@@ -15,10 +15,10 @@ If you do not want any permissions to be added to your app, add the
 following tag to your config.xml; you will still have the INTERNET
 permission on your app, which PhoneGap requires.
 -->
- <preference name="permissions" value="3.3.0"/>
+
  
  <!-- Customize your app and platform with the preference element. -->
- <preference name="phonegap-version" value="2.5.0" />
+ <preference name="phonegap-version" value="3.3.0" />
  <!-- all: current version of PhoneGap -->
  <preference name="orientation" value="default" />
  <!-- all: default means both landscape and portrait are enabled -->
@@ -71,17 +71,6 @@ A list of available plugins are available at https://build.phonegap.com/docs/plu
  <icon src="icon.png" gap:platform="winphone" />
  <icon src="icon.png" gap:platform="winphone" gap:role="background" />
  
- <!-- Define app splash screen for each platform. -->
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="android" gap:density="ldpi" />
- <gap:splash src="screen-mdpi-portrait.png" gap:platform="android" gap:density="mdpi" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="android" gap:density="hdpi" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="blackberry" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="ios" width="320" height="480" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="ios" width="640" height="960" />
- <gap:splash src="screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024" />
- <gap:splash src="screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768" />
- <gap:splash src="screen-ldpi-portrait.png" gap:platform="winphone" />
  
  <!--
 Define access to external domains.
