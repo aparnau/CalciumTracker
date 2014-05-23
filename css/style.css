@@ -866,8 +866,8 @@ width:12%;
 }
 .optcontainer .ui-icon, .optcontainer .ui-icon-searchfield:after
 {
-	background-image: url('../images/dwnarrow.png');
-	background-position: 0px 0px;
+	background-image: url('../images/dwnarrow.png') !important;
+	background-position: 0px 0px !important;
 	border-radius: 0px;
 	width: 30px;
 	height: 30px;
@@ -1211,6 +1211,26 @@ text-align: center;
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
 
 @media only screen and (min-device-width : 200px) and (max-device-width : 780px) {
+.nextbutton, .prevbutton, .homebutton {
+background-color: #eb008b !important;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
+background-image: -webkit-linear-gradient(#eb008b, #eb008b) !important;
+background-image: -moz-linear-gradient(#eb008b, #eb008b) !important;
+background-image: -ms-linear-gradient(#eb008b, #eb008b) !important;
+background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
+background-image: linear-gradient(#eb008b, #eb008b) !important;
+clear: both;
+margin: 0 auto !important;
+color: #FFF !important;
+width: 140px !important;
+height: 35px !important;
+border: none;
+margin-left: 20px;
+position: relative;
+cursor: pointer;
+font-size: 18px;
+top: 5px;
+}
 .calcium_head p.linetwo
 {
 	font-size: 19px;
@@ -1219,7 +1239,8 @@ text-align: center;
 	font-family: HelveticaNeue;
 	float: none;
 	text-align: center;
-	padding-left: 0%;
+	padding-left: 2px;
+padding-right: 2px;
 }
 p.mid_one
 {
