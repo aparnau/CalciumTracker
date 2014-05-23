@@ -18,107 +18,14 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/snacks.js"></script>
 <script src="js/calculate.js"></script>
 <script>
 $(document).ready(function (e) {
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-	
-var se_poha=sessionStorage.getItem('se_poha');
-var se_pohafrac=sessionStorage.getItem('se_pohafrac');
-var se_upma=sessionStorage.getItem('se_upma');
-var se_upmafrac=sessionStorage.getItem('se_upmafrac');
-var se_chat=sessionStorage.getItem('se_chat');
-var se_chatfrac=sessionStorage.getItem('se_chatfrac');
-var se_dahivada=sessionStorage.getItem('se_dahivada');
-var se_dahivadafrac=sessionStorage.getItem('se_dahivadafrac');
-var se_vada=sessionStorage.getItem('se_vada');
-var se_vadafrac=sessionStorage.getItem('se_vadafrac');
-var se_dosa=sessionStorage.getItem('se_dosa');
-var se_dosafrac=sessionStorage.getItem('se_dosafrac');
-var se_mas_dosa=sessionStorage.getItem('se_mas_dosa');
-var se_mas_dosafrac=sessionStorage.getItem('se_mas_dosafrac');
-var se_idli=sessionStorage.getItem('se_idli');
-var se_idlifrac=sessionStorage.getItem('se_idlifrac');
-var se_pot_vada=sessionStorage.getItem('se_pot_vada');
-var se_pot_vadafrac=sessionStorage.getItem('se_pot_vadafrac');
-var se_samosa=sessionStorage.getItem('se_samosa');
-var se_samosafrac=sessionStorage.getItem('se_samosafrac');
-var se_sandwich=sessionStorage.getItem('se_sandwich');
-var se_sandwichfrac=sessionStorage.getItem('se_sandwichfrac');
-var se_veg_puff=sessionStorage.getItem('se_veg_puff');
-var se_veg_pufffrac=sessionStorage.getItem('se_veg_pufffrac');
-var se_bajji=sessionStorage.getItem('se_bajji');
-var se_bajjifrac=sessionStorage.getItem('se_bajjifrac');
-var se_pura=sessionStorage.getItem('se_pura');
-var se_purafrac=sessionStorage.getItem('se_purafrac');
-
-$('#poha option[value="'+se_poha+'"]').prop('selected', true);
-$('#pohafrac option[value="'+se_pohafrac+'"]').prop('selected', true);
-$('#upma option[value="'+se_upma+'"]').prop('selected', true);
-$('#upmafrac option[value="'+se_upmafrac+'"]').prop('selected', true);
-$('#chat option[value="'+se_chat+'"]').prop('selected', true);
-$('#chatfrac option[value="'+se_chatfrac+'"]').prop('selected', true);
-$('#dahivada option[value="'+se_dahivada+'"]').prop('selected', true);
-$('#dahivadafrac option[value="'+se_dahivadafrac+'"]').prop('selected', true);
-$('#vada option[value="'+se_vada+'"]').prop('selected', true);
-$('#vadafrac option[value="'+se_vadafrac+'"]').prop('selected', true);
-$('#dosa option[value="'+se_dosa+'"]').prop('selected', true);
-$('#dosafrac option[value="'+se_dosafrac+'"]').prop('selected', true);
-$('#mas_dosa option[value="'+se_mas_dosa+'"]').prop('selected', true);
-$('#mas_dosafrac option[value="'+se_mas_dosafrac+'"]').prop('selected', true);
-
-$('#idli option[value="'+se_idli+'"]').prop('selected', true);
-$('#idlifrac option[value="'+se_idlifrac+'"]').prop('selected', true);
-$('#pot_vada option[value="'+se_pot_vada+'"]').prop('selected', true);
-$('#pot_vadafrac option[value="'+se_pot_vadafrac+'"]').prop('selected', true);
-$('#samosa option[value="'+se_samosa+'"]').prop('selected', true);
-$('#samosafrac option[value="'+se_samosafrac+'"]').prop('selected', true);
-$('#sandwich option[value="'+se_sandwich+'"]').prop('selected', true);
-$('#sandwichfrac option[value="'+se_sandwichfrac+'"]').prop('selected', true);
-$('#veg_puff option[value="'+se_veg_puff+'"]').prop('selected', true);
-$('#veg_pufffrac option[value="'+se_veg_pufffrac+'"]').prop('selected', true);
-$('#bajji option[value="'+se_bajji+'"]').prop('selected', true);
-$('#bajjifrac option[value="'+se_bajjifrac+'"]').prop('selected', true);
-$('#pura option[value="'+se_pura+'"]').prop('selected', true);
-$('#purafrac option[value="'+se_purafrac+'"]').prop('selected', true);
-
-
-$("#poha").selectmenu("refresh");
-$("#pohafrac").selectmenu("refresh");
-$("#upma").selectmenu("refresh");
-$("#upmafrac").selectmenu("refresh");
-$("#chat").selectmenu("refresh");
-$("#chatfrac").selectmenu("refresh");
-$("#dahivada").selectmenu("refresh");
-$("#dahivadafrac").selectmenu("refresh");
-$("#vada").selectmenu("refresh");
-$("#vadafrac").selectmenu("refresh");
-$("#dosa").selectmenu("refresh");
-$("#dosafrac").selectmenu("refresh");
-$("#mas_dosa").selectmenu("refresh");
-$("#mas_dosafrac").selectmenu("refresh");
-$("#idli").selectmenu("refresh");
-$("#idlifrac").selectmenu("refresh");
-$("#pot_vada").selectmenu("refresh");
-$("#pot_vadafrac").selectmenu("refresh");
-$("#samosa").selectmenu("refresh");
-$("#samosafrac").selectmenu("refresh");
-$("#sandwich").selectmenu("refresh");
-$("#sandwichfrac").selectmenu("refresh");
-$("#veg_puff").selectmenu("refresh");
-$("#veg_pufffrac").selectmenu("refresh");
-$("#bajji").selectmenu("refresh");
-$("#bajjifrac").selectmenu("refresh");
-$("#pura").selectmenu("refresh");
-$("#purafrac").selectmenu("refresh");
-	
 		
-	
 $(".savenxt").click(function(e) {
 	snacks();
-  window.location="sweets.html";
+  window.location="snacks1.html";
 });
 });
 </script>
@@ -150,7 +57,8 @@ $(".savenxt").click(function(e) {
        <label for="poha"><i>Poha</i>(Rice flakes)</label>
        <select name="poha" id="poha">
         <option value="">&nbsp;</option>
-        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="0">0</option>
+        <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -168,7 +76,8 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="pohafrac" id="pohafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
@@ -177,7 +86,8 @@ $(".savenxt").click(function(e) {
        <label for="upma"><i>Upma </i>(Semolina)</label>
        <select name="upma" id="upma">
         <option value="">&nbsp;</option>
-        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="0">0</option>
+        <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -195,7 +105,8 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="upmafrac" id="upmafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
@@ -205,21 +116,21 @@ $(".savenxt").click(function(e) {
        <select name="chat" id="chat">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
+        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
        </select>
        <select name="chatfrac" id="chatfrac">
         <option value="">&nbsp;</option>
@@ -234,21 +145,21 @@ $(".savenxt").click(function(e) {
        <select name="dahivada" id="dahivada">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
+        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
        </select>
        <select name="dahivadafrac" id="dahivadafrac">
         <option value="">&nbsp;</option>
@@ -263,21 +174,21 @@ $(".savenxt").click(function(e) {
        <select name="vada" id="vada">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
+        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
        </select>
        <select name="vadafrac" id="vadafrac">
         <option value="">&nbsp;</option>
@@ -292,21 +203,21 @@ $(".savenxt").click(function(e) {
        <select name="dosa" id="dosa">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
+        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
        </select>
        <select name="dosafrac" id="dosafrac">
         <option value="">&nbsp;</option>
@@ -321,21 +232,21 @@ $(".savenxt").click(function(e) {
        <select name="mas_dosa" id="mas_dosa">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
+        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
        </select>
        <select name="mas_dosafrac" id="mas_dosafrac">
         <option value="">&nbsp;</option>
@@ -345,218 +256,14 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 </option>
        </select>
       </div>
-      <div class="ui-field-contain">
-       <label for="idli"><i>Idli</i></label>
-       <select name="idli" id="idli">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="idlifrac" id="idlifrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="pot_vada">Potato <i>vada</i></label>
-       <select name="pot_vada" id="pot_vada">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="pot_vadafrac" id="pot_vadafrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="samosa"><i>Samosa</i></label>
-       <select name="samosa" id="samosa">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="samosafrac" id="samosafrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="sandwich">Sandwich</label>
-       <select name="sandwich" id="sandwich">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="sandwichfrac" id="sandwichfrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="veg_puff">Vegetable puff</label>
-       <select name="veg_puff" id="veg_puff">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="veg_pufffrac" id="veg_pufffrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="bajji"><i>Bajji/pakoda</i></label>
-       <select name="bajji" id="bajji">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="bajjifrac" id="bajjifrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="pura"><i>Besan ka pura</i></label>
-       <select name="pura" id="pura">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No</option>
-        <option value="2">2 Nos</option>
-        <option value="3">3 Nos</option>
-        <option value="4">4 Nos</option>
-        <option value="5">5 Nos</option>
-        <option value="6">6 Nos</option>
-        <option value="7">7 Nos</option>
-        <option value="8">8 Nos</option>
-        <option value="9">9 Nos</option>
-        <option value="10">10 Nos</option>
-        <option value="11">11 Nos</option>
-        <option value="12">12 Nos</option>
-        <option value="13">13 Nos</option>
-        <option value="14">14 Nos</option>
-        <option value="15">15 Nos</option>
-       </select>
-       <select name="purafrac" id="purafrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
      </form>
-     
     </div><!--optcontainer -->
    </div>
   </div>
   <div class="clear">
   </div>
   <div class="navigation" data-role="footer">
-   <div id="prev"><a href="veg-dry.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   <div id="prev"><a href="veg-dry.html" data-ajax="false"><img src="images/prevarrow.png" alt=""/></a>
    </div>
    <div id="next">
     <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
