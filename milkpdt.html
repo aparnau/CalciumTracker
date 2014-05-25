@@ -97,7 +97,7 @@ $(".savenxt").click(function(e) {
 </script>
 </head>
 <body>
-<div class="gridContainer clearfix">
+<div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
   <div id="insidecont">
    <div id="top-bar" class="top-bar">
@@ -121,7 +121,7 @@ $(".savenxt").click(function(e) {
      <form>
       <div class="ui-field-contain">
        <label for="milk_buffalo">Milk (buffalo)</label>
-       <select name="milk_buffalo" id="milk_buffalo" data-native-menu="false">
+       <select name="milk_buffalo" id="milk_buffalo" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Cup</option>
@@ -140,7 +140,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Cups</option>
         <option value="15">15 Cups</option>
        </select>
-       <select name="milk_buffalofrac" id="milk_buffalofrac" data-native-menu="false">
+       <select name="milk_buffalofrac" id="milk_buffalofrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Cups</option>
@@ -150,7 +150,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="milk_cow">Milk (cow)</label>
-       <select name="milk_cow" id="milk_cow" data-native-menu="false"> 
+       <select name="milk_cow" id="milk_cow" > 
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -169,7 +169,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="milk_cowfrac" id="milk_cowfrac" data-native-menu="false">
+       <select name="milk_cowfrac" id="milk_cowfrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -179,7 +179,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="skimmed_milk">Skimmed milk</label>
-       <select name="skimmed_milk" id="skimmed_milk" data-native-menu="false">
+       <select name="skimmed_milk" id="skimmed_milk" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -198,7 +198,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="skimmed_milkfrac" id="skimmed_milkfrac" data-native-menu="false">
+       <select name="skimmed_milkfrac" id="skimmed_milkfrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -208,7 +208,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="curd">Curd (cow’s milk)</label>
-       <select name="curd" id="curd" data-native-menu="false">
+       <select name="curd" id="curd" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
@@ -226,7 +226,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 K</option>
         <option value="15">15 K</option>
        </select>
-       <select name="curdfrac" id="curdfrac" data-native-menu="false">
+       <select name="curdfrac" id="curdfrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
@@ -235,7 +235,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="cheese">Cheese</label>
-       <select name="cheese" id="cheese" data-native-menu="false">
+       <select name="cheese" id="cheese" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Slice</option>
@@ -254,7 +254,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Slices</option>
         <option value="15">15 Slices</option>
        </select>
-       <select name="cheesefrac" id="cheesefrac" data-native-menu="false">
+       <select name="cheesefrac" id="cheesefrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Slices</option>
@@ -264,7 +264,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="buttermilk">Buttermilk</label>
-       <select name="buttermilk" id="buttermilk" data-native-menu="false">
+       <select name="buttermilk" id="buttermilk" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -283,7 +283,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="buttermilkfrac" id="buttermilkfrac" data-native-menu="false">
+       <select name="buttermilkfrac" id="buttermilkfrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -293,7 +293,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="lassi"><i>Lassi</i></label>
-       <select name="lassi" id="lassi" data-native-menu="false">
+       <select name="lassi" id="lassi" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -312,7 +312,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="lassifrac" id="lassifrac" data-native-menu="false">
+       <select name="lassifrac" id="lassifrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -322,7 +322,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="bananashake">Banana milk shake </label>
-       <select name="bananashake" id="bananashake" data-native-menu="false">
+       <select name="bananashake" id="bananashake" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -341,7 +341,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="bananashakefrac" id="bananashakefrac" data-native-menu="false">
+       <select name="bananashakefrac" id="bananashakefrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -351,7 +351,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="strawberry">Strawberry milk shake </label>
-       <select name="strawberry" id="strawberry" data-native-menu="false">
+       <select name="strawberry" id="strawberry" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -370,7 +370,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="strawberryfrac" id="strawberryfrac" data-native-menu="false">
+       <select name="strawberryfrac" id="strawberryfrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
@@ -380,7 +380,7 @@ $(".savenxt").click(function(e) {
       </div>
       <div class="ui-field-contain">
        <label for="apple">Apple milk shake</label>
-       <select name="apple" id="apple" data-native-menu="false">
+       <select name="apple" id="apple" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -399,7 +399,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="applefrac" id="applefrac" data-native-menu="false">
+       <select name="applefrac" id="applefrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>
