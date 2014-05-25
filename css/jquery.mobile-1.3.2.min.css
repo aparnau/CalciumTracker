@@ -1412,8 +1412,8 @@ to { transform: translateY(100%) }
 }
 .flip
 {
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateX(0);
+	/*-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(0);*/
 	-moz-backface-visibility: hidden;
 	-moz-transform: translateX(0);
 	backface-visibility: hidden;
@@ -1525,9 +1525,9 @@ to { transform: rotateY(0) }
 }
 .turn
 {
-	-webkit-backface-visibility: hidden;
+	/*-webkit-backface-visibility: hidden;
 	-webkit-transform: translateX(0);
-	-webkit-transform-origin: 0;
+	-webkit-transform-origin: 0;*/
 	-moz-backface-visibility: hidden;
 	-moz-transform: translateX(0);
 	-moz-transform-origin: 0;
@@ -3530,8 +3530,8 @@ th.ui-table-priority-6, td.ui-table-priority-6, th.ui-table-priority-5, td.ui-ta
 }
 .ui-panel-animate.ui-panel:not(.ui-panel-display-reveal), .ui-panel-animate.ui-panel:not(.ui-panel-display-reveal)>div, .ui-panel-animate.ui-panel-closed.ui-panel-display-reveal>div, .ui-panel-animate.ui-panel-content-wrap, .ui-panel-animate.ui-panel-content-fixed-toolbar
 {
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translate3d(0, 0, 0)
+	/*-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0)*/
 }
 .ui-panel-position-left { left: -17em }
 .ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay, .ui-panel-animate.ui-panel-position-left.ui-panel-display-push
