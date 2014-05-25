@@ -2616,10 +2616,10 @@ label.ui-submit
 	max-height: 100%;
 	filter: Alpha(Opacity=0);
 	opacity: 0;
-	z-index: 2
+/*	z-index: 2*/
 }
 .ui-select .ui-disabled { opacity: .3 }
-.ui-select .ui-disabled select { display: none }
+.ui-select .ui-disabled select { display: none; }
 @-moz-document url-prefix() {
 .ui-select .ui-btn select {
 opacity:.0001

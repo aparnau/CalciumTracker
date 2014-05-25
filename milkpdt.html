@@ -9,7 +9,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
-<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -98,352 +97,340 @@ $(".savenxt").click(function(e) {
 </head>
 <body>
 <div class="gridContainer clearfix" data-role="page">
- <div id="maincontainer">
-  <div id="insidecont">
-   <div id="top-bar" class="top-bar">
-   </div>
-   <div class="clear">
-   </div>
-   <div id="header" data-role="header">
-    <p>Milk and milk products</p>
-    <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
+  <div id="maincontainer">
+    <div id="insidecont">
+      <div id="top-bar" class="top-bar"> </div>
+      <div class="clear"> </div>
+      <div id="header" data-role="header">
+        <p>Milk and milk products</p>
+        <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
-        data-iconpos="notext" class="ui-btn-right">Menu </a>
-   </div>
-   <div class="clear"></div>
-   <div id="menu-main">
-    <div class="optcontainer">
-     <div id="headcontainer">
-      <div class="head1"><span> Food items </span></div>
-      <div class="head2"><span> Portion eaten </span></div>
-     </div>
-     <div class="clear"></div>
-     <form>
-      <div class="ui-field-contain">
-       <label for="milk_buffalo">Milk (buffalo)</label>
-       <select name="milk_buffalo" id="milk_buffalo" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Cup</option>
-        <option value="2">2 Cups</option>
-        <option value="3">3 Cups</option>
-        <option value="4">4 Cups</option>
-        <option value="5">5 Cups</option>
-        <option value="6">6 Cups</option>
-        <option value="7">7 Cups</option>
-        <option value="8">8 Cups</option>
-        <option value="9">9 Cups</option>
-        <option value="10">10 Cups</option>
-        <option value="11">11 Cups</option>
-        <option value="12">12 Cups</option>
-        <option value="13">13 Cups</option>
-        <option value="14">14 Cups</option>
-        <option value="15">15 Cups</option>
-       </select>
-       <select name="milk_buffalofrac" id="milk_buffalofrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Cups</option>
-        <option value=".50">1/2 Cups</option>
-        <option value=".75">3/4 Cups</option>
-       </select>
+        data-iconpos="notext" class="ui-btn-right">Menu </a> </div>
+      <div class="clear"></div>
+      <div id="menu-main">
+        <div class="optcontainer">
+          <div id="headcontainer">
+            <div class="head1"><span> Food items </span></div>
+            <div class="head2"><span> Portion eaten </span></div>
+          </div>
+          <div class="clear"></div>
+          <form>
+            <div class="ui-field-contain">
+              <label for="milk_buffalo">Milk (buffalo)</label>
+              <select name="milk_buffalo" id="milk_buffalo" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Cup</option>
+                <option value="2">2 Cups</option>
+                <option value="3">3 Cups</option>
+                <option value="4">4 Cups</option>
+                <option value="5">5 Cups</option>
+                <option value="6">6 Cups</option>
+                <option value="7">7 Cups</option>
+                <option value="8">8 Cups</option>
+                <option value="9">9 Cups</option>
+                <option value="10">10 Cups</option>
+                <option value="11">11 Cups</option>
+                <option value="12">12 Cups</option>
+                <option value="13">13 Cups</option>
+                <option value="14">14 Cups</option>
+                <option value="15">15 Cups</option>
+              </select>
+              <select name="milk_buffalofrac" id="milk_buffalofrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Cups</option>
+                <option value=".50">1/2 Cups</option>
+                <option value=".75">3/4 Cups</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="milk_cow">Milk (cow)</label>
+              <select name="milk_cow" id="milk_cow" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="milk_cowfrac" id="milk_cowfrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="skimmed_milk">Skimmed milk</label>
+              <select name="skimmed_milk" id="skimmed_milk" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="skimmed_milkfrac" id="skimmed_milkfrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="curd">Curd (cow’s milk)</label>
+              <select name="curd" id="curd" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 K</option>
+                <option value="2">2 K</option>
+                <option value="3">3 K</option>
+                <option value="4">4 K</option>
+                <option value="5">5 K</option>
+                <option value="6">6 K</option>
+                <option value="7">7 K</option>
+                <option value="8">8 K</option>
+                <option value="9">9 K</option>
+                <option value="10">10 K</option>
+                <option value="11">11 K</option>
+                <option value="12">12 K</option>
+                <option value="13">13 K</option>
+                <option value="14">14 K</option>
+                <option value="15">15 K</option>
+              </select>
+              <select name="curdfrac" id="curdfrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 K</option>
+                <option value=".50">1/2 K</option>
+                <option value=".75">3/4 K</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="cheese">Cheese</label>
+              <select name="cheese" id="cheese" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Slice</option>
+                <option value="2">2 Slices</option>
+                <option value="3">3 Slices</option>
+                <option value="4">4 Slices</option>
+                <option value="5">5 Slices</option>
+                <option value="6">6 Slices</option>
+                <option value="7">7 Slices</option>
+                <option value="8">8 Slices</option>
+                <option value="9">9 Slices</option>
+                <option value="10">10 Slices</option>
+                <option value="11">11 Slices</option>
+                <option value="12">12 Slices</option>
+                <option value="13">13 Slices</option>
+                <option value="14">14 Slices</option>
+                <option value="15">15 Slices</option>
+              </select>
+              <select name="cheesefrac" id="cheesefrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Slices</option>
+                <option value=".50">1/2 Slices</option>
+                <option value=".75">3/4 Slices</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="buttermilk">Buttermilk</label>
+              <select name="buttermilk" id="buttermilk" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="buttermilkfrac" id="buttermilkfrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="lassi"><i>Lassi</i></label>
+              <select name="lassi" id="lassi" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="lassifrac" id="lassifrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="bananashake">Banana milk shake </label>
+              <select name="bananashake" id="bananashake" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="bananashakefrac" id="bananashakefrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="strawberry">Strawberry milk shake </label>
+              <select name="strawberry" id="strawberry" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="strawberryfrac" id="strawberryfrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+            <div class="ui-field-contain">
+              <label for="apple">Apple milk shake</label>
+              <select name="apple" id="apple" >
+                <option value="">&nbsp;</option>
+                <option value="0">0</option>
+                <option value="1">1 Glass</option>
+                <option value="2">2 Glasses</option>
+                <option value="3">3 Glasses</option>
+                <option value="4">4 Glasses</option>
+                <option value="5">5 Glasses</option>
+                <option value="6">6 Glasses</option>
+                <option value="7">7 Glasses</option>
+                <option value="8">8 Glasses</option>
+                <option value="9">9 Glasses</option>
+                <option value="10">10 Glasses</option>
+                <option value="11">11 Glasses</option>
+                <option value="12">12 Glasses</option>
+                <option value="13">13 Glasses</option>
+                <option value="14">14 Glasses</option>
+                <option value="15">15 Glasses</option>
+              </select>
+              <select name="applefrac" id="applefrac" >
+                <option value="">&nbsp;</option>
+                <option value=".0">0 </option>
+                <option value=".25">1/4 Glasses</option>
+                <option value=".50">1/2 Glasses</option>
+                <option value=".75">3/4 Glasses</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <!--optcontainer --> 
       </div>
-      <div class="ui-field-contain">
-       <label for="milk_cow">Milk (cow)</label>
-       <select name="milk_cow" id="milk_cow" > 
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="milk_cowfrac" id="milk_cowfrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
+    </div>
+    <div class="clear"> </div>
+    <div class="navigation" data-role="footer">
+      <div id="prev"> <a href="recallhome.html"  data-ajax="false"><img src="images/prevarrow.png"/></a> </div>
+      <div id="next">
+        <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
       </div>
-      <div class="ui-field-contain">
-       <label for="skimmed_milk">Skimmed milk</label>
-       <select name="skimmed_milk" id="skimmed_milk" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="skimmed_milkfrac" id="skimmed_milkfrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="curd">Curd (cow’s milk)</label>
-       <select name="curd" id="curd" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>       <option value="1">1 K</option>
-        <option value="2">2 K</option>
-        <option value="3">3 K</option>
-        <option value="4">4 K</option>
-        <option value="5">5 K</option>
-        <option value="6">6 K</option>
-        <option value="7">7 K</option>
-        <option value="8">8 K</option>
-        <option value="9">9 K</option>
-        <option value="10">10 K</option>
-        <option value="11">11 K</option>
-        <option value="12">12 K</option>
-        <option value="13">13 K</option>
-        <option value="14">14 K</option>
-        <option value="15">15 K</option>
-       </select>
-       <select name="curdfrac" id="curdfrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>       <option value=".25">1/4 K</option>
-        <option value=".50">1/2 K</option>
-        <option value=".75">3/4 K</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="cheese">Cheese</label>
-       <select name="cheese" id="cheese" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Slice</option>
-        <option value="2">2 Slices</option>
-        <option value="3">3 Slices</option>
-        <option value="4">4 Slices</option>
-        <option value="5">5 Slices</option>
-        <option value="6">6 Slices</option>
-        <option value="7">7 Slices</option>
-        <option value="8">8 Slices</option>
-        <option value="9">9 Slices</option>
-        <option value="10">10 Slices</option>
-        <option value="11">11 Slices</option>
-        <option value="12">12 Slices</option>
-        <option value="13">13 Slices</option>
-        <option value="14">14 Slices</option>
-        <option value="15">15 Slices</option>
-       </select>
-       <select name="cheesefrac" id="cheesefrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Slices</option>
-        <option value=".50">1/2 Slices</option>
-        <option value=".75">3/4 Slices</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="buttermilk">Buttermilk</label>
-       <select name="buttermilk" id="buttermilk" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="buttermilkfrac" id="buttermilkfrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="lassi"><i>Lassi</i></label>
-       <select name="lassi" id="lassi" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="lassifrac" id="lassifrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="bananashake">Banana milk shake </label>
-       <select name="bananashake" id="bananashake" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="bananashakefrac" id="bananashakefrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="strawberry">Strawberry milk shake </label>
-       <select name="strawberry" id="strawberry" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="strawberryfrac" id="strawberryfrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="apple">Apple milk shake</label>
-       <select name="apple" id="apple" >
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 Glass</option>
-        <option value="2">2 Glasses</option>
-        <option value="3">3 Glasses</option>
-        <option value="4">4 Glasses</option>
-        <option value="5">5 Glasses</option>
-        <option value="6">6 Glasses</option>
-        <option value="7">7 Glasses</option>
-        <option value="8">8 Glasses</option>
-        <option value="9">9 Glasses</option>
-        <option value="10">10 Glasses</option>
-        <option value="11">11 Glasses</option>
-        <option value="12">12 Glasses</option>
-        <option value="13">13 Glasses</option>
-        <option value="14">14 Glasses</option>
-        <option value="15">15 Glasses</option>
-       </select>
-       <select name="applefrac" id="applefrac" >
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 Glasses</option>
-        <option value=".50">1/2 Glasses</option>
-        <option value=".75">3/4 Glasses</option>
-       </select>
-      </div>
-     </form>
-    </div><!--optcontainer -->
-   </div>
+    </div>
+    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
+      <ul data-role="listview">
+        <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a> </li>
+        <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a> </li>
+        <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a> </li>
+        <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a> </li>
+        <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a> </li>
+        <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a> </li>
+      </ul>
+    </div>
   </div>
-  <div class="clear">
-  </div>
-  <div class="navigation" data-role="footer">
-   <div id="prev">
-    <a href="recallhome.html"  data-ajax="false"><img src="images/prevarrow.png"/></a>
-   </div>
-   <div id="next">
-    <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
-   </div>
-  </div>
-  <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
-   <ul data-role="listview">
-    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
-    </li>
-   </ul>
-  </div>
- </div>
 </div>
 <!-- /panel -->
 </body>
