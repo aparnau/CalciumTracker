@@ -81,6 +81,8 @@ var applecal;
 var coc_chutneycal;
 var tillchutneycal;
 var cereal_total;
+
+
 function milk() {
     var milk_buffalo = $("#milk_buffalo").val() + $("#milk_buffalofrac").val();
     var milk_cow = $("#milk_cow").val() + $("#milk_cowfrac").val();
