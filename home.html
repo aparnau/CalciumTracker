@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
-<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -145,6 +145,8 @@ localStorage.removeItem("menopause");
     }); //gender change
 
     $(".clear-btn").on('click', function () {
+			
+
         $('#name').val('');
         $('#age').val('');
 				$('#calrecomm').text('mg/day');
@@ -169,6 +171,12 @@ $("#menopause_0").checkboxradio("refresh");
 			      $('.pregnantblock').hide();
             $('.lactatingblock').hide();
             $('.menopauseblock').hide();
+									localStorage.removeItem('name');
+			localStorage.removeItem('age');
+			localStorage.removeItem('gender');
+		  localStorage.removeItem('preg');
+			localStorage.removeItem('lact');
+			localStorage.removeItem('menopause');
     });
 
 });
@@ -230,8 +238,9 @@ $("#menopause_0").checkboxradio("refresh");
       </fieldset>
      </div>
      <div class="btn-container">
-      <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
       <input name="clearbtn" type="button" value="Reset" class="clear-btn" data-role="none">
+      <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
+     
      </div>
     </form>
    </div>

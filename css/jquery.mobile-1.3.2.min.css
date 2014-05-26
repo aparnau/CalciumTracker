@@ -3478,7 +3478,7 @@ th.ui-table-priority-6, td.ui-table-priority-6, th.ui-table-priority-5, td.ui-ta
 }
 .ui-panel
 {
-	width: 17em;
+	width:14em;/* 17em;*/
 	min-height: 100%;
 	max-height: none;
 	border-width: 0;

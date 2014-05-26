@@ -28,6 +28,8 @@ body
 {
 	background-color: #e1ecf6;
 	max-width: 100%;
+	padding:0px;
+	margin:0px;
 }
 .gridContainer
 {
@@ -145,14 +147,11 @@ p.mid_two
 	font-weight: normal;
 	height: 50px;
 	background-color: #eb008b;
-	-webkit-border-bottom-right-radius: 90px;
-	-webkit-border-bottom-left-radius: 90px;
-	-moz-border-radius-bottomright: 90px;
-	-moz-border-radius-bottomleft: 90px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	border-bottom-left-radius: 90px;
-	border-bottom-right-radius: 90px;
+	border-bottom-left-radius: 89px;
+	border-bottom-right-radius: 89px;
+	border: 4px solid #eb008b;
 	width: 110px;
 	margin: auto;
 	padding-top: 5px;
@@ -668,6 +667,7 @@ float: left;*/
 	position: relative;
 	font-size: 18px;
 	right: 0px;
+
 }
 #aboutform .ui-radio label
 {
@@ -721,6 +721,7 @@ float: left;*/
 {
 	float: left;
 	margin-left: 3%;
+	margin-top: 8px;
 }
 #next
 {
@@ -792,7 +793,7 @@ float: left;*/
 #header .ui-icon, #header .ui-btn-icon-notext
 {
 	width: 45px;
-	height: 62px;
+	height: 61px;
 	margin-top: -1px;
 	border: none;
 	top: 0px;
@@ -995,14 +996,11 @@ width:12%;
 	font-weight: normal;
 	height: 48px;
 	background-color: #eb008b;
-	-webkit-border-bottom-right-radius: 90px;
-	-webkit-border-bottom-left-radius: 90px;
-	-moz-border-radius-bottomright: 90px;
-	-moz-border-radius-bottomleft: 90px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	border-bottom-left-radius: 90px;
-	border-bottom-right-radius: 90px;
+	border-bottom-left-radius: 89px;
+	border-bottom-right-radius: 89px;
+	border: 4px solid #eb008b;
 	width: 110px;
 	margin: auto;
 	padding-top: 10px;
@@ -1055,6 +1053,7 @@ p.resultcom { padding-top: 0px !important; }
 	margin-bottom: 0px;
 	margin-top: 0px;
 	text-align: center;
+		margin-bottom:20px;
 }
 .ui-controlgroup-controls label
 {
@@ -1132,14 +1131,11 @@ p.resultcom { padding-top: 0px !important; }
 	font-weight: normal;
 	height: 70px;
 	background-color: #eb008b;
-	-webkit-border-bottom-right-radius: 90px;
-	-webkit-border-bottom-left-radius: 90px;
-	-moz-border-radius-bottomright: 90px;
-	-moz-border-radius-bottomleft: 90px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	border-bottom-left-radius: 90px;
-	border-bottom-right-radius: 90px;
+	border-bottom-left-radius: 89px;
+	border-bottom-right-radius: 89px;
+	border: 4px solid #eb008b;
 	width: 120px;
 	margin: auto;
 }
@@ -1253,7 +1249,7 @@ p.resultcom { padding-top: 0px !important; }
 	margin-left: 0px;
 	cursor: pointer;
 	font-size: 14px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .calcium_mid p.linetwo
 {
@@ -1397,14 +1393,11 @@ p.mid_two
 	font-weight: normal;
 	height: 44px;
 	background-color: #eb008b;
-	-webkit-border-bottom-right-radius: 90px;
-	-webkit-border-bottom-left-radius: 90px;
-	-moz-border-radius-bottomright: 90px;
-	-moz-border-radius-bottomleft: 90px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	border-bottom-left-radius: 90px;
-	border-bottom-right-radius: 90px;
+	border-bottom-left-radius: 89px;
+	border-bottom-right-radius: 89px;
+	border: 4px solid #eb008b;
 	width: 110px;
 	margin: auto;
 	padding-top: 10px;
