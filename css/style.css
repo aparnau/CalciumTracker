@@ -109,10 +109,10 @@ body
 	height: 40px;
 	padding-top: 60px;
 }
- .calcium_mid p.linetwo
+.calcium_mid p.linetwo
 {
 	font-size: 19px;
-	color:#FFFFFF;
+	color: #FFFFFF;
 	margin-top: 18px;
 	font-family: HelveticaNeue;
 	float: none;
@@ -612,7 +612,7 @@ float: left;*/
 	cursor: pointer;
 	font-size: 15px;
 }
-.recall, .savenxt,.homebtn
+.recall, .savenxt, .homebtn
 {
 	background-color: #eb008b !important;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
@@ -775,7 +775,6 @@ float: left;*/
 {
 	font-size: 14px !important;
 	padding-left: 34px !important;
-
 }
 .btngroup .listitem.ui-last-child { border-bottom: none !important; }
 #header .ui-btn-corner-all
@@ -832,7 +831,7 @@ width:12%;
 .optcontainer .ui-field-contain label.ui-select
 {
 	width: 50% !important;
-	margin:6px 2% 0 1%;
+	margin: 6px 2% 0 1%;
 }
 .optcontainer .ui-field-contain
 {
@@ -1033,7 +1032,7 @@ p.resultcom { padding-top: 0px !important; }
 }
 #aboutform
 {
-	width:100%;
+	width: 100%;
 	margin: auto;
 }
 .ui-select .ui-btn select
@@ -1104,10 +1103,9 @@ p.resultcom { padding-top: 0px !important; }
 }
 #header p
 {
-padding-left: 0px;
-
-margin-top: 20px !important; 
-font-size: 20px !important;
+	padding-left: 0px;
+	margin-top: 20px !important;
+	font-size: 20px !important;
 }
 .optcontainer .ui-btn-inner
 {
@@ -1189,7 +1187,6 @@ font-size: 20px !important;
 #slidecontainer p
 {
 	padding: 10px;
-
 	color: #231f20;
 	text-align: left;
 }
@@ -1204,7 +1201,6 @@ font-size: 20px !important;
 #slidecontainer ul { padding: 0 0 0 30px; }
 #slidecontainer li
 {
-
 	margin-top: 0% !important;
 	padding-top: 0px !important;
 	text-align: left;
@@ -1241,7 +1237,7 @@ font-size: 20px !important;
 	font-size: 18px;
 	top: 5px;
 }
-.recall, .savenxt,.homebtn
+.recall, .savenxt, .homebtn
 {
 	background-color: #eb008b !important;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
@@ -1254,12 +1250,11 @@ font-size: 20px !important;
 	width: 100px;
 	height: 50px;
 	border: none;
-	margin-left:0px;
+	margin-left: 0px;
 	cursor: pointer;
 	font-size: 14px;
 	margin-bottom: 10px;
 }
-
 .calcium_mid p.linetwo
 {
 	font-size: 19px;
@@ -1283,7 +1278,7 @@ p.mid_two
 	padding-top: 0px;
 	margin-top: 0px;
 	padding-bottom: 0px;
-margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 .logo_home
 {
@@ -1379,8 +1374,6 @@ margin-bottom: 0px;
 	padding-top: 8px !important;
 	text-align: left;
 }
-
-
 .optcontainer .ui-btn-inner
 {
 	padding-left: 3px !important;
@@ -1427,45 +1420,47 @@ margin-bottom: 0px;
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
-
-
 }
 @media screen and (max-device-width: 500px) {
-
-.submit-btn {
-background-color: #eb008b !important;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
-background-image: -webkit-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -moz-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -ms-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
-background-image: linear-gradient(#eb008b, #eb008b) !important;
-color: #FFF !important;
-width:100px;
-height: 30px;
-border: none;
-float: left;
-cursor: pointer;
-font-size: 15px;
+.submit-btn
+{
+	background-color: #eb008b !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
+	background-image: -webkit-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -moz-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -ms-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: linear-gradient(#eb008b, #eb008b) !important;
+	color: #FFF !important;
+	width: 100px;
+	height: 30px;
+	border: none;
+	float: left;
+	cursor: pointer;
+	font-size: 15px;
 }
-
-.clear-btn {
-background-color: #eb008b !important;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
-background-image: -webkit-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -moz-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -ms-linear-gradient(#eb008b, #eb008b) !important;
-background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
-background-image: linear-gradient(#eb008b, #eb008b) !important;
-color: #FFF !important;
-width: 100px !important;
-height: 30px;
-border: none;
-margin-left: 1px;
-cursor: pointer;
-font-size: 15px;
+.clear-btn
+{
+	background-color: #eb008b !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eb008b), to(#eb008b)) !important;
+	background-image: -webkit-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -moz-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -ms-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
+	background-image: linear-gradient(#eb008b, #eb008b) !important;
+	color: #FFF !important;
+	width: 100px !important;
+	height: 30px;
+	border: none;
+	margin-left: 1px;
+	cursor: pointer;
+	font-size: 15px;
 }
-.head1 span, .head2 span { margin-left: 6px; font-size: 15px;}
+.head1 span, .head2 span
+{
+	margin-left: 6px;
+	font-size: 15px;
+}
 .calcium_mid
 {
 	background-color: #eb008b;
@@ -1486,7 +1481,7 @@ p.mid_two
 	padding-top: 0px;
 	margin-top: 0px;
 	padding-bottom: 0px;
-margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 }
 .tablecontainer { }
@@ -1521,7 +1516,6 @@ margin-bottom: 0px;
 	margin-bottom: 0px;
 	padding: 10px;
 }
-
 }
 .resultcom a
 {
@@ -1533,10 +1527,15 @@ margin-bottom: 0px;
 	color: #0054a5;
 	text-decoration: none;
 }
-#slidecontainer h4 { text-align: left;font-size: 12px; }
-
-
-.ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup {
-margin: 0;
-width: 55%;
+#slidecontainer h4
+{
+	text-align: left;
+	font-size: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup
+{
+	margin: 0;
+	width: 55%;
 }
