@@ -148,10 +148,16 @@ p.mid_two
 	-webkit-border-bottom-left-radius: 90px;
 	-moz-border-radius-bottomright: 90px;
 	-moz-border-radius-bottomleft: 90px;
+<<<<<<< HEAD
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 90px;
 border-bottom-right-radius: 90px;
+=======
+
+border-bottom-left-radius: 93px;
+border-bottom-right-radius: 93px;
+>>>>>>> 2846a753545c0f0222bcb78c23fba2cab60a427c
 	width: 110px;
 	margin: auto;
 	padding-top: 5px;
@@ -999,12 +1005,19 @@ width:12%;
 	-webkit-border-bottom-left-radius: 90px;
 	-moz-border-radius-bottomright: 90px;
 	-moz-border-radius-bottomleft: 90px;
+<<<<<<< HEAD
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 90px;
 border-bottom-right-radius: 90px;
 	
 
+=======
+
+	
+border-bottom-left-radius: 90px;
+border-bottom-right-radius: 90px;
+>>>>>>> 2846a753545c0f0222bcb78c23fba2cab60a427c
 
 	width: 110px;
 	margin: auto;
