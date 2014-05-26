@@ -148,8 +148,9 @@ p.mid_two
 	-webkit-border-bottom-left-radius: 90px;
 	-moz-border-radius-bottomright: 90px;
 	-moz-border-radius-bottomleft: 90px;
-	border-bottom-right-radius: 63px;
-	border-bottom-left-radius: 63px;
+
+border-bottom-left-radius: 93px;
+border-bottom-right-radius: 93px;
 	width: 110px;
 	margin: auto;
 	padding-top: 5px;
@@ -997,8 +998,11 @@ width:12%;
 	-webkit-border-bottom-left-radius: 90px;
 	-moz-border-radius-bottomright: 90px;
 	-moz-border-radius-bottomleft: 90px;
-	border-bottom-right-radius: 63px;
-	border-bottom-left-radius: 63px;
+
+	
+border-bottom-left-radius: 90px;
+border-bottom-right-radius: 90px;
+
 	width: 110px;
 	margin: auto;
 	padding-top: 10px;
@@ -1339,13 +1343,16 @@ p.mid_two
 	float: left;
 	text-align: center;
 	padding: 2px;
+		padding-top: 8px !important;
 }
 .head1
 {
 	width: 47%;
 	padding: 2px;
+	padding-top: 8px !important;
 	text-align: left;
 }
+
 #header p
 {
 	padding-left: 0px;
@@ -1395,6 +1402,12 @@ p.mid_two
 	cursor: auto;
 	width: 180px;
 	margin-top: 4px;
+}
+}
+@media screen and (max-device-width: 500px)
+{
+.head1 span, .head2 span {
+ margin-left: 0px;
 }
 }
 .tablecontainer { }
