@@ -966,7 +966,7 @@ width:12%;
 	background-color: #eb008b;
 	text-align: center;
 	color: #ffffff;
-	height: 70px;
+	height: 75px;
 }
 .result_mid .mid_one
 {
@@ -1206,7 +1206,7 @@ p.resultcom { padding-top: 0px !important; }
 {
 	padding-left: 0px;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 18px;
 	font-size: 20px;
 }
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
@@ -1503,11 +1503,13 @@ p.mid_two
  @media only screen and (max-width: 440px) {
 #slideinside #header p
 {
-	text-align: left;
-	margin-top: 0px;
-	font-size: 20px;
-	margin-bottom: 0px;
-	padding: 10px;
+text-align: left;
+margin-top: 0px;
+font-size: 20px;
+margin-bottom: 0px;
+padding: 10px;
+padding-top: 0px;
+margin-top: 10px !important;
 }
 }
 .resultcom a
