@@ -2,8 +2,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	        xmlns:gap = "http://phonegap.com/ns/1.0"
-	        id        = "com.CalciumTracker"
-	        version   = "2.9.0">
+	        id        = "com.bioquestglobal.CalciumTracker"
+	        version   = "3.3.0">
  <name>Calcium Tracker</name>
  <description>CalciumTracker</description>
  <author href="http://www.bioquestglobal.com/" email="ashok.gowda@bioquestglobal.com">BioQuest Solutions Pvt. Ltd.</author>
@@ -20,7 +20,7 @@ permission on your app, which PhoneGap requires.
 
 
  <!-- Customize your app and platform with the preference element. -->
- <preference name="phonegap-version"           value="2.9.0" />
+ <preference name="phonegap-version"           value="3.3.0" />
  <!-- all: current version of PhoneGap -->
  <preference name="orientation" value="default" />
  <!-- all: possible values handset, tablet, or universal -->
