@@ -16,7 +16,13 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/respond.min.js"></script>
 <script src="js/cordova.js"></script>
+<script src="js/phonegap.js"></script>
 <script>
+document.addEventListener("deviceready", startEvents, false);
+function startEvents()
+{
+StatusBar.hide();
+}
 $(document).ready(function(e) {
     localStorage.clear();
 		sessionStorage.clear();
