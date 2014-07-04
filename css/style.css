@@ -42,7 +42,7 @@ body
 	padding-top: 50px;
 	background-color: #0054a5;
 	text-align: center;
-	height: 180px;
+	height: 120px;
 	border-bottom: 1px solid #9bc5d0;
 }
 .calcium_mid
@@ -51,7 +51,7 @@ body
 	text-align: center;
 	color: #ffffff;
 	border-top: 1px solid #FFFFFF;
-	height: 130px;
+	height: 150px;
 }
 @font-face
 {
@@ -170,9 +170,23 @@ p.mid_two
 	display: block;
 	background-color: #FFF;
 	padding: 20px;
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	overflow-x: hidden;
+}
+.logo_home
+{
+	background-image: url(../images/logo_small.png);
+	background-repeat: no-repeat;
+	height: 83px;
+	background-position: center center;
+}
+.logo_result
+{
+	background-image: url(../images/logo_small.png);
+	background-repeat: no-repeat;
+	height: 83px;
+	background-position: center center;
 }
 #recomm
 {
@@ -1261,20 +1275,7 @@ p.mid_two
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
-.logo_home
-{
-	background-image: url(../images/logo_small.png);
-	background-repeat: no-repeat;
-	height: 83px;
-	background-position: center center;
-}
-.logo_result
-{
-	background-image: url(../images/logo_small.png);
-	background-repeat: no-repeat;
-	height: 83px;
-	background-position: center center;
-}
+
 .result_mid .mid_one
 {
 	font-size: 19px;

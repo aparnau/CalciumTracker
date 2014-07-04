@@ -9,42 +9,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home</title>
-
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/cordova.js"></script>
 <script>
 $(document).ready(function(e) {
     localStorage.clear();
 		sessionStorage.clear();
 });
-
+document.addEventListener("deviceready", startEvents, false);
+function startEvents()
+{
+StatusBar.hide();
+}
 </script>
 </head>
 <body>
 <div class="gridContainer clearfix">
  <div id="maincontainer" class="bgstripresult">
-   <div id="insidecont">
-  <div id="contentsection">
-   <div class="calcium_head">
-    <div class="logo_home"></div>
-  
-   </div>
-   <div class="clear"> </div>
-   <div class="calcium_mid">
+  <div id="insidecont">
+   <div id="contentsection">
+    <div class="calcium_head">
+     <div class="logo_home"></div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="calcium_mid">
      <p class="linetwo">Are you getting enough calcium from the foods you eat? </p>
-    <p class="mid_one">Check It Out</p>
-    <p class="mid_two">Your bones will thank you!</p>
-   </div>
-      <div class="clear"> </div>
-   <div class="calcium_btm">
-    <div id="enterbtn"><a href="home.html">Enter </a>
+     <p class="mid_one">Check It Out</p>
+     <p class="mid_two">Your bones will thank you!</p>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="calcium_btm">
+     <div id="enterbtn"><a href="home.html">Enter </a>
+     </div>
     </div>
    </div>
-  </div>
   </div>
  </div>
 </div>
