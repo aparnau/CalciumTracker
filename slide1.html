@@ -19,13 +19,6 @@
 <script src="js/respond.min.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
-function onDeviceReady() {
-    if (parseFloat(window.device.version) === 7.0) {
-          document.body.style.marginTop = "20px";
-    }
-}
-  
-document.addEventListener('deviceready', onDeviceReady, false);
 
 $(document).ready(function (e) {
 	var name=localStorage.getItem("name");
