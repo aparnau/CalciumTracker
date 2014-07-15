@@ -9,7 +9,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
-
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,7 +40,7 @@ $(".savenxt").click(function(e) {
    <div class="clear">
    </div>
    <div id="header" data-role="header">
-    <p>Savory snacks</p>
+    <p>Snacks</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
         data-direction="reverse" data-transition="slide"
         data-iconpos="notext" class="ui-btn-right">Menu </a>
@@ -51,15 +50,16 @@ $(".savenxt").click(function(e) {
     <div class="optcontainer">
      <div id="headcontainer">
       <div class="head1"><span> Food items </span></div>
-      <div class="head2"><span> Portion eaten </span></div>
+      <div class="head2"><span> Portions consumed </span></div>
      </div>
      <div class="clear"></div>
      <form>
       <div class="ui-field-contain">
-       <label for="poha"><i>Poha</i> (Rice flakes)</label>
+       <label for="poha"><i>Poha</i> (Rice flakes)/ Upma</label>
        <select name="poha" id="poha">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
+         <option value="">&nbsp;</option>
+ <option value="katori">1 Katori (K) = 150 mL</option>
+        <option value="0">0 K</option>
         <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
@@ -78,35 +78,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="pohafrac" id="pohafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
-        <option value=".50">1/2 K</option>
-        <option value=".75">3/4 K</option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="upma"><i>Upma </i>(Semolina)</label>
-       <select name="upma" id="upma">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
-        <option value="2">2 K</option>
-        <option value="3">3 K</option>
-        <option value="4">4 K</option>
-        <option value="5">5 K</option>
-        <option value="6">6 K</option>
-        <option value="7">7 K</option>
-        <option value="8">8 K</option>
-        <option value="9">9 K</option>
-        <option value="10">10 K</option>
-        <option value="11">11 K</option>
-        <option value="12">12 K</option>
-        <option value="13">13 K</option>
-        <option value="14">14 K</option>
-        <option value="15">15 K</option>
-       </select>
-       <select name="upmafrac" id="upmafrac">
-        <option value="">&nbsp;</option>
+ <option value="katori">1 Katori (K) = 150 mL</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
@@ -172,7 +144,7 @@ $(".savenxt").click(function(e) {
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="vada"><i>Vada</i></label>
+       <label for="vada"><i>Vada</i>/ Potato<i>vada</i></label>
        <select name="vada" id="vada">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
@@ -258,7 +230,6 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 </option>
        </select>
       </div>
-
       <div class="ui-field-contain">
        <label for="idli"><i>Idli</i></label>
        <select name="idli" id="idli">
@@ -281,35 +252,6 @@ $(".savenxt").click(function(e) {
         <option value="15">15 Nos.</option>
        </select>
        <select name="idlifrac" id="idlifrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
-      <div class="ui-field-contain">
-       <label for="pot_vada">Potato <i>vada</i></label>
-       <select name="pot_vada" id="pot_vada">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No.</option>
-        <option value="2">2 Nos.</option>
-        <option value="3">3 Nos.</option>
-        <option value="4">4 Nos.</option>
-        <option value="5">5 Nos.</option>
-        <option value="6">6 Nos.</option>
-        <option value="7">7 Nos.</option>
-        <option value="8">8 Nos.</option>
-        <option value="9">9 Nos.</option>
-        <option value="10">10 Nos.</option>
-        <option value="11">11 Nos.</option>
-        <option value="12">12 Nos.</option>
-        <option value="13">13 Nos.</option>
-        <option value="14">14 Nos.</option>
-        <option value="15">15 Nos.</option>
-       </select>
-       <select name="pot_vadafrac" id="pot_vadafrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 </option>
@@ -462,7 +404,64 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 </option>
        </select>
       </div>
-
+      <div class="ui-field-contain">
+       <label for="coc_chutney">Dry coconut <i>chutney</i></label>
+       <select name="coc_chutney" id="coc_chutney" class="select1">
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 tbsp</option>
+        <option value="2">2 tbsp</option>
+        <option value="3">3 tbsp</option>
+        <option value="4">4 tbsp</option>
+        <option value="5">5 tbsp</option>
+        <option value="6">6 tbsp</option>
+        <option value="7">7 tbsp</option>
+        <option value="8">8 tbsp</option>
+        <option value="9">9 tbsp</option>
+        <option value="10">10 tbsp</option>
+        <option value="11">11 tbsp</option>
+        <option value="12">12 tbsp</option>
+        <option value="13">13 tbsp</option>
+        <option value="14">14 tbsp</option>
+        <option value="15">15 tbsp</option>
+       </select>
+       <select name="coc_chutneyfrac" id="coc_chutneyfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 tbsp</option>
+        <option value=".50">1/2 tbsp</option>
+        <option value=".75">3/4 tbsp</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="tillchutney">Till <i>chutney</i></label>
+       <select name="tillchutney" id="tillchutney"  class="select1">
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 tbsp</option>
+        <option value="2">2 tbsp</option>
+        <option value="3">3 tbsp</option>
+        <option value="4">4 tbsp</option>
+        <option value="5">5 tbsp</option>
+        <option value="6">6 tbsp</option>
+        <option value="7">7 tbsp</option>
+        <option value="8">8 tbsp</option>
+        <option value="9">9 tbsp</option>
+        <option value="10">10 tbsp</option>
+        <option value="11">11 tbsp</option>
+        <option value="12">12 tbsp</option>
+        <option value="13">13 tbsp</option>
+        <option value="14">14 tbsp</option>
+        <option value="15">15 tbsp</option>
+       </select>
+       <select name="tillchutneyfrac" id="tillchutneyfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 tbsp</option>
+        <option value=".50">1/2 tbsp</option>
+        <option value=".75">3/4 tbsp</option>
+       </select>
+      </div>
      </form>
     </div><!--optcontainer -->
    </div>
@@ -477,17 +476,26 @@ $(".savenxt").click(function(e) {
    </div>
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
-    <ul data-role="listview"> <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a> </li>
-        <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a> </li>
-        <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a> </li>
-        <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a> </li>
-        <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a> </li>
-        <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a> </li>
-        <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a> </li>
-        <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a> </li>
-        <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a> </li>
-        <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a> </li>
-      </ul>
+   <ul data-role="listview">
+    <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    </li>
+   </ul>
   </div>
  </div>
 </div>
