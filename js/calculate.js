@@ -1,3 +1,12 @@
+$(document).ready(function(e) {
+  		var eathabit=localStorage.getItem("eathabit");
+		if(eathabit=='veg'){
+    $(".non-veg").css("display","none");
+		}
+		else if(eathabit=='non-veg'){
+		 $(".non-veg").css("display","block");
+		}
+});
 var ricecal;
 var khicharical;
 var pulaocal;
