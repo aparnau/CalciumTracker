@@ -1429,7 +1429,7 @@ background-image: url(../images/homeicon_small.png) !important;
 background-repeat: no-repeat;
 -webkit-border-radius: 9px;
 border-radius: 9px;
-background-position: 0px 15px;
+background-position: 0px 15px !important;
 }
 
 }
