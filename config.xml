@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	        xmlns:gap = "http://phonegap.com/ns/1.0"
 	        id        = "com.bioquestglobal.CalciumTracker"
-	        version   = "1.9.0">
+	        version   = "2.0.0">
  <name>Calcium Tracker</name>
  <description>CalciumTracker</description>
  <author href="http://www.bioquestglobal.com/" email="ashok.gowda@bioquestglobal.com">BioQuest Solutions Pvt. Ltd.</author>
@@ -27,13 +27,7 @@ A list of available plugins are available at https://build.phonegap.com/docs/plu
  <preference name="orientation" value="default" />
  <!-- all: possible values handset, tablet, or universal -->
  <preference name="fullscreen"                 value="true" />
- <!-- all: hides the status bar at the top of the screen -->
- <!-- ios preferences -->
- <!-- control whether the screen 'bounces' when scrolled beyond the top -->
- <preference name="webviewbounce"              value="false" />
- <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
- <preference name="ios-statusbarstyle"         value="black-opaque" />
- 
+
  <!-- Plugins can also be added here. -->
  
  <!-- Define app icon for each platform. -->
