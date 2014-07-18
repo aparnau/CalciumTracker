@@ -9,6 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +28,10 @@ $(document).ready(function (e) {
 	
 var se_chanadal=sessionStorage.getItem('se_chanadal');
 var se_chanadalfrac=sessionStorage.getItem('se_chanadalfrac');
-
+var se_mungdal=sessionStorage.getItem('se_mungdal');
+var se_mungdalfrac=sessionStorage.getItem('se_mungdalfrac');
+var se_masurdal=sessionStorage.getItem('se_masurdal');
+var se_masurdalfrac=sessionStorage.getItem('se_masurdalfrac');
 var se_turdal=sessionStorage.getItem('se_turdal');
 var se_turdalfrac=sessionStorage.getItem('se_turdalfrac');
 var se_spinach=sessionStorage.getItem('se_spinach');
@@ -44,10 +48,15 @@ var se_masurwhole=sessionStorage.getItem('se_masurwhole');
 var se_masurwholefrac=sessionStorage.getItem('se_masurwholefrac');
 var se_rajmah=sessionStorage.getItem('se_rajmah');
 var se_rajmahfrac=sessionStorage.getItem('se_rajmahfrac');
+var se_chawali=sessionStorage.getItem('se_chawali');
+var se_chawalifrac=sessionStorage.getItem('se_chawalifrac');
 
 $('#chanadal option[value="'+se_chanadal+'"]').prop('selected', true);
 $('#chanadalfrac option[value="'+se_chanadalfrac+'"]').prop('selected', true);
-
+$('#mungdal option[value="'+se_mungdal+'"]').prop('selected', true);
+$('#mungdalfrac option[value="'+se_mungdalfrac+'"]').prop('selected', true);
+$('#masurdal option[value="'+se_masurdal+'"]').prop('selected', true);
+$('#masurdalfrac option[value="'+se_masurdalfrac+'"]').prop('selected', true);
 $('#turdal option[value="'+se_turdal+'"]').prop('selected', true);
 $('#turdalfrac option[value="'+se_turdalfrac+'"]').prop('selected', true);
 $('#spinach option[value="'+se_spinach+'"]').prop('selected', true);
@@ -64,11 +73,16 @@ $('#masurwhole option[value="'+se_masurwhole+'"]').prop('selected', true);
 $('#masurwholefrac option[value="'+se_masurwholefrac+'"]').prop('selected', true);
 $('#rajmah option[value="'+se_rajmah+'"]').prop('selected', true);
 $('#rajmahfrac option[value="'+se_rajmahfrac+'"]').prop('selected', true);
+$('#chawali option[value="'+se_chawali+'"]').prop('selected', true);
+$('#chawalifrac option[value="'+se_chawalifrac+'"]').prop('selected', true);
 
 
 $("#chanadal").selectmenu("refresh");
 $("#chanadalfrac").selectmenu("refresh");
-
+$("#mungdal").selectmenu("refresh");
+$("#mungdalfrac").selectmenu("refresh");
+$("#masurdal").selectmenu("refresh");
+$("#masurdalfrac").selectmenu("refresh");
 $("#turdal").selectmenu("refresh");
 $("#turdalfrac").selectmenu("refresh");
 $("#spinach").selectmenu("refresh");
@@ -85,6 +99,8 @@ $("#masurwhole").selectmenu("refresh");
 $("#masurwholefrac").selectmenu("refresh");
 $("#rajmah").selectmenu("refresh");
 $("#rajmahfrac").selectmenu("refresh");
+$("#chawali").selectmenu("refresh");
+$("#chawalifrac").selectmenu("refresh");
 
 
 	
@@ -101,10 +117,8 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="top-bar" class="top-bar">
-   </div>
-   <div class="clear">
-   </div>
+    <div id="top-bar" class="top-bar"> </div>
+  <div class="clear">  </div>
    <div id="header" data-role="header">
     <p>Curry/dal preparations</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
@@ -122,10 +136,8 @@ $(".savenxt").click(function(e) {
      <form>
       <div class="ui-field-contain">
        <label for="chanadal">Chana <i>dal</i> (Bengal gram <i>dal</i>)</label>
-       <select name="chanadal" id="chanadal">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="chanadal" id="chanadal"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -143,18 +155,41 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="chanadalfrac" id="chanadalfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="mungdal">Mung <i>dal</i> (Green gram <i>dal</i>)</label>
+       <select name="mungdal" id="mungdal"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="mungdalfrac" id="mungdalfrac">
+        <option value="">&nbsp;</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="masurdal">Masur <i>dal</i> (Lentil <i>dal</i>)</label>
-       <select name="masurdal" id="masurdal">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="masurdal" id="masurdal"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -172,18 +207,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="masurdalfrac" id="masurdalfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="turdal">Tur <i>dal</i> (Red gram <i>dal</i> )/ Lentil whole</label>
-       <select name="turdal" id="turdal">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <label for="turdal">Tur <i>dal</i> (Red gram <i>dal</i>)</label>
+       <select name="turdal" id="turdal"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -201,18 +233,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="turdalfrac" id="turdalfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="spinach">Spinach with <i>dal </i>/ Green gram <i>dal </i></label>
-       <select name="spinach" id="spinach">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <label for="spinach">Spinach with mung <i>dal</i> </label>
+       <select name="spinach" id="spinach"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -230,18 +259,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="spinachfrac" id="spinachfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="sambar"><i>Sambar</i>/ Black eyed peas</label>
-       <select name="sambar" id="sambar">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <label for="sambar"><i>Sambar</i></label>
+       <select name="sambar" id="sambar"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -259,18 +285,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="sambarfrac" id="sambarfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="kadhi"><i>Kadhi</i></label>
-       <select name="kadhi" id="kadhi">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="kadhi" id="kadhi"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -288,18 +311,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="kadhifrac" id="kadhifrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="chole"><i>Chole</i></label>
-       <select name="chole" id="chole">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="chole" id="chole"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -317,18 +337,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="cholefrac" id="cholefrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="mungwhole">Mung whole (Green gram whole)/ Kuttu</label>
-       <select name="mungwhole" id="mungwhole">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <label for="mungwhole">Mung whole (Green gram whole)</label>
+       <select name="mungwhole" id="mungwhole"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -346,18 +363,41 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="mungwholefrac" id="mungwholefrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="masurwhole">Masur whole (Lentil whole)</label>
+       <select name="masurwhole" id="masurwhole"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="masurwholefrac" id="masurwholefrac">
+        <option value="">&nbsp;</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="rajmah"><i>Rajmah </i>(Kidney beans)</label>
-       <select name="rajmah" id="rajmah">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="rajmah" id="rajmah"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -375,14 +415,40 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="rajmahfrac" id="rajmahfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
-      
+      <div class="ui-field-contain">
+       <label for="chawali">Cow pea (Lobia)</label>
+       <select name="chawali" id="chawali"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="chawalifrac" id="chawalifrac">
+        <option value="">&nbsp;</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+
      </form>
+  
     </div><!--optcontainer -->
    </div>
   </div>
@@ -397,27 +463,17 @@ $(".savenxt").click(function(e) {
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
    <ul data-role="listview">
-    <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">Home</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
-    </li>
-   </ul>
+        <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">Home</a> </li>
+        <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a> </li>
+        <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a> </li>
+        <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a> </li>
+        <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a> </li>
+        <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a> </li>
+        <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a> </li>
+      </ul>
   </div>
  </div>
 </div>

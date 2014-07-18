@@ -9,6 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,33 +28,38 @@ $(document).ready(function (e) {
 	
 var se_fishfillet=sessionStorage.getItem('se_fishfillet');
 var se_fishfilletfrac=sessionStorage.getItem('se_fishfilletfrac');
-var se_meat=sessionStorage.getItem('se_meat');
-var se_meatfrac=sessionStorage.getItem('se_meatfrac');
+var se_fishfried=sessionStorage.getItem('se_fishfried');
+var se_fishfriedfrac=sessionStorage.getItem('se_fishfriedfrac');
+var se_muttoncurry=sessionStorage.getItem('se_muttoncurry');
+var se_muttoncurryfrac=sessionStorage.getItem('se_muttoncurryfrac');
 var se_prawncurry=sessionStorage.getItem('se_prawncurry');
 var se_prawncurryfrac=sessionStorage.getItem('se_prawncurryfrac');
-var se_egg=sessionStorage.getItem('se_egg');
-var se_eggfrac=sessionStorage.getItem('se_eggfrac');
+var se_dumchicken=sessionStorage.getItem('se_dumchicken');
+var se_dumchickenfrac=sessionStorage.getItem('se_dumchickenfrac');
 
 
 $('#fishfillet option[value="'+se_fishfillet+'"]').prop('selected', true);
 $('#fishfilletfrac option[value="'+se_fishfilletfrac+'"]').prop('selected', true);
-$('#meat option[value="'+se_meat+'"]').prop('selected', true);
-$('#meatfrac option[value="'+se_meatfrac+'"]').prop('selected', true);
+$('#fishfried option[value="'+se_fishfried+'"]').prop('selected', true);
+$('#fishfriedfrac option[value="'+se_fishfriedfrac+'"]').prop('selected', true);
+$('#muttoncurry option[value="'+se_muttoncurry+'"]').prop('selected', true);
+$('#muttoncurryfrac option[value="'+se_muttoncurryfrac+'"]').prop('selected', true);
 $('#prawncurry option[value="'+se_prawncurry+'"]').prop('selected', true);
 $('#prawncurryfrac option[value="'+se_prawncurryfrac+'"]').prop('selected', true);
-$('#egg option[value="'+se_egg+'"]').prop('selected', true);
-$('#eggfrac option[value="'+se_eggfrac+'"]').prop('selected', true);
+$('#dumchicken option[value="'+se_dumchicken+'"]').prop('selected', true);
+$('#dumchickenfrac option[value="'+se_dumchickenfrac+'"]').prop('selected', true);
 
 
 $("#fishfillet").selectmenu("refresh");
 $("#fishfilletfrac").selectmenu("refresh");
-$("#meat").selectmenu("refresh");
-$("#meatfrac").selectmenu("refresh");
-
+$("#fishfried").selectmenu("refresh");
+$("#fishfriedfrac").selectmenu("refresh");
+$("#muttoncurry").selectmenu("refresh");
+$("#muttoncurryfrac").selectmenu("refresh");
 $("#prawncurry").selectmenu("refresh");
 $("#prawncurryfrac").selectmenu("refresh");
-$("#egg").selectmenu("refresh");
-$("#eggfrac").selectmenu("refresh");
+$("#dumchicken").selectmenu("refresh");
+$("#dumchickenfrac").selectmenu("refresh");
 	
 $(".savenxt").click(function(e) {
 	nonveg();
@@ -66,10 +72,9 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="top-bar" class="top-bar">
-   </div>
-   <div class="clear">
-   </div>
+
+  <div id="top-bar" class="top-bar"> </div>
+  <div class="clear">  </div>
    <div id="header" data-role="header">
     <p>Non-vegetarian foods</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
@@ -86,7 +91,7 @@ $(".savenxt").click(function(e) {
      <div class="clear"></div>
      <form>
       <div class="ui-field-contain">
-       <label for="fishfillet">Fish</label>
+       <label for="fishfillet">Fish fillet</label>
        <select name="fishfillet" id="fishfillet">
         <option value="">&nbsp;</option>
         <option value="0">0 Piece</option>
@@ -115,8 +120,8 @@ $(".savenxt").click(function(e) {
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="meat">Meat/Chicken</label>
-       <select name="meat" id="meat">
+       <label for="fishfried">Fried fish</label>
+       <select name="fishfried" id="fishfried">
         <option value="">&nbsp;</option>
         <option value="0">0 Piece</option>
         <option value="1">1 Piece</option>
@@ -135,7 +140,7 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Pieces</option>
         <option value="15">15 Pieces</option>
        </select>
-       <select name="meatfrac" id="meatfrac">
+       <select name="fishfriedfrac" id="fishfriedfrac">
         <option value="">&nbsp;</option>
         <option value=".0">0 Piece</option>
         <option value=".25">1/4 Pieces</option>
@@ -144,11 +149,26 @@ $(".savenxt").click(function(e) {
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="prawncurry">Prawns</label>
-       <select name="prawncurry" id="prawncurry">
+       <label for="muttoncurry">Mutton ball curry</label>
+       <select name="muttoncurry" id="muttoncurry">
+        <option value="">&nbsp;</option>    <option value="0">0 K</option>    <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="muttoncurryfrac" id="muttoncurryfrac">
         <option value="">&nbsp;</option>
-        <option value="0">0 Piece</option>
-        <option value="1">1 Piece</option>
         <option value="2">2 Pieces</option>
         <option value="3">3 Pieces</option>
         <option value="4">4 Pieces</option>
@@ -156,49 +176,56 @@ $(".savenxt").click(function(e) {
         <option value="6">6 Pieces</option>
         <option value="7">7 Pieces</option>
         <option value="8">8 Pieces</option>
-        <option value="9">9 Pieces</option>
-        <option value="10">10 Pieces</option>
-        <option value="11">11 Pieces</option>
-        <option value="12">12 Pieces</option>
-        <option value="13">13 Pieces</option>
-        <option value="14">14 Pieces</option>
-        <option value="15">15 Pieces</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="prawncurry">Prawn curry</label>
+       <select name="prawncurry" id="prawncurry">
+        <option value="">&nbsp;</option>    <option value="0">0 K</option>    <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
        </select>
        <select name="prawncurryfrac" id="prawncurryfrac">
-       <option value="">&nbsp;</option>
-        <option value=".0">0 Piece</option>
-        <option value=".25">1/4 Pieces</option>
-        <option value=".50">1/2 Pieces</option>
-        <option value=".75">3/4 Pieces</option>
+        <option value="">&nbsp;</option> <option value=".0">0 K</option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="egg">Egg</label>
-       <select name="egg" id="egg">
-   			<option value="">&nbsp;</option>
-        <option value="0">0 Piece</option>
-        <option value="1">1 Piece</option>
-        <option value="2">2 Pieces</option>
-        <option value="3">3 Pieces</option>
-        <option value="4">4 Pieces</option>
-        <option value="5">5 Pieces</option>
-        <option value="6">6 Pieces</option>
-        <option value="7">7 Pieces</option>
-        <option value="8">8 Pieces</option>
-        <option value="9">9 Pieces</option>
-        <option value="10">10 Pieces</option>
-        <option value="11">11 Pieces</option>
-        <option value="12">12 Pieces</option>
-        <option value="13">13 Pieces</option>
-        <option value="14">14 Pieces</option>
-        <option value="15">15 Pieces</option>
+       <label for="dumchicken"><i>Dum</i> chicken</label>
+       <select name="dumchicken" id="dumchicken">
+        <option value="">&nbsp;</option>    <option value="0">0 K</option>    <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
        </select>
-       <select name="eggfrac" id="eggfrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 Piece</option>
-        <option value=".25">1/4 Pieces</option>
-        <option value=".50">1/2 Pieces</option>
-        <option value=".75">3/4 Pieces</option>
+       <select name="dumchickenfrac" id="dumchickenfrac">
+        <option value="">&nbsp;</option> <option value=".0">0 K</option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
        </select>
       </div>
      </form>
@@ -215,28 +242,17 @@ $(".savenxt").click(function(e) {
    </div>
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
-   <ul data-role="listview">
-    <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
-    </li>
-   </ul>
+    <ul data-role="listview"> <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a> </li>
+        <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a> </li>
+        <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a> </li>
+        <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a> </li>
+        <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a> </li>
+        <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a> </li>
+        <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a> </li>
+      </ul>
   </div>
  </div>
 </div>

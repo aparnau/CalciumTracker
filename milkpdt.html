@@ -25,21 +25,33 @@ $(document).ready(function (e) {
 	var name=localStorage.getItem("name");
 	$("#top-bar").append(name);
 	
-
+var se_milk_buffalo=sessionStorage.getItem('se_milk_buffalo');
+var se_milk_cow=sessionStorage.getItem('se_milk_cow');
+var se_skimmed_milk=sessionStorage.getItem('se_skimmed_milk');
 var se_curd=sessionStorage.getItem('se_curd');
 var se_cheese=sessionStorage.getItem('se_cheese');
 var se_buttermilk=sessionStorage.getItem('se_buttermilk');
 var se_lassi=sessionStorage.getItem('se_lassi');
-var se_milkshake=sessionStorage.getItem('se_milkshake');
-
-
+var se_bananashake=sessionStorage.getItem('se_bananashake');
+var se_strawberry=sessionStorage.getItem('se_strawberry');
+var se_apple=sessionStorage.getItem('se_apple');
+var se_milk_buffalo_frac=sessionStorage.getItem('se_milk_buffalo_frac');
+var se_milk_cow_frac=sessionStorage.getItem('se_milk_cow_frac');
+var se_skimmed_milk_frac=sessionStorage.getItem('se_skimmed_milk_frac');
 var se_curd_frac=sessionStorage.getItem('se_curd_frac');
 var se_cheese_frac=sessionStorage.getItem('se_cheese_frac');
 var se_buttermilk_frac=sessionStorage.getItem('se_buttermilk_frac');
 var se_lassi_frac=sessionStorage.getItem('se_lassi_frac');
-var se_milkshakefrac=sessionStorage.getItem('se_milkshakefrac');
+var se_bananashake_frac=sessionStorage.getItem('se_bananashake_frac');
+var se_strawberry_frac=sessionStorage.getItem('se_strawberry_frac');
+var se_apple_frac=sessionStorage.getItem('se_apple_frac');
 
-
+$('#milk_buffalo option[value="'+se_milk_buffalo+'"]').prop('selected', true);
+$('#milk_buffalofrac option[value="'+se_milk_buffalo_frac+'"]').prop('selected', true);
+$('#milk_cow option[value="'+se_milk_cow+'"]').prop('selected', true);
+$('#milk_cowfrac option[value="'+se_milk_cow_frac+'"]').prop('selected', true);
+$('#skimmed_milk option[value="'+se_skimmed_milk+'"]').prop('selected', true);
+$('#skimmed_milkfrac option[value="'+se_skimmed_milk_frac+'"]').prop('selected', true);
 $('#curd option[value="'+se_curd+'"]').prop('selected', true);
 $('#curdfrac option[value="'+se_curd_frac+'"]').prop('selected', true);
 $('#cheese option[value="'+se_cheese+'"]').prop('selected', true);
@@ -48,10 +60,19 @@ $('#buttermilk option[value="'+se_buttermilk+'"]').prop('selected', true);
 $('#buttermilkfrac option[value="'+se_buttermilk_frac+'"]').prop('selected', true);
 $('#lassi option[value="'+se_lassi+'"]').prop('selected', true);
 $('#lassifrac option[value="'+se_lassi_frac+'"]').prop('selected', true);
-$('#milkshake option[value="'+se_milkshake+'"]').prop('selected', true);
-$('#milkshakefrac option[value="'+se_milkshakefrac+'"]').prop('selected', true);
+$('#bananashake option[value="'+se_bananashake+'"]').prop('selected', true);
+$('#bananashakefrac option[value="'+se_bananashake_frac+'"]').prop('selected', true);
+$('#strawberry option[value="'+se_strawberry+'"]').prop('selected', true);
+$('#strawberryfrac option[value="'+se_strawberry_frac+'"]').prop('selected', true);
+$('#apple option[value="'+se_apple+'"]').prop('selected', true);
+$('#applefrac option[value="'+se_apple_frac+'"]').prop('selected', true);
 
-
+$("#milk_buffalo").selectmenu("refresh");
+$("#milk_buffalofrac").selectmenu("refresh");
+$("#milk_cow").selectmenu("refresh");
+$("#milk_cowfrac").selectmenu("refresh");
+$("#skimmed_milk").selectmenu("refresh");
+$("#skimmed_milkfrac").selectmenu("refresh");
 $("#curd").selectmenu("refresh");
 $("#curdfrac").selectmenu("refresh");
 $("#cheese").selectmenu("refresh");
@@ -60,8 +81,12 @@ $("#buttermilk").selectmenu("refresh");
 $("#buttermilkfrac").selectmenu("refresh");
 $("#lassi").selectmenu("refresh");
 $("#lassifrac").selectmenu("refresh");
-$("#milkshake").selectmenu("refresh");
-$("#milkshakefrac").selectmenu("refresh");
+$("#bananashake").selectmenu("refresh");
+$("#bananashakefrac").selectmenu("refresh");
+$("#strawberry").selectmenu("refresh");
+$("#strawberryfrac").selectmenu("refresh");
+$("#apple").selectmenu("refresh");
+$("#applefrac").selectmenu("refresh");
 
 $(".savenxt").click(function(e) {
  	milk();
@@ -95,9 +120,95 @@ $(".savenxt").click(function(e) {
      </div>
      <div class="clear"></div>
      <form>
- 
-       <div class="ui-field-contain">
-       <label for="curd">Curd </label>
+      <div class="ui-field-contain">
+       <label for="milk_buffalo">Milk (Buffalo)</label>
+       <select name="milk_buffalo" id="milk_buffalo" >
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 Cup</option>
+        <option value="2">2 Cups</option>
+        <option value="3">3 Cups</option>
+        <option value="4">4 Cups</option>
+        <option value="5">5 Cups</option>
+        <option value="6">6 Cups</option>
+        <option value="7">7 Cups</option>
+        <option value="8">8 Cups</option>
+        <option value="9">9 Cups</option>
+        <option value="10">10 Cups</option>
+        <option value="11">11 Cups</option>
+        <option value="12">12 Cups</option>
+        <option value="13">13 Cups</option>
+        <option value="14">14 Cups</option>
+        <option value="15">15 Cups</option>
+       </select>
+       <select name="milk_buffalofrac" id="milk_buffalofrac" >
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 Cups</option>
+        <option value=".50">1/2 Cups</option>
+        <option value=".75">3/4 Cups</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="milk_cow">Milk (Cow)</label>
+       <select name="milk_cow" id="milk_cow" >
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
+       </select>
+       <select name="milk_cowfrac" id="milk_cowfrac" >
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="skimmed_milk">Skimmed milk</label>
+       <select name="skimmed_milk" id="skimmed_milk" >
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
+       </select>
+       <select name="skimmed_milkfrac" id="skimmed_milkfrac" >
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="curd">Curd (Cow’s milk)</label>
        <select name="curd" id="curd" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
@@ -155,7 +266,7 @@ $(".savenxt").click(function(e) {
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="buttermilk">Buttermilk(<i>chaach</i>)</label>
+       <label for="buttermilk">Buttermilk</label>
        <select name="buttermilk" id="buttermilk" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
@@ -212,9 +323,9 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 Glasses</option>
        </select>
       </div>
-  <div class="ui-field-contain">
-       <label for="milkshake">Milk/Fruit milk shake</label>
-       <select name="milkshake" id="milkshake" >
+      <div class="ui-field-contain">
+       <label for="bananashake">Banana milk shake </label>
+       <select name="bananashake" id="bananashake" >
         <option value="">&nbsp;</option>
         <option value="0">0</option>
         <option value="1">1 Glass</option>
@@ -233,7 +344,65 @@ $(".savenxt").click(function(e) {
         <option value="14">14 Glasses</option>
         <option value="15">15 Glasses</option>
        </select>
-       <select name="milkshakefrac" id="milkshakefrac" >
+       <select name="bananashakefrac" id="bananashakefrac" >
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="strawberry">Strawberry milk shake </label>
+       <select name="strawberry" id="strawberry" >
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
+       </select>
+       <select name="strawberryfrac" id="strawberryfrac" >
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 Glasses</option>
+        <option value=".50">1/2 Glasses</option>
+        <option value=".75">3/4 Glasses</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="apple">Apple milk shake</label>
+       <select name="apple" id="apple" >
+        <option value="">&nbsp;</option>
+        <option value="0">0</option>
+        <option value="1">1 Glass</option>
+        <option value="2">2 Glasses</option>
+        <option value="3">3 Glasses</option>
+        <option value="4">4 Glasses</option>
+        <option value="5">5 Glasses</option>
+        <option value="6">6 Glasses</option>
+        <option value="7">7 Glasses</option>
+        <option value="8">8 Glasses</option>
+        <option value="9">9 Glasses</option>
+        <option value="10">10 Glasses</option>
+        <option value="11">11 Glasses</option>
+        <option value="12">12 Glasses</option>
+        <option value="13">13 Glasses</option>
+        <option value="14">14 Glasses</option>
+        <option value="15">15 Glasses</option>
+       </select>
+       <select name="applefrac" id="applefrac" >
         <option value="">&nbsp;</option>
         <option value=".0">0 </option>
         <option value=".25">1/4 Glasses</option>

@@ -9,6 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,7 +27,10 @@ $(document).ready(function (e) {
 	$("#top-bar").append(name);
 	
 	
-
+var se_beans=sessionStorage.getItem('se_beans');
+var se_beansfrac=sessionStorage.getItem('se_beansfrac');
+var se_baiganaloo=sessionStorage.getItem('se_baiganaloo');
+var se_baiganaloofrac=sessionStorage.getItem('se_baiganaloofrac');
 var se_mirchi=sessionStorage.getItem('se_mirchi');
 var se_mirchifrac=sessionStorage.getItem('se_mirchifrac');
 var se_gopigaajar=sessionStorage.getItem('se_gopigaajar');
@@ -35,7 +39,8 @@ var se_bhindi=sessionStorage.getItem('se_bhindi');
 var se_bhindifrac=sessionStorage.getItem('se_bhindifrac');
 var se_kaddu=sessionStorage.getItem('se_kaddu');
 var se_kaddufrac=sessionStorage.getItem('se_kaddufrac');
-
+var se_baigan=sessionStorage.getItem('se_baigan');
+var se_baiganfrac=sessionStorage.getItem('se_baiganfrac');
 var se_cabbage=sessionStorage.getItem('se_cabbage');
 var se_cabbagefrac=sessionStorage.getItem('se_cabbagefrac');
 var se_leafyveg1=sessionStorage.getItem('se_leafyveg1');
@@ -47,8 +52,10 @@ var se_leafyveg3frac=sessionStorage.getItem('se_leafyveg3frac');
 var se_leafyveg4=sessionStorage.getItem('se_leafyveg4');
 var se_leafyveg4frac=sessionStorage.getItem('se_leafyveg4frac');
 
-
-
+$('#beans option[value="'+se_beans+'"]').prop('selected', true);
+$('#beansfrac option[value="'+se_beansfrac+'"]').prop('selected', true);
+$('#baiganaloo option[value="'+se_baiganaloo+'"]').prop('selected', true);
+$('#baiganaloofrac option[value="'+se_baiganaloofrac+'"]').prop('selected', true);
 $('#mirchi option[value="'+se_mirchi+'"]').prop('selected', true);
 $('#mirchifrac option[value="'+se_mirchifrac+'"]').prop('selected', true);
 $('#gopigaajar option[value="'+se_gopigaajar+'"]').prop('selected', true);
@@ -57,7 +64,8 @@ $('#bhindi option[value="'+se_bhindi+'"]').prop('selected', true);
 $('#bhindifrac option[value="'+se_bhindifrac+'"]').prop('selected', true);
 $('#kaddu option[value="'+se_kaddu+'"]').prop('selected', true);
 $('#kaddufrac option[value="'+se_kaddufrac+'"]').prop('selected', true);
-
+$('#baigan option[value="'+se_baigan+'"]').prop('selected', true);
+$('#baiganfrac option[value="'+se_baiganfrac+'"]').prop('selected', true);
 $('#cabbage option[value="'+se_cabbage+'"]').prop('selected', true);
 $('#cabbagefrac option[value="'+se_cabbagefrac+'"]').prop('selected', true);
 $('#leafyveg1 option[value="'+se_leafyveg1+'"]').prop('selected', true);
@@ -70,8 +78,10 @@ $('#leafyveg4 option[value="'+se_leafyveg4+'"]').prop('selected', true);
 $('#leafyveg4frac option[value="'+se_leafyveg4frac+'"]').prop('selected', true);
 
 
-
-
+$("#beans").selectmenu("refresh");
+$("#beansfrac").selectmenu("refresh");
+$("#baiganaloo").selectmenu("refresh");
+$("#baiganaloofrac").selectmenu("refresh");
 $("#mirchi").selectmenu("refresh");
 $("#mirchifrac").selectmenu("refresh");
 $("#gopigaajar").selectmenu("refresh");
@@ -80,7 +90,8 @@ $("#bhindi").selectmenu("refresh");
 $("#bhindifrac").selectmenu("refresh");
 $("#kaddu").selectmenu("refresh");
 $("#kaddufrac").selectmenu("refresh");
-
+$("#baigan").selectmenu("refresh");
+$("#baiganfrac").selectmenu("refresh");
 $("#cabbage").selectmenu("refresh");
 $("#cabbagefrac").selectmenu("refresh");
 $("#leafyveg1").selectmenu("refresh");
@@ -106,10 +117,9 @@ $(".savenxt").click(function(e) {
 <div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="top-bar" class="top-bar">
-   </div>
-   <div class="clear">
-   </div>
+
+  <div id="top-bar" class="top-bar"> </div>
+  <div class="clear">  </div>
    <div id="header" data-role="header">
     <p>Vegetables - dry</p>
     <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
@@ -126,11 +136,61 @@ $(".savenxt").click(function(e) {
      <div class="clear"></div>
      <form>
       <div class="ui-field-contain">
-       <label for="mirchi"><i>Mirchi aloo</i> (Capsicum-potato)/ Brinjal potato</label>
-       <select name="mirchi" id="mirchi">
+       <label for="beans">Beans and potato</label>
+       <select name="beans" id="beans"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="beansfrac" id="beansfrac">
         <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="baiganaloo"><i>Baigan aloo </i>(Brinjal-potato)</label>
+       <select name="baiganaloo" id="baiganaloo"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="baiganaloofrac" id="baiganaloofrac">
+        <option value="">&nbsp;</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="mirchi"><i>Mirchi aloo</i> (Capsicum-potato)</label>
+       <select name="mirchi" id="mirchi"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -148,18 +208,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="mirchifrac" id="mirchifrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="gopigaajar"><i>Phul gobi and gaajar</i> (Cauliflower-carrot)</label>
-       <select name="gopigaajar" id="gopigaajar">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="gopigaajar" id="gopigaajar"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -177,18 +234,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="gopigaajarfrac" id="gopigaajarfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="bhindi"><i>Bhindi</i> (Ladies finger)</label>
-       <select name="bhindi" id="bhindi">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="bhindi" id="bhindi"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -206,18 +260,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="bhindifrac" id="bhindifrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="kaddu"><i>Kaddu </i>(Pumpkin)</label>
-       <select name="kaddu" id="kaddu">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="kaddu" id="kaddu"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -235,18 +286,41 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="kaddufrac" id="kaddufrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="cabbage"><i>Band gobi </i>(Cabbage)/ Baigan bhurta/ Beans potato </label>
-       <select name="cabbage" id="cabbage">
+       <label for="baigan"><i>Baingan bhurta </i>(Mashed brinjal)</label>
+       <select name="baigan" id="baigan"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="baiganfrac" id="baiganfrac">
         <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="cabbage"><i>Band gobi </i>(Cabbage)</label>
+       <select name="cabbage" id="cabbage"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -264,18 +338,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="cabbagefrac" id="cabbagefrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="leafyveg1">Drumstick leaves/fenugreek leaves/amaranth/colocasia black</label>
-       <select name="leafyveg1" id="leafyveg1">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="leafyveg1" id="leafyveg1"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -293,18 +364,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="leafyveg1frac" id="leafyveg1frac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="leafyveg2">Agathi</label>
-       <select name="leafyveg2" id="leafyveg2">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="leafyveg2" id="leafyveg2"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -322,18 +390,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="leafyveg2frac" id="leafyveg2frac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="leafyveg3">Raddish leaves/cow pea leaves</label>
-       <select name="leafyveg3" id="leafyveg3">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="leafyveg3" id="leafyveg3"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -351,18 +416,15 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="leafyveg3frac" id="leafyveg3frac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
       <div class="ui-field-contain">
        <label for="leafyveg4">Dill</label>
-       <select name="leafyveg4" id="leafyveg4">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 K</option>
+       <select name="leafyveg4" id="leafyveg4"> <option value="">&nbsp;</option>
+        <option value="0">0</option>       <option value="1">1 K</option>
         <option value="2">2 K</option>
         <option value="3">3 K</option>
         <option value="4">4 K</option>
@@ -380,13 +442,13 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="leafyveg4frac" id="leafyveg4frac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 K</option>
+<option value=".0">0 </option>       <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
        </select>
       </div>
      </form>
+  
     </div><!--optcontainer -->
    </div>
   </div>
@@ -400,28 +462,17 @@ $(".savenxt").click(function(e) {
    </div>
   </div>
   <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
-   <ul data-role="listview">
-    <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
-    </li>
-    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
-    </li>
-   </ul>
+   <ul data-role="listview"> <li data-icon="false" class="listitem"><a href="home.html" data-ajax="false">HOME</a> </li>
+        <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a> </li>
+        <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a> </li>
+        <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a> </li>
+        <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Snacks</a> </li>
+        <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a> </li>
+        <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a> </li>
+        <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a> </li>
+      </ul>
   </div>
  </div>
 </div>

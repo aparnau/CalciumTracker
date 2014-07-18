@@ -30,66 +30,60 @@ var se_chikki=sessionStorage.getItem('se_chikki');
 var se_chikkifrac=sessionStorage.getItem('se_chikkifrac');
 var se_cake_fruit=sessionStorage.getItem('se_cake_fruit');
 var se_cake_fruitfrac=sessionStorage.getItem('se_cake_fruitfrac');
+var se_biscuit_nut=sessionStorage.getItem('se_biscuit_nut');
+var se_biscuit_nutfrac=sessionStorage.getItem('se_biscuit_nutfrac');
 var se_breadpudd=sessionStorage.getItem('se_breadpudd');
 var se_breadpudfrac=sessionStorage.getItem('se_breadpudfrac');
 var se_custard=sessionStorage.getItem('se_custard');
 var se_custardfrac=sessionStorage.getItem('se_custardfrac');
+var se_halwa=sessionStorage.getItem('se_halwa');
+var se_halwafrac=sessionStorage.getItem('se_halwafrac');
 var se_payasam=sessionStorage.getItem('se_payasam');
 var se_payasamfrac=sessionStorage.getItem('se_payasamfrac');
 var se_shrikhand=sessionStorage.getItem('se_shrikhand');
 var se_shrikhandfrac=sessionStorage.getItem('se_shrikhandfrac');
 var se_pooranpoli=sessionStorage.getItem('se_pooranpoli');
 var se_pooranpolifrac=sessionStorage.getItem('se_pooranpolifrac');
-var se_gulabjamun=sessionStorage.getItem('se_gulabjamun');
-var se_gulabjamunfrac=sessionStorage.getItem('se_gulabjamunfrac');
-var se_rasgulla=sessionStorage.getItem('se_rasgulla');
-var se_rasgullafrac=sessionStorage.getItem('se_rasgullafrac');
-var se_icecream=sessionStorage.getItem('se_icecream');
-var se_icecreamfrac=sessionStorage.getItem('se_icecreamfrac');
-
-
 
 $('#chikki option[value="'+se_chikki+'"]').prop('selected', true);
 $('#chikkifrac option[value="'+se_chikkifrac+'"]').prop('selected', true);
 $('#cake_fruit option[value="'+se_cake_fruit+'"]').prop('selected', true);
 $('#cake_fruitfrac option[value="'+se_cake_fruitfrac+'"]').prop('selected', true);
+$('#biscuit_nut option[value="'+se_biscuit_nut+'"]').prop('selected', true);
+$('#biscuit_nutfrac option[value="'+se_biscuit_nutfrac+'"]').prop('selected', true);
 $('#breadpudd option[value="'+se_breadpudd+'"]').prop('selected', true);
 $('#breadpudfrac option[value="'+se_breadpudfrac+'"]').prop('selected', true);
 $('#custard option[value="'+se_custard+'"]').prop('selected', true);
 $('#custardfrac option[value="'+se_custardfrac+'"]').prop('selected', true);
+$('#halwa option[value="'+se_halwa+'"]').prop('selected', true);
+$('#halwafrac option[value="'+se_halwafrac+'"]').prop('selected', true);
 $('#payasam option[value="'+se_payasam+'"]').prop('selected', true);
 $('#payasamfrac option[value="'+se_payasamfrac+'"]').prop('selected', true);
 $('#shrikhand option[value="'+se_shrikhand+'"]').prop('selected', true);
 $('#shrikhandfrac option[value="'+se_shrikhandfrac+'"]').prop('selected', true);
 $('#pooranpoli option[value="'+se_pooranpoli+'"]').prop('selected', true);
 $('#pooranpolifrac option[value="'+se_pooranpolifrac+'"]').prop('selected', true);
-$('#gulabjamun option[value="'+se_gulabjamun+'"]').prop('selected', true);
-$('#gulabjamunfrac option[value="'+se_gulabjamunfrac+'"]').prop('selected', true);
-$('#rasgulla option[value="'+se_rasgulla+'"]').prop('selected', true);
-$('#rasgullafrac option[value="'+se_rasgullafrac+'"]').prop('selected', true);
-$('#icecream option[value="'+se_icecream+'"]').prop('selected', true);
-$('#icecreamfrac option[value="'+se_icecreamfrac+'"]').prop('selected', true);
 
 
 $("#chikki").selectmenu("refresh");
 $("#chikkifrac").selectmenu("refresh");
 $("#cake_fruit").selectmenu("refresh");
 $("#cake_fruitfrac").selectmenu("refresh");
+$("#biscuit_nut").selectmenu("refresh");
+$("#biscuit_nutfrac").selectmenu("refresh");
 $("#breadpudd").selectmenu("refresh");
 $("#breadpudfrac").selectmenu("refresh");
 $("#custard").selectmenu("refresh");
 $("#custardfrac").selectmenu("refresh");
+$("#halwa").selectmenu("refresh");
+$("#halwafrac").selectmenu("refresh");
 $("#payasam").selectmenu("refresh");
 $("#payasamfrac").selectmenu("refresh");
 $("#shrikhand").selectmenu("refresh");
 $("#shrikhandfrac").selectmenu("refresh");
-$("#gulabjamun").selectmenu("refresh");
-$("#gulabjamunfrac").selectmenu("refresh");
-$("#rasgulla").selectmenu("refresh");
-$("#rasgullafrac").selectmenu("refresh");
-$("#icecream").selectmenu("refresh");
-$("#icecreamfrac").selectmenu("refresh");
-
+$("#pooranpoli").selectmenu("refresh");
+$("#pooranpolifrac").selectmenu("refresh");
+	
 	
 $(".savenxt").click(function(e) {
 		sweets();
@@ -179,7 +173,34 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 Pieces</option>
        </select>
       </div>
-      
+      <div class="ui-field-contain">
+       <label for="biscuit_nut">Nut biscuits</label>
+       <select name="biscuit_nut" id="biscuit_nut">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>        <option value="1">1 No.</option>
+        <option value="2">2 Nos.</option>
+        <option value="3">3 Nos.</option>
+        <option value="4">4 Nos.</option>
+        <option value="5">5 Nos.</option>
+        <option value="6">6 Nos.</option>
+        <option value="7">7 Nos.</option>
+        <option value="8">8 Nos.</option>
+        <option value="9">9 Nos.</option>
+        <option value="10">10 Nos.</option>
+        <option value="11">11 Nos.</option>
+        <option value="12">12 Nos.</option>
+        <option value="13">13 Nos.</option>
+        <option value="14">14 Nos.</option>
+        <option value="15">15 Nos.</option>
+       </select>
+       <select name="biscuit_nutfrac" id="biscuit_nutfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
       <div class="ui-field-contain">
        <label for="breadpudd">Bread pudding</label>
        <select name="breadpudd" id="breadpudd">
@@ -230,7 +251,31 @@ $(".savenxt").click(function(e) {
         <option value=".75">3/4 K</option>
        </select>
       </div>
-      
+      <div class="ui-field-contain">
+       <label for="halwa"><i>Halwa</i></label>
+       <select name="halwa" id="halwa">
+        <option value="">&nbsp;</option>    <option value="0">0 K</option>    <option value="1">1 K</option>
+        <option value="2">2 K</option>
+        <option value="3">3 K</option>
+        <option value="4">4 K</option>
+        <option value="5">5 K</option>
+        <option value="6">6 K</option>
+        <option value="7">7 K</option>
+        <option value="8">8 K</option>
+        <option value="9">9 K</option>
+        <option value="10">10 K</option>
+        <option value="11">11 K</option>
+        <option value="12">12 K</option>
+        <option value="13">13 K</option>
+        <option value="14">14 K</option>
+        <option value="15">15 K</option>
+       </select>
+       <select name="halwafrac" id="halwafrac">
+        <option value="">&nbsp;</option> <option value=".0">0 K</option>       <option value=".25">1/4 K</option>
+        <option value=".50">1/2 K</option>
+        <option value=".75">3/4 K</option>
+       </select>
+      </div>
       <div class="ui-field-contain">
        <label for="payasam"><i>Payasam</i></label>
        <select name="payasam" id="payasam">
@@ -308,95 +353,7 @@ $(".savenxt").click(function(e) {
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
        </select>
-      </div>      
-      <div class="ui-field-contain">
-       <label for="gulabjamun">Gulab jamun</label>
-       <select name="gulabjamun" id="gulabjamun">
-        <option value="">&nbsp;</option>
-        <option value="0">0 Piece</option>
-        <option value="1">1 Piece</option>
-        <option value="2">2 Pieces</option>
-        <option value="3">3 Pieces</option>
-        <option value="4">4 Pieces</option>
-        <option value="5">5 Pieces</option>
-        <option value="6">6 Pieces</option>
-        <option value="7">7 Pieces</option>
-        <option value="8">8 Pieces</option>
-        <option value="9">9 Pieces</option>
-        <option value="10">10 Pieces</option>
-        <option value="11">11 Pieces</option>
-        <option value="12">12 Pieces</option>
-        <option value="13">13 Pieces</option>
-        <option value="14">14 Pieces</option>
-        <option value="15">15 Pieces</option>
-       </select>
-       <select name="gulabjamunfrac" id="gulabjamunfrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 Piece</option>
-        <option value=".25">1/4 Pieces</option>
-        <option value=".50">1/2 Pieces</option>
-        <option value=".75">3/4 Pieces</option>
-       </select>
       </div>
-      <div class="ui-field-contain">
-       <label for="rasgulla">Rasgulla</label>
-       <select name="rasgulla" id="rasgulla">
-        <option value="">&nbsp;</option>
-        <option value="0">0 Piece</option>
-        <option value="1">1 Piece</option>
-        <option value="2">2 Pieces</option>
-        <option value="3">3 Pieces</option>
-        <option value="4">4 Pieces</option>
-        <option value="5">5 Pieces</option>
-        <option value="6">6 Pieces</option>
-        <option value="7">7 Pieces</option>
-        <option value="8">8 Pieces</option>
-        <option value="9">9 Pieces</option>
-        <option value="10">10 Pieces</option>
-        <option value="11">11 Pieces</option>
-        <option value="12">12 Pieces</option>
-        <option value="13">13 Pieces</option>
-        <option value="14">14 Pieces</option>
-        <option value="15">15 Pieces</option>
-       </select>
-       <select name="rasgullafrac" id="rasgullafrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 Piece</option>
-        <option value=".25">1/4 Pieces</option>
-        <option value=".50">1/2 Pieces</option>
-        <option value=".75">3/4 Pieces</option>
-       </select>
-      </div>
-       <div class="ui-field-contain">
-       <label for="icecream">Ice cream</label>
-       <select name="icecream" id="icecream">
-        <option value="">&nbsp;</option>
-        <option value="0">0 Cup</option>
-        <option value="1">1 Cup</option>
-        <option value="2">2 Cups</option>
-        <option value="3">3 Cups</option>
-        <option value="4">4 Cups</option>
-        <option value="5">5 Cups</option>
-        <option value="6">6 Cups</option>
-        <option value="7">7 Cups</option>
-        <option value="8">8 Cups</option>
-        <option value="9">9 Cups</option>
-        <option value="10">10 Cups</option>
-        <option value="11">11 Cups</option>
-        <option value="12">12 Cups</option>
-        <option value="13">13 Cups</option>
-        <option value="14">14 Cups</option>
-        <option value="15">15 Cups</option>
-       </select>
-       <select name="icecreamfrac" id="icecreamfrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 Cup</option>
-        <option value=".25">1/4 Cups</option>
-        <option value=".50">1/2 Cups</option>
-        <option value=".75">3/4 Cups</option>
-       </select>
-      </div>
-      
      </form>
    
     </div><!--optcontainer -->
