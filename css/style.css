@@ -1129,7 +1129,7 @@ p.resultcom { padding-top: 0px !important; }
 {
 	padding-left: 0px;
 	margin-top: 20px !important;
-	font-size: 20px !important;
+	font-size: 16px !important;
 }
 .recallhome #header p
 {
@@ -1423,6 +1423,8 @@ p.mid_two
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
+
+
 }
 @media screen and (max-device-width: 500px) {
 .submit-btn
