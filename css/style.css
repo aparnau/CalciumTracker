@@ -42,7 +42,7 @@ body
 	padding-top: 50px;
 	background-color: #0054a5;
 	text-align: center;
-	height: 180px;
+	height: 120px;
 	border-bottom: 1px solid #9bc5d0;
 }
 .calcium_mid
@@ -426,9 +426,6 @@ p.mid_two
 	color: #231f20;
 	cursor: auto;
 	margin-top: 4px;
-	background: transparent;
-	border: none;
-}
 }
 .gridContainer { }
 #maincontainer
@@ -1005,8 +1002,8 @@ width:12%;
 	font-size: 20px;
 	font-weight: normal;
 	height: 60px;
-	background-image: url('../images/round.png');
-	background-repeat: no-repeat;
+background-image:url('../images/round.png');
+background-repeat:no-repeat;
 	width: 110px;
 	margin: auto;
 	padding-top: 10px;
@@ -1076,30 +1073,12 @@ p.resultcom { padding-top: 0px !important; }
 .ui-controlgroup-controls .ui-radio
 {
 	text-align: center;
-	width: 110px;
+	width: 100px;
 	float: left;
 	clear: none;
 }
-.ui-checkbox input
-{
-	position: absolute;
-	left: 16px !important;
-	top: 50%;
-	height: 19px !important;
-	margin: -5px 0 0 0;
-	outline: 0 !important;
-	z-index: 1;
-	margin-top: -9px;
-}
-.ui-checkbox .ui-icon
-{
-	background-image: url(../images/icons-18-white.png) !important;
-	background-color: transparent !important;
-	background-position: 89% 48%;
-	border-radius: 13px;
-}
-.ui-icon-checkbox-off { background-position: -754px 0px !important; }
-.ui-icon-checkbox-on { background-position: -718px 0px !important; }
+
+
 
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
 
@@ -1130,12 +1109,6 @@ p.resultcom { padding-top: 0px !important; }
 	margin-top: 20px !important;
 	font-size: 20px !important;
 }
-.recallhome #header p {
-padding-left: 0px;
-text-align: center;
-margin-top: 6px !important;
-font-size: 13px !important;
-}
 .optcontainer .ui-btn-inner
 {
 	padding-left: 3px !important;
@@ -1160,8 +1133,8 @@ font-size: 13px !important;
 	font-size: 19px;
 	font-weight: normal;
 	height: 60px;
-	background-image: url('../images/round.png');
-	background-repeat: no-repeat;
+background-image:url('../images/round.png');
+background-repeat:no-repeat;
 	width: 110px;
 	margin: auto;
 }
@@ -1302,6 +1275,7 @@ p.mid_two
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
+
 .result_mid .mid_one
 {
 	font-size: 19px;
@@ -1403,10 +1377,12 @@ p.mid_two
 	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: normal;
+
 	height: 60px;
-	background-image: url('../images/round.png');
-	background-repeat: no-repeat;
+background-image:url('../images/round.png');
+background-repeat:no-repeat;
 	width: 110px;
+
 	margin: auto;
 	padding-top: 10px;
 }
@@ -1542,34 +1518,5 @@ p.mid_two
 	margin: 0;
 	width: 55%;
 }
+
 .ui-page { -webkit-backface-visibility: hidden; }
-#header .homeicon .ui-icon, #header .homeicon .ui-btn-icon-notext
-{
-	background-color: transparent;
-	width: 100px;
-	height: 60px;
-}
-
-
-.homeicon .ui-icon{
-
-background: rgba(0,0,0,0) ;
-background-image: url(../images/homeicon.png);
-background-repeat: no-repeat;
--webkit-border-radius: 9px;
-border-radius: 9px;
-background-position: 0px 10px;
-}
-
-
-
-.homeicon.ui-btn-up-a {
-background: transparent !important;
-}
-
-.recallhome #header p {
-padding-left: 0px;
-text-align: center;
-margin-top: 6px;
-font-size: 17px;
-}

@@ -9,6 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,74 +20,72 @@
 <script src="js/respond.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-$(document).ready(function (e) {
-
+$(document).ready(function(e) {
+	$("#next").hide();
     $('.pregnantblock').hide();
     $('.lactatingblock').hide();
     $('.menopauseblock').hide();
-    $('#otherblock').hide();
+
     $('#calrecomm').text('mg/day');
-$("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
-    var namesel = localStorage.getItem("name");
-    var agesel = localStorage.getItem("age");
-    var gendersel = localStorage.getItem("gender");
-    var pregsel = localStorage.getItem("preg");
-    var lactsel = localStorage.getItem("lact");
-    var menopausesel = localStorage.getItem("menopause");
 
-    if (namesel !== null) {
-        $('#name').val(namesel);
-    }
-    if (agesel !== null) {
-        $('#age').val(agesel);
-    }
+var namesel=localStorage.getItem("name");
+var agesel=localStorage.getItem("age");
+var gendersel=localStorage.getItem("gender");
+var pregsel=localStorage.getItem("preg");
+var lactsel=localStorage.getItem("lact");
+var menopausesel=localStorage.getItem("menopause");
 
-    if (gendersel == 'male') {
-        document.aboutform.gender[0].checked = true;
-        $("#gender_0").checkboxradio("refresh");
+if (namesel !== null) {$('#name').val(namesel); }
+if (agesel !== null) {$('#age').val(agesel);}
 
-        $('.pregnantblock').hide();
-        $('.lactatingblock').hide();
-        $('.menopauseblock').hide();
-				$('#otherblock').hide();
-        /*          $('input[name=pregnant]').attr("disabled", true);
-                    $('input[name=lactating]').attr("disabled", true);
-                    $('input[name=menopause]').attr("disabled", true);*/
-    } else if (gendersel == 'female') {
+if(gendersel=='male'){ document.aboutform.gender[0].checked = true;
+$("#gender_0").checkboxradio("refresh");
+						$('.pregnantblock').hide();
+            $('.lactatingblock').hide();
+            $('.menopauseblock').hide();
+						
+/*            $('input[name=pregnant]').attr("disabled", true);
+            $('input[name=lactating]').attr("disabled", true);
+            $('input[name=menopause]').attr("disabled", true);*/
+}
+else if(gendersel=='female'){
+document.aboutform.gender[1].checked = true;
+$("#gender_1").checkboxradio("refresh");
+       			$('.pregnantblock').show();
+            $('.lactatingblock').show();
+            $('.menopauseblock').show();
+/*			    $('input[name=pregnant]').attr("disabled", false);
+            $('input[name=lactating]').attr("disabled", false);
+            $('input[name=menopause]').attr("disabled", false);	  */    
+}
 
-        document.aboutform.gender[1].checked = true;
-        $("#gender_1").checkboxradio("refresh");
+if(pregsel=='no'){ 
+document.aboutform.pregnant[0].checked = true;
+$("#pregnant_0").checkboxradio("refresh");
+}
+else if(pregsel=='yes'){
 
-        $('.pregnantblock').show();
-        $('.lactatingblock').show();
-        $('.menopauseblock').show();
-				$('#otherblock').show();
-     
-    }
+document.aboutform.pregnant[1].checked = true;
+$("#pregnant_1").checkboxradio("refresh");
+}
+if(lactsel=='no'){ 
 
-    if (pregsel == 'no') {
-        document.aboutform.pregnant[0].checked = true;
-        $("#pregnant_0").checkboxradio("refresh");
-    } else if (pregsel == 'yes') {
-        document.aboutform.pregnant[1].checked = true;
-        $("#pregnant_1").checkboxradio("refresh");
-    }
-		
-    if (lactsel == 'no') {
-        document.aboutform.lactating[0].checked = true;
-        $("#lactating_0").checkboxradio("refresh");
-    } else if (lactsel == 'yes') {
-        document.aboutform.lactating[1].checked = true;
-        $("#lactating_1").checkboxradio("refresh");
-    }
+document.aboutform.lactating[0].checked = true;
+$("#lactating_0").checkboxradio("refresh");
+}
+else if(lactsel=='yes'){
+document.aboutform.lactating[1].checked = true;
+$("#lactating_1").checkboxradio("refresh");
+}
+if(menopausesel=='no'){ 
+document.aboutform.menopause[0].checked = true;
+$("#menopause_0").checkboxradio("refresh");
+}
+else if(menopausesel=='yes'){
 
-    if (menopausesel == 'no') {
-        document.aboutform.menopause[0].checked = true;
-        $("#menopause_0").checkboxradio("refresh");
-    } else if (menopausesel == 'yes') {
-        document.aboutform.menopause[1].checked = true;
-        $("#menopause_1").checkboxradio("refresh");
-    }
+document.aboutform.menopause[1].checked = true;
+$("#menopause_1").checkboxradio("refresh");
+}
 
 
     $(".submit-btn").click(function (e) {
@@ -96,39 +95,26 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
         var preg = $("input[name='pregnant']:checked").val();
         var lact = $("input[name='lactating']:checked").val();
         var menopause = $("input[name='menopause']:checked").val();
-				
-        localStorage.setItem("name", name);
+				localStorage.setItem("name", name);
         localStorage.setItem("age", age);
         localStorage.setItem("gender", gender);
-       
-		
-				if(document.getElementById("othercheck").checked==true){
-				$("input[type='checkbox']").attr("checked",true).checkboxradio("refresh");
-				localStorage.setItem("preg", 'no');
-        localStorage.setItem("lact",  'no');
-        localStorage.setItem("menopause",  'no');			
-				}
-				else if(document.getElementById("othercheck").checked==false){
-				
-				localStorage.setItem("preg", preg);
+        localStorage.setItem("preg", preg);
         localStorage.setItem("lact", lact);
         localStorage.setItem("menopause", menopause);
-				}
-			
         var regex = /^[a-zA-Z]*$/;
-        var nameregex = /^[A-Za-z ]+$/
+
         if (age == '') {
             alert('Please enter valid age');
             document.aboutform.age.focus();
         } else if (name == '') {
             alert('Please enter valid name');
             document.aboutform.name.focus();
-        } else if (!nameregex.test(document.aboutform.name.value)) {
+        } else if (!regex.test(document.aboutform.name.value)) {
             alert('Please enter valid name');
             document.aboutform.name.focus();
         } else {
-
-            window.location = 'recallentery.html';
+					
+ 						window.location='recallentery.html';          
         }
     });
     /*    $("#age").bind("change", function () {
@@ -138,24 +124,60 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
 
     $("input[name='gender']").change(function () {
         var gender = $("input[name='gender']:checked").val();
-				 var age = $("#age").val();
         if (gender == 'male') {
             $('.pregnantblock').hide();
             $('.lactatingblock').hide();
             $('.menopauseblock').hide();
-						$('#otherblock').hide();
-            localStorage.removeItem("preg");
-            localStorage.removeItem("lact");
-            localStorage.removeItem("menopause");
+localStorage.removeItem("preg");  
+localStorage.removeItem("lact");  
+localStorage.removeItem("menopause"); 
 
         }
-        if (gender == 'female' && age > 18 ) {
+        if (gender == 'female') {
             $('.pregnantblock').show();
             $('.lactatingblock').show();
             $('.menopauseblock').show();
-						$('#otherblock').show();    
+            $('input[name=pregnant]').attr("disabled", false);
+            $('input[name=lactating]').attr("disabled", false);
+            $('input[name=menopause]').attr("disabled", false);
+
         }
     }); //gender change
+
+    $(".clear-btn").on('click', function () {
+			
+
+        $('#name').val('');
+        $('#age').val('');
+				$('#calrecomm').text('mg/day');
+document.aboutform.gender[0].checked = true;
+$("#gender_0").checkboxradio("refresh");
+document.aboutform.pregnant[0].checked = true;
+$("#pregnant_0").checkboxradio("refresh");
+document.aboutform.lactating[0].checked = true;
+$("#lactating_0").checkboxradio("refresh");
+document.aboutform.menopause[0].checked = true;
+$("#menopause_0").checkboxradio("refresh");
+
+		document.aboutform.gender[1].checked = false;
+		$("#gender_1").checkboxradio("refresh");
+		document.aboutform.pregnant[1].checked = false;
+		$("#pregnant_1").checkboxradio("refresh");
+		document.aboutform.lactating[1].checked = false;
+		$("#lactating_1").checkboxradio("refresh");
+		document.aboutform.menopause[1].checked = false;
+		$("#menopause_0").checkboxradio("refresh");	
+		
+			      $('.pregnantblock').hide();
+            $('.lactatingblock').hide();
+            $('.menopauseblock').hide();
+									localStorage.removeItem('name');
+			localStorage.removeItem('age');
+			localStorage.removeItem('gender');
+		  localStorage.removeItem('preg');
+			localStorage.removeItem('lact');
+			localStorage.removeItem('menopause');
+    });
 
 });
 
@@ -179,8 +201,9 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
       <input name="age" type="number" id="age" >
      </div>
      <div data-role="fieldcontain">
-      <label>Gender</label>
+       <label>Gender</label>
       <fieldset data-role="controlgroup">
+     
        <input type="radio" name="gender" value="male" id="gender_0" class="gender" >
        <label for="gender_0">Male &nbsp; &nbsp;</label>
        <input type="radio" name="gender" value="female" id="gender_1" class="gender" >
@@ -191,8 +214,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
       <label>Are you pregnant?</label>
       <fieldset data-role="controlgroup">
        <input type="radio" name="pregnant" value="no" id="pregnant_0" class="pregnant">
-       <label for="pregnant_0"> No &nbsp;
-       </label>
+       <label for="pregnant_0"> No &nbsp; </label>
        <input type="radio" name="pregnant" value="yes" id="pregnant_1" class="pregnant">
        <label for="pregnant_1"> Yes</label>
       </fieldset>
@@ -207,7 +229,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
       </fieldset>
      </div>
      <div data-role="fieldcontain" class="menopauseblock">
-      <label>Have you achieved menopause(Cessation of monthly periods)?</label>
+      <label>Have you achieved menopause?</label>
       <fieldset data-role="controlgroup">
        <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
        <label for="menopause_0"> No &nbsp;</label>
@@ -215,32 +237,18 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
        <label for="menopause_1"> Yes</label>
       </fieldset>
      </div>
-     <div class="roundedOne" data-role="fieldcontain" id="otherblock">
-      <label for="roundedOne">None of the above</label>
-      <fieldset data-role="controlgroup">
-       <input type="checkbox" value="None" id="othercheck" name="check" data-theme=""/>
-       <label for="othercheck">
-       </label>
-      </fieldset>
-     </div>
-     <div data-role="fieldcontain" class="menopauseblock">
-      <label>Are you veg or non-veg?</label>
-      <fieldset data-role="controlgroup">
-       <input type="radio" name="eathabit" value="no" id="eathabit_0" class="menopause">
-       <label for="eathabit_0"> Veg &nbsp;</label>
-       <input type="radio" name="eathabit" value="yes" id="eathabit_1" class="menopause">
-       <label for="eathabit_1"> Non-Veg</label>
-      </fieldset>
-     </div>
      <div class="btn-container">
+      <input name="clearbtn" type="button" value="Reset" class="clear-btn" data-role="none">
       <input name="submitbtn" type="button" value="Submit" class="submit-btn" data-role="none">
+     
      </div>
     </form>
    </div>
   </div>
   <div class="clear">
   </div>
+  </div>
  </div>
-</div>
+
 </body>
 </html>
