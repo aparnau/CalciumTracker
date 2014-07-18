@@ -119,6 +119,11 @@ if (eathabitsel == 'veg') {
         localStorage.setItem("lact", lact);
         localStorage.setItem("menopause", menopause);
 				}
+				else{
+				localStorage.setItem("preg", preg);
+        localStorage.setItem("lact", lact);
+        localStorage.setItem("menopause", menopause);
+				}
 			
         var regex = /^[a-zA-Z]*$/;
         var nameregex = /^[A-Za-z ]+$/
@@ -221,12 +226,16 @@ if (eathabitsel == 'veg') {
       </fieldset>
      </div>
      <div class="roundedOne" data-role="fieldcontain" id="otherblock">
-      <label for="roundedOne">None of the above</label>
+      <label for="othercheck">None of the above</label>
       <fieldset data-role="controlgroup">
-       <input type="checkbox" value="None" id="othercheck" name="check" data-theme=""/>
+      <!-- <input type="checkbox" value="None" id="othercheck" name="check" />
        <label for="othercheck">
-       </label>
-      </fieldset>
+       </label>-->
+       
+   <input type="checkbox" name="check" id="othercheck" class="css-checkbox" />
+      <label for="othercheck" class="css-label"></label>
+   
+</fieldset>
      </div>
      <div data-role="fieldcontain" class="foodhabitblock">
       <label>Are you veg or non-veg?</label>
