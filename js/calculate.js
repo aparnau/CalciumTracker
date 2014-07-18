@@ -1,12 +1,3 @@
-$(document).ready(function(e) {
-  		var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-		else if(eathabit=='non-veg'){
-		 $(".non-veg").css("display","block");
-		}
-});
 var ricecal;
 var khicharical;
 var pulaocal;
@@ -206,70 +197,79 @@ function cereal() {
 function currydal() {
 
     var chanadal = $("#chanadal").val() + $("#chanadalfrac").val();
+
+
     var turdal = $("#turdal").val() + $("#turdalfrac").val();
     var spinach = $("#spinach").val() + $("#spinachfrac").val();
     var sambar = $("#sambar").val() + $("#sambarfrac").val();
     var kadhi = $("#kadhi").val() + $("#kadhifrac").val();
     var chole = $("#chole").val() + $("#cholefrac").val();
     var mungwhole = $("#mungwhole").val() + $("#mungwholefrac").val();
-    var masurdal = $("#masurdal").val() + $("#masurdalfrac").val();
+    var masurwhole = $("#masurwhole").val() + $("#masurwholefrac").val();
     var rajmah = $("#rajmah").val() + $("#rajmahfrac").val();
 
 
     chanadalcal = chanadal * 17.5;
-		 masurdalcal = masurdal * 20.8;
+
+
     turdalcal = turdal * 23.95;
     spinachcal = spinach * 74.8;
     sambarcal = sambar * 38.15;
     kadhical = kadhi * 66.6;
     cholecal = chole * 85.9;
-    mungwholecal = mungwhole * 32.8;   
+    mungwholecal = mungwhole * 32.8;
+    masurwholecal = masurwhole * 20.8;
     rajmahcal = rajmah * 94.2;
-		
 
-    var currydal_total = chanadalcal + turdalcal + spinachcal + sambarcal + kadhical + cholecal + mungwholecal + masurdalcal + rajmahcal;
+
+    var currydal_total = chanadalcal + turdalcal + spinachcal + sambarcal + kadhical + cholecal + mungwholecal + masurwholecal + rajmahcal;
 
     var se_chanadal = $("#chanadal option:selected").val();
-    var se_masurdal = $("#masurdal option:selected").val();
+
+
     var se_turdal = $("#turdal option:selected").val();
     var se_spinach = $("#spinach option:selected").val();
     var se_sambar = $("#sambar option:selected").val();
     var se_kadhi = $("#kadhi option:selected").val();
     var se_chole = $("#chole option:selected").val();
-    var se_mungwhole = $("#mungwhole option:selected").val();   
+    var se_mungwhole = $("#mungwhole option:selected").val();
+    var se_masurwhole = $("#masurwhole option:selected").val();
     var se_rajmah = $("#rajmah option:selected").val();
 
 
     var se_chanadalfrac = $("#chanadalfrac option:selected").val();
-    var se_masurdalfrac = $("#masurdalfrac option:selected").val();
+
     var se_turdalfrac = $("#turdalfrac option:selected").val();
     var se_spinachfrac = $("#spinachfrac option:selected").val();
     var se_sambarfrac = $("#sambarfrac option:selected").val();
     var se_kadhifrac = $("#kadhifrac option:selected").val();
     var se_cholefrac = $("#cholefrac option:selected").val();
-    var se_mungwholefrac = $("#mungwholefrac option:selected").val();  
+    var se_mungwholefrac = $("#mungwholefrac option:selected").val();
+    var se_masurwholefrac = $("#masurwholefrac option:selected").val();
     var se_rajmahfrac = $("#rajmahfrac option:selected").val();
 
 
     sessionStorage.setItem('se_chanadal', se_chanadal);
-		sessionStorage.setItem('se_masurdal', se_masurdal);
+
+
     sessionStorage.setItem('se_turdal', se_turdal);
     sessionStorage.setItem('se_spinach', se_spinach);
     sessionStorage.setItem('se_sambar', se_sambar);
     sessionStorage.setItem('se_kadhi', se_kadhi);
     sessionStorage.setItem('se_chole', se_chole);
-    sessionStorage.setItem('se_mungwhole', se_mungwhole);   
+    sessionStorage.setItem('se_mungwhole', se_mungwhole);
+    sessionStorage.setItem('se_masurwhole', se_masurwhole);
     sessionStorage.setItem('se_rajmah', se_rajmah);
 
 
-  	sessionStorage.setItem('se_chanadalfrac', se_chanadalfrac);			
+
     sessionStorage.setItem('se_turdalfrac', se_turdalfrac);
     sessionStorage.setItem('se_spinachfrac', se_spinachfrac);
     sessionStorage.setItem('se_sambarfrac', se_sambarfrac);
     sessionStorage.setItem('se_kadhifrac', se_kadhifrac);
     sessionStorage.setItem('se_cholefrac', se_cholefrac);
     sessionStorage.setItem('se_mungwholefrac', se_mungwholefrac);
-    sessionStorage.setItem('se_masurdalfrac', se_masurdalfrac);
+    sessionStorage.setItem('se_masurwholefrac', se_masurwholefrac);
     sessionStorage.setItem('se_rajmahfrac', se_rajmahfrac);
 
 
@@ -512,6 +512,7 @@ function sweets() {
     var cake_fruit = $("#cake_fruit").val() + $("#cake_fruitfrac").val();
     var breadpudd = $("#breadpudd").val() + $("#breadpudfrac").val();
     var custard = $("#custard").val() + $("#custardfrac").val();
+    var halwa = $("#halwa").val() + $("#halwafrac").val();
     var payasam = $("#payasam").val() + $("#payasamfrac").val();
     var shrikhand = $("#shrikhand").val() + $("#shrikhandfrac").val();
     var pooranpoli = $("#pooranpoli").val() + $("#pooranpolifrac").val();
@@ -524,14 +525,16 @@ function sweets() {
     cake_fruitcal = cake_fruit * 13.9;
     breadpuddcal = breadpudd * 125.6;
     custardcal = custard * 78.9;
+    halwacal = halwa * 5.466666667;
     payasamcal = payasam * 81.7;
     shrikhandcal = shrikhand * 313.4666667;
     pooranpolical = pooranpoli * 15.5;
     gulabjamuncal = gulabjamun * 239;
     rasgullacal = rasgulla * 52;
-    icecreamcal = icecream * 156;
-		
-    var sweets_total = chikkical + cake_fruitcal + breadpuddcal + custardcal + payasamcal + shrikhandcal + pooranpolical + gulabjamuncal + rasgullacal + icecreamcal;
+    icecream = icecream * 156;
+
+
+    var sweets_total = chikkical + cake_fruitcal + breadpuddcal + custardcal + halwacal + payasamcal + shrikhandcal + pooranpolical + gulabjamuncal + rasgullacal + icecream;
 
 
     var se_chikki = $("#chikki option:selected").val();

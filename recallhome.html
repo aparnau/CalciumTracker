@@ -1,4 +1,4 @@
-<!doctype html>
+       <!doctype html>
 <!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
@@ -9,6 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcium Tracker</title>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,7 +18,7 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
-<script src="js/calculate.js"> </script>
+<script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
@@ -32,41 +33,42 @@ function sel_milk(){
 </script>
 </head>
 <body>
-<div class="gridContainer clearfix">
+<div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer" class="recallhome">
   <div id="insidecont">
-   <div id="top-bar" class="top-bar"></div>
-   <div class="clear">
-   </div>
+  <div id="top-bar" class="top-bar"></div>
+  <div class="clear">  </div>
    <div id="header"  data-role="header" >
-    <p>Dietary Intake</p>
-    <p> Take a minute to quickly recall the food items during the last 3 days</p>
+    <p>Dietary Intake
+    <br/>Take a minute to quickly recall the food items during the last 3 days</p>
    </div>
    <div class="clear"></div>
    <div class="btngroup">
-    <ul data-role="listview">
-     <li data-icon="false" class="listitem"><a href="milkpdt.html" rel="external" >Milk and milk products</a>
+    <ul data-role="listview"> 
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" rel="external" data-transition="slide" >Milk and milk products</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();" >Cereal preparations</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();" >Cereal preparations</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();">Curry/dal preparations</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Curry/dal preparations</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();" >Vegetable - gravy</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();" >Vegetable - gravy</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();">Vegetable - dry</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Vegetable - dry</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();">Snacks</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Snacks</a>
      </li>
-     <li data-icon="false" class="listitem"><a href="#" rel="external" onClick="sel_milk();">Sweets</a>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Sweets</a>
      </li>
-     <li data-icon="false" class="listitem non-veg"><a href="#" rel="external" onClick="sel_milk();">Non-vegetarian foods</a>
-     </li>
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Non-vegetarian foods</a>
+     </li>     
+     <li data-icon="false" class="listitem"><a href="#" rel="external" data-transition="slide" onClick="sel_milk();">Other preparations</a>
+    </li>
     </ul>
    </div>
   </div>
   <div class="clear">
   </div>
-  <div class="navigation" data-role="footer">
+<div class="navigation" data-role="footer">
    <div id="prev"><a href="recallentery.html" rel="external" data-transition="slide" ><img src="images/prevarrow.png"/>
     </a>
    </div>
@@ -74,6 +76,7 @@ function sel_milk(){
     </a>
    </div>
   </div>
+
  </div>
 </div>
 </body>

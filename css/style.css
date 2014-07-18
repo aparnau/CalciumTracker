@@ -146,62 +146,6 @@ p.mid_two
 	text-decoration: none;
 	font-family: HelveticaNeue;
 }
-.ui-controlgroup-controls label
-{
-	float: none !important;
-	margin: 0px;
-}
-.ui-icon-checkbox-off, .ui-icon-radio-off { background-color: #f3d7e2 !important; }
-.ui-radio .ui-icon, .ui-radio .ui-icon-searchfield:after
-{
-	background-image: url(../images/icons-18-white.png) !important;
-	background-color: #f3d7e2 !important;
-}
-.btn-container { text-align: center; }
-.ui-controlgroup-controls .ui-radio
-{
-	text-align: center;
-	width: 110px;
-	float: left;
-	clear: none;
-}
-.ui-icon-checkbox-off {
-background-position: -754px 0px !important;
-background-color: transparent !important;
-}
-.ui-icon-checkbox-on {
-background-position: -718px 0px !important;
-background-color: transparent !important;
-}
-input[type=checkbox].css-checkbox {
-							display:none;
-						}
-
-						input[type=checkbox].css-checkbox + label.css-label {
-							padding-left:21px;
-							height:15px; 
-							display:inline-block;
-							line-height:15px;
-							background-repeat:no-repeat;
-							background-position: 0 0;
-							font-size:15px;
-							vertical-align:middle;
-							cursor:pointer;
-
-						}
-
-						input[type=checkbox].css-checkbox:checked + label.css-label {
-							background-position: 0 -15px;
-						}
-						label.css-label {
-				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_7038b3aa32eb437fd8b868e54dbb0898.png);
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
 #maincontainer
 {
 	clear: both;
@@ -481,7 +425,7 @@ input[type=checkbox].css-checkbox {
 	text-align: right;
 	color: #231f20;
 	cursor: auto;
-	margin-top: 6px;
+	margin-top: 4px;
 	background: transparent;
 	border: none;
 }
@@ -628,7 +572,7 @@ input[type=checkbox].css-checkbox {
 	width: 99%;
 	font-weight: normal;
 	display: block;
-	height: 59px;
+	height: 60px;
 	color: #accdec;
 	font-size: 25px;
 	padding-left: 1%;
@@ -688,8 +632,8 @@ float: left;*/
 	background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
 	background-image: linear-gradient(#eb008b, #eb008b) !important;
 	color: #FFF !important;
-	width: 150px;
-	height: 45px;
+	width: 200px;
+	height: 50px;
 	border: none;
 	margin-left: 20px;
 	cursor: pointer;
@@ -1092,7 +1036,7 @@ p.resultcom { padding-top: 0px !important; }
 }
 #aboutform
 {
-	width: 80%;
+	width: 100%;
 	margin: auto;
 }
 .ui-select .ui-btn select
@@ -1117,6 +1061,45 @@ p.resultcom { padding-top: 0px !important; }
 	text-align: center;
 	margin-bottom: 20px;
 }
+.ui-controlgroup-controls label
+{
+	float: none !important;
+	margin: 0px;
+}
+.ui-icon-checkbox-off, .ui-icon-radio-off { background-color: #f3d7e2 !important; }
+.ui-radio .ui-icon, .ui-radio .ui-icon-searchfield:after
+{
+	background-image: url(../images/icons-18-white.png) !important;
+	background-color: #f3d7e2 !important;
+}
+.btn-container { text-align: center; }
+.ui-controlgroup-controls .ui-radio
+{
+	text-align: center;
+	width: 110px;
+	float: left;
+	clear: none;
+}
+.ui-checkbox input
+{
+	position: absolute;
+	left: 16px !important;
+	top: 50%;
+	height: 19px !important;
+	margin: -5px 0 0 0;
+	outline: 0 !important;
+	z-index: 1;
+	margin-top: -9px;
+}
+.ui-checkbox .ui-icon
+{
+	background-image: url(../images/icons-18-white.png) !important;
+	background-color: transparent !important;
+	background-position: 89% 48%;
+	border-radius: 13px;
+}
+.ui-icon-checkbox-off { background-position: -754px 0px !important; }
+.ui-icon-checkbox-on { background-position: -718px 0px !important; }
 
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
 
@@ -1145,14 +1128,13 @@ p.resultcom { padding-top: 0px !important; }
 {
 	padding-left: 0px;
 	margin-top: 20px !important;
-	font-size: 16px !important;
+	font-size: 20px !important;
 }
-.recallhome #header p
-{
-	padding-left: 0px;
-	text-align: center;
-	margin-top: 6px !important;
-	font-size: 13px !important;
+.recallhome #header p {
+padding-left: 0px;
+text-align: center;
+margin-top: 6px !important;
+font-size: 13px !important;
 }
 .optcontainer .ui-btn-inner
 {
@@ -1215,7 +1197,7 @@ p.resultcom { padding-top: 0px !important; }
 	width: 100%;
 	font-weight: normal;
 	display: block;
-	height: 59px;
+	height: auto;
 	color: #accdec;
 	font-size: 25px;
 	padding-left: 0%;
@@ -1439,15 +1421,6 @@ p.mid_two
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
-.homeicon .ui-icon {
-background: rgba(0,0,0,0);
-background-image: url(../images/homeicon_small.png) !important;
-background-repeat: no-repeat;
--webkit-border-radius: 9px;
-border-radius: 9px;
-background-position: 0px 15px !important;
-}
-
 }
 @media screen and (max-device-width: 500px) {
 .submit-btn
@@ -1576,29 +1549,27 @@ p.mid_two
 	width: 100px;
 	height: 60px;
 }
-.homeicon .ui-icon
-{
-	background: rgba(0,0,0,0);
-	background-image: url(../images/homeicon.png);
-	background-repeat: no-repeat;
-	-webkit-border-radius: 9px;
-	border-radius: 9px;
-	background-position: 0px 10px;
-}
-.homeicon.ui-btn-up-a { background: transparent !important; }
-.recallhome #header p
-{
-	padding-left: 0px;
-	text-align: center;
-	margin-top: 6px;
-	font-size: 17px;
-}
-#header a.homeicon.ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all.ui-btn-inline.ui-btn-icon-notext.ui-btn-hover-a { background: none !important; }
 
 
-.ui-checkbox .ui-btn-up-c,
-.ui-checkbox .ui-btn-hover-c{
-	border:none !important;
-	background:none !important;
+.homeicon .ui-icon{
+
+background: rgba(0,0,0,0) ;
+background-image: url(../images/homeicon.png);
+background-repeat: no-repeat;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+background-position: 0px 10px;
 }
 
+
+
+.homeicon.ui-btn-up-a {
+background: transparent !important;
+}
+
+.recallhome #header p {
+padding-left: 0px;
+text-align: center;
+margin-top: 6px;
+font-size: 17px;
+}
