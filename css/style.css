@@ -1423,7 +1423,14 @@ p.mid_two
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
-
+.homeicon .ui-icon {
+background: rgba(0,0,0,0);
+background-image: url(../images/homeicon_small.png) !important;
+background-repeat: no-repeat;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+background-position: 0px 15px;
+}
 
 }
 @media screen and (max-device-width: 500px) {
@@ -1578,3 +1585,4 @@ p.mid_two
 	border:none !important;
 	background:none !important;
 }
+
