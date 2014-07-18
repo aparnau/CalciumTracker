@@ -42,7 +42,7 @@ body
 	padding-top: 50px;
 	background-color: #0054a5;
 	text-align: center;
-	height: 120px;
+	height: 180px;
 	border-bottom: 1px solid #9bc5d0;
 }
 .calcium_mid
@@ -146,6 +146,62 @@ p.mid_two
 	text-decoration: none;
 	font-family: HelveticaNeue;
 }
+.ui-controlgroup-controls label
+{
+	float: none !important;
+	margin: 0px;
+}
+.ui-icon-checkbox-off, .ui-icon-radio-off { background-color: #f3d7e2 !important; }
+.ui-radio .ui-icon, .ui-radio .ui-icon-searchfield:after
+{
+	background-image: url(../images/icons-18-white.png) !important;
+	background-color: #f3d7e2 !important;
+}
+.btn-container { text-align: center; }
+.ui-controlgroup-controls .ui-radio
+{
+	text-align: center;
+	width: 110px;
+	float: left;
+	clear: none;
+}
+.ui-icon-checkbox-off {
+background-position: -754px 0px !important;
+background-color: transparent !important;
+}
+.ui-icon-checkbox-on {
+background-position: -718px 0px !important;
+background-color: transparent !important;
+}
+input[type=checkbox].css-checkbox {
+							display:none;
+						}
+
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:21px;
+							height:15px; 
+							display:inline-block;
+							line-height:15px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:15px;
+							vertical-align:middle;
+							cursor:pointer;
+
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -15px;
+						}
+						label.css-label {
+				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_7038b3aa32eb437fd8b868e54dbb0898.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
 #maincontainer
 {
 	clear: both;
@@ -425,7 +481,10 @@ p.mid_two
 	text-align: right;
 	color: #231f20;
 	cursor: auto;
-	margin-top: 4px;
+	margin-top: 6px;
+	background: transparent;
+	border: none;
+}
 }
 .gridContainer { }
 #maincontainer
@@ -569,7 +628,7 @@ p.mid_two
 	width: 99%;
 	font-weight: normal;
 	display: block;
-	height: 60px;
+	height: 59px;
 	color: #accdec;
 	font-size: 25px;
 	padding-left: 1%;
@@ -629,8 +688,8 @@ float: left;*/
 	background-image: -o-linear-gradient(#eb008b, #eb008b) !important;
 	background-image: linear-gradient(#eb008b, #eb008b) !important;
 	color: #FFF !important;
-	width: 200px;
-	height: 50px;
+	width: 150px;
+	height: 45px;
 	border: none;
 	margin-left: 20px;
 	cursor: pointer;
@@ -1002,8 +1061,8 @@ width:12%;
 	font-size: 20px;
 	font-weight: normal;
 	height: 60px;
-background-image:url('../images/round.png');
-background-repeat:no-repeat;
+	background-image: url('../images/round.png');
+	background-repeat: no-repeat;
 	width: 110px;
 	margin: auto;
 	padding-top: 10px;
@@ -1033,7 +1092,7 @@ p.resultcom { padding-top: 0px !important; }
 }
 #aboutform
 {
-	width: 100%;
+	width: 80%;
 	margin: auto;
 }
 .ui-select .ui-btn select
@@ -1058,27 +1117,6 @@ p.resultcom { padding-top: 0px !important; }
 	text-align: center;
 	margin-bottom: 20px;
 }
-.ui-controlgroup-controls label
-{
-	float: none !important;
-	margin: 0px;
-}
-.ui-icon-checkbox-off, .ui-icon-radio-off { background-color: #f3d7e2 !important; }
-.ui-radio .ui-icon, .ui-radio .ui-icon-searchfield:after
-{
-	background-image: url(../images/icons-18-white.png) !important;
-	background-color: #f3d7e2 !important;
-}
-.btn-container { text-align: center; }
-.ui-controlgroup-controls .ui-radio
-{
-	text-align: center;
-	width: 100px;
-	float: left;
-	clear: none;
-}
-
-
 
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
 
@@ -1107,7 +1145,14 @@ p.resultcom { padding-top: 0px !important; }
 {
 	padding-left: 0px;
 	margin-top: 20px !important;
-	font-size: 20px !important;
+	font-size: 16px !important;
+}
+.recallhome #header p
+{
+	padding-left: 0px;
+	text-align: center;
+	margin-top: 6px !important;
+	font-size: 13px !important;
 }
 .optcontainer .ui-btn-inner
 {
@@ -1133,8 +1178,8 @@ p.resultcom { padding-top: 0px !important; }
 	font-size: 19px;
 	font-weight: normal;
 	height: 60px;
-background-image:url('../images/round.png');
-background-repeat:no-repeat;
+	background-image: url('../images/round.png');
+	background-repeat: no-repeat;
 	width: 110px;
 	margin: auto;
 }
@@ -1170,7 +1215,7 @@ background-repeat:no-repeat;
 	width: 100%;
 	font-weight: normal;
 	display: block;
-	height: auto;
+	height: 59px;
 	color: #accdec;
 	font-size: 25px;
 	padding-left: 0%;
@@ -1275,7 +1320,6 @@ p.mid_two
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
-
 .result_mid .mid_one
 {
 	font-size: 19px;
@@ -1377,12 +1421,10 @@ p.mid_two
 	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: normal;
-
 	height: 60px;
-background-image:url('../images/round.png');
-background-repeat:no-repeat;
+	background-image: url('../images/round.png');
+	background-repeat: no-repeat;
 	width: 110px;
-
 	margin: auto;
 	padding-top: 10px;
 }
@@ -1397,6 +1439,15 @@ background-repeat:no-repeat;
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
+.homeicon .ui-icon {
+background: rgba(0,0,0,0);
+background-image: url(../images/homeicon_small.png) !important;
+background-repeat: no-repeat;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+background-position: 0px 15px !important;
+}
+
 }
 @media screen and (max-device-width: 500px) {
 .submit-btn
@@ -1518,5 +1569,36 @@ p.mid_two
 	margin: 0;
 	width: 55%;
 }
-
 .ui-page { -webkit-backface-visibility: hidden; }
+#header .homeicon .ui-icon, #header .homeicon .ui-btn-icon-notext
+{
+	background-color: transparent;
+	width: 100px;
+	height: 60px;
+}
+.homeicon .ui-icon
+{
+	background: rgba(0,0,0,0);
+	background-image: url(../images/homeicon.png);
+	background-repeat: no-repeat;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	background-position: 0px 10px;
+}
+.homeicon.ui-btn-up-a { background: transparent !important; }
+.recallhome #header p
+{
+	padding-left: 0px;
+	text-align: center;
+	margin-top: 6px;
+	font-size: 17px;
+}
+#header a.homeicon.ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all.ui-btn-inline.ui-btn-icon-notext.ui-btn-hover-a { background: none !important; }
+
+
+.ui-checkbox .ui-btn-up-c,
+.ui-checkbox .ui-btn-hover-c{
+	border:none !important;
+	background:none !important;
+}
+
