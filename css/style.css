@@ -555,20 +555,7 @@ input[type=checkbox].css-checkbox {
 	margin: 0 auto;
 	margin-top: 1%;
 }
-#top-bar
-{
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-	background-color: #72B4F0;
-	height: 25px;
-	font-size: 19px;
-	color: #231f20;
-	text-align: center;
-	padding-top: 5px;
-}
+
 #resultname
 {
 	clear: both;
