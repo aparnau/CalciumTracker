@@ -1592,6 +1592,7 @@ p.mid_two
 	text-align: center;
 	margin-top: 6px;
 	font-size: 17px;
+	margin-bottom: 0px;
 }
 #header a.homeicon.ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all.ui-btn-inline.ui-btn-icon-notext.ui-btn-hover-a { background: none !important; }
 
