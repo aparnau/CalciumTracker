@@ -26,7 +26,7 @@ $(document).ready(function (e) {
     $('.menopauseblock').hide();
     $('#otherblock').hide();
     $('#calrecomm').text('mg/day');
-$("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
+
     var namesel = localStorage.getItem("name");
     var agesel = localStorage.getItem("age");
     var gendersel = localStorage.getItem("gender");
@@ -34,6 +34,10 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
     var lactsel = localStorage.getItem("lact");
     var menopausesel = localStorage.getItem("menopause");
     var eathabitsel = localStorage.getItem("eathabit");
+
+    if (pregsel == 'no' && lactsel == 'no' && menopausesel == 'no') {
+        $("input[type='checkbox']").attr("checked", true).checkboxradio("refresh");
+    }
 
     if (namesel !== null) {
         $('#name').val(namesel);
@@ -49,7 +53,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
         $('.pregnantblock').hide();
         $('.lactatingblock').hide();
         $('.menopauseblock').hide();
-				$('#otherblock').hide();
+        $('#otherblock').hide();
         /*          $('input[name=pregnant]').attr("disabled", true);
                     $('input[name=lactating]').attr("disabled", true);
                     $('input[name=menopause]').attr("disabled", true);*/
@@ -60,7 +64,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
         $('.pregnantblock').show();
         $('.lactatingblock').show();
         $('.menopauseblock').show();
-				$('#otherblock').show();     
+        $('#otherblock').show();
     }
 
     if (pregsel == 'no') {
@@ -70,7 +74,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
         document.aboutform.pregnant[1].checked = true;
         $("#pregnant_1").checkboxradio("refresh");
     }
-		
+
     if (lactsel == 'no') {
         document.aboutform.lactating[0].checked = true;
         $("#lactating_0").checkboxradio("refresh");
@@ -86,7 +90,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
         document.aboutform.menopause[1].checked = true;
         $("#menopause_1").checkboxradio("refresh");
     }
-if (eathabitsel == 'veg') {
+    if (eathabitsel == 'veg') {
         document.aboutform.eathabit[0].checked = true;
         $("#eathabit_0").checkboxradio("refresh");
     } else if (eathabitsel == 'non-veg') {
@@ -101,30 +105,25 @@ if (eathabitsel == 'veg') {
         var preg = $("input[name='pregnant']:checked").val();
         var lact = $("input[name='lactating']:checked").val();
         var menopause = $("input[name='menopause']:checked").val();
-			  var eathabit = $("input[name='eathabit']:checked").val();
+        var eathabit = $("input[name='eathabit']:checked").val();
         localStorage.setItem("name", name);
         localStorage.setItem("age", age);
         localStorage.setItem("gender", gender);
         localStorage.setItem("eathabit", eathabit);
-		
-				if(document.getElementById("othercheck").checked==true){
-				$("input[type='checkbox']").attr("checked",true).checkboxradio("refresh");
-				localStorage.setItem("preg", 'no');
-        localStorage.setItem("lact",  'no');
-        localStorage.setItem("menopause",  'no');			
-				}
-				else if(document.getElementById("othercheck").checked==false){
-			$("input[type='checkbox']").attr("checked",true).checkboxradio("refresh");	
-				localStorage.setItem("preg", preg);
-        localStorage.setItem("lact", lact);
-        localStorage.setItem("menopause", menopause);
-				}
-				else{
-				localStorage.setItem("preg", preg);
-        localStorage.setItem("lact", lact);
-        localStorage.setItem("menopause", menopause);
-				}
-			
+
+        if (document.getElementById("othercheck").checked == true) {
+            $("input[type='checkbox']").attr("checked", true).checkboxradio("refresh");
+            localStorage.setItem("preg", 'no');
+            localStorage.setItem("lact", 'no');
+            localStorage.setItem("menopause", 'no');
+        } else if (document.getElementById("othercheck").checked == false) {
+            $("input[type='checkbox']").attr("checked", true).checkboxradio("refresh");
+            localStorage.setItem("preg", preg);
+            localStorage.setItem("lact", lact);
+            localStorage.setItem("menopause", menopause);
+        }
+
+
         var regex = /^[a-zA-Z]*$/;
         var nameregex = /^[A-Za-z ]+$/
         if (age == '') {
@@ -141,29 +140,29 @@ if (eathabitsel == 'veg') {
             window.location = 'recallentery.html';
         }
     });
-/*    $("#age").bind("change", function () {
-        var age = $("#age").val();
-    }); //age change	
-*/
+    /*    $("#age").bind("change", function () {
+            var age = $("#age").val();
+        }); //age change	
+    */
 
     $("input[name='gender']").change(function () {
         var gender = $("input[name='gender']:checked").val();
-				 var age = $("#age").val();
+        var age = $("#age").val();
         if (gender == 'male') {
             $('.pregnantblock').hide();
             $('.lactatingblock').hide();
             $('.menopauseblock').hide();
-						$('#otherblock').hide();
+            $('#otherblock').hide();
             localStorage.removeItem("preg");
             localStorage.removeItem("lact");
             localStorage.removeItem("menopause");
 
         }
-        if (gender == 'female' && age > 18 ) {
+        if (gender == 'female' && age > 18) {
             $('.pregnantblock').show();
             $('.lactatingblock').show();
             $('.menopauseblock').show();
-						$('#otherblock').show();    
+            $('#otherblock').show();
         }
     }); //gender change
 
@@ -228,21 +227,20 @@ if (eathabitsel == 'veg') {
      <div class="roundedOne" data-role="fieldcontain" id="otherblock">
       <label for="othercheck">None of the above</label>
       <fieldset data-role="controlgroup">
-      <!-- <input type="checkbox" value="None" id="othercheck" name="check" />
+       <!-- <input type="checkbox" value="None" id="othercheck" name="check" />
        <label for="othercheck">
        </label>-->
        
-   <input type="checkbox" name="check" id="othercheck" class="css-checkbox" />
-      <label for="othercheck" class="css-label"></label>
-   
-</fieldset>
+       <input type="checkbox" name="check" id="othercheck" class="css-checkbox" />
+       <label for="othercheck" class="css-label"></label>
+      </fieldset>
      </div>
      <div data-role="fieldcontain" class="foodhabitblock">
       <label>Are you veg or non-veg?</label>
       <fieldset data-role="controlgroup">
        <input type="radio" name="eathabit" value="veg" id="eathabit_0" class="eathabit">
        <label for="eathabit_0">
-       &nbsp; &nbsp;Veg &nbsp;</label>
+        &nbsp; &nbsp;Veg &nbsp;</label>
        <input type="radio" name="eathabit" value="non-veg" id="eathabit_1" class="eathabit">
        <label for="eathabit_1"> Non-Veg</label>
       </fieldset>
