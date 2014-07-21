@@ -284,7 +284,7 @@ input[type=checkbox].css-checkbox {
 	width: 100%;
 	display: block;
 	margin: 0 auto;
-	margin-top: 1%;
+	margin-top:3%;
 }
 #top-bar
 {
@@ -300,6 +300,8 @@ input[type=checkbox].css-checkbox {
 	text-align: center;
 	padding-top: 5px;
 	text-transform: capitalize;
+	position: fixed;
+top: -1px;
 }
 #resultname
 {
@@ -424,7 +426,7 @@ input[type=checkbox].css-checkbox {
 	width: 80%;
 	display: block;
 	margin: 0 auto;
-	margin-top: 1%;
+	margin-top:3%;
 }
 #top-bar
 {
@@ -439,6 +441,8 @@ input[type=checkbox].css-checkbox {
 	color: #231f20;
 	text-align: center;
 	padding-top: 5px;
+	position: fixed;
+top: -1px;
 }
 #resultname
 {
@@ -553,7 +557,7 @@ input[type=checkbox].css-checkbox {
 	width: 80%;
 	display: block;
 	margin: 0 auto;
-	margin-top: 1%;
+	margin-top: 3%;
 }
 
 #resultname
@@ -609,20 +613,21 @@ input[type=checkbox].css-checkbox {
 }
 #header.ui-header
 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 99%;
-	font-weight: normal;
-	display: block;
-	height: 59px;
-	color: #accdec;
-	font-size: 25px;
-	padding-left: 1%;
-	word-spacing: 1px;
-	border: none;
-	background: #0054a5;
-	text-shadow: 0 0 0;
+clear: both;
+float: left;
+margin-left: 0;
+width: 99%;
+font-weight: normal;
+display: block;
+height: 59px;
+color: #accdec;
+font-size: 25px;
+padding-left: 1%;
+word-spacing: 1px;
+border: none;
+background: #0054a5;
+text-shadow: 0 0 0;
+top: 29px;
 }
 #header p
 {
@@ -846,8 +851,8 @@ float: left;*/
 #header .ui-icon, #header .ui-btn-icon-notext
 {
 	width: 45px;
-	height: 61px;
-	margin-top: -1px;
+	height: 60px;
+	margin-top: 0px;
 	border: none;
 	top: 0px;
 }
@@ -1590,3 +1595,8 @@ p.mid_two
 	background:none !important;
 }
 
+
+
+.homeheader {
+position: static !important;
+}
