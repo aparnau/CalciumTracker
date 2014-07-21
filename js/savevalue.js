@@ -6,9 +6,9 @@ $(document).ready(function (e) {
     if (eathabit == 'veg') {
         $(".non-veg").css("display", "none");
     }
-    if (eathabit == 'non-veg') {
+   /* if (eathabit == 'non-veg') {
         $(".non-veg").css("display", "block");
-    }
+    }*/
 
     /* MILK */
 
