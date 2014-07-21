@@ -17,89 +17,12 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/savevalue.js"></script>
 <script src="js/calculate.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
-		var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-		if(eathabit=='non-veg'){		
-		 $(".non-veg").css("display","block");
-		}	
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-	
-var se_mirchi=sessionStorage.getItem('se_mirchi');
-var se_mirchifrac=sessionStorage.getItem('se_mirchifrac');
-var se_gopigaajar=sessionStorage.getItem('se_gopigaajar');
-var se_gopigaajarfrac=sessionStorage.getItem('se_gopigaajarfrac');
-var se_bhindi=sessionStorage.getItem('se_bhindi');
-var se_bhindifrac=sessionStorage.getItem('se_bhindifrac');
-var se_kaddu=sessionStorage.getItem('se_kaddu');
-var se_kaddufrac=sessionStorage.getItem('se_kaddufrac');
-
-var se_cabbage=sessionStorage.getItem('se_cabbage');
-var se_cabbagefrac=sessionStorage.getItem('se_cabbagefrac');
-var se_leafyveg1=sessionStorage.getItem('se_leafyveg1');
-var se_leafyveg1frac=sessionStorage.getItem('se_leafyveg1frac');
-var se_leafyveg2=sessionStorage.getItem('se_leafyveg2');
-var se_leafyveg2frac=sessionStorage.getItem('se_leafyveg2frac');
-var se_leafyveg3=sessionStorage.getItem('se_leafyveg3');
-var se_leafyveg3frac=sessionStorage.getItem('se_leafyveg3frac');
-var se_leafyveg4=sessionStorage.getItem('se_leafyveg4');
-var se_leafyveg4frac=sessionStorage.getItem('se_leafyveg4frac');
-
-
-
-$('#mirchi option[value="'+se_mirchi+'"]').prop('selected', true);
-$('#mirchifrac option[value="'+se_mirchifrac+'"]').prop('selected', true);
-$('#gopigaajar option[value="'+se_gopigaajar+'"]').prop('selected', true);
-$('#gopigaajarfrac option[value="'+se_gopigaajarfrac+'"]').prop('selected', true);
-$('#bhindi option[value="'+se_bhindi+'"]').prop('selected', true);
-$('#bhindifrac option[value="'+se_bhindifrac+'"]').prop('selected', true);
-$('#kaddu option[value="'+se_kaddu+'"]').prop('selected', true);
-$('#kaddufrac option[value="'+se_kaddufrac+'"]').prop('selected', true);
-
-$('#cabbage option[value="'+se_cabbage+'"]').prop('selected', true);
-$('#cabbagefrac option[value="'+se_cabbagefrac+'"]').prop('selected', true);
-$('#leafyveg1 option[value="'+se_leafyveg1+'"]').prop('selected', true);
-$('#leafyveg1frac option[value="'+se_leafyveg1frac+'"]').prop('selected', true);
-$('#leafyveg2 option[value="'+se_leafyveg2+'"]').prop('selected', true);
-$('#leafyveg2frac option[value="'+se_leafyveg2frac+'"]').prop('selected', true);
-$('#leafyveg3 option[value="'+se_leafyveg3+'"]').prop('selected', true);
-$('#leafyveg3frac option[value="'+se_leafyveg3frac+'"]').prop('selected', true);
-$('#leafyveg4 option[value="'+se_leafyveg4+'"]').prop('selected', true);
-$('#leafyveg4frac option[value="'+se_leafyveg4frac+'"]').prop('selected', true);
-
-
-
-
-$("#mirchi").selectmenu("refresh");
-$("#mirchifrac").selectmenu("refresh");
-$("#gopigaajar").selectmenu("refresh");
-$("#gopigaajarfrac").selectmenu("refresh");
-$("#bhindi").selectmenu("refresh");
-$("#bhindifrac").selectmenu("refresh");
-$("#kaddu").selectmenu("refresh");
-$("#kaddufrac").selectmenu("refresh");
-
-$("#cabbage").selectmenu("refresh");
-$("#cabbagefrac").selectmenu("refresh");
-$("#leafyveg1").selectmenu("refresh");
-$("#leafyveg1frac").selectmenu("refresh");
-$("#leafyveg2").selectmenu("refresh");
-$("#leafyveg2frac").selectmenu("refresh");
-$("#leafyveg3").selectmenu("refresh");
-$("#leafyveg3frac").selectmenu("refresh");
-$("#leafyveg4").selectmenu("refresh");
-$("#leafyveg4frac").selectmenu("refresh");
-	
-	
-	
 $(".savenxt").click(function(e) {
 	veg_dry();
   window.location='snacks.html';

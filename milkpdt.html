@@ -17,58 +17,12 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/savevalue.js"></script>
 <script src="js/calculate.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
-			var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-	if(eathabit=='non-veg'){		
-		 $(".non-veg").css("display","block");
-		}	
-	var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-
-var se_curd=sessionStorage.getItem('se_curd');
-var se_cheese=sessionStorage.getItem('se_cheese');
-var se_buttermilk=sessionStorage.getItem('se_buttermilk');
-var se_lassi=sessionStorage.getItem('se_lassi');
-var se_milkshake=sessionStorage.getItem('se_milkshake');
-
-
-var se_curd_frac=sessionStorage.getItem('se_curd_frac');
-var se_cheese_frac=sessionStorage.getItem('se_cheese_frac');
-var se_buttermilk_frac=sessionStorage.getItem('se_buttermilk_frac');
-var se_lassi_frac=sessionStorage.getItem('se_lassi_frac');
-var se_milkshakefrac=sessionStorage.getItem('se_milkshakefrac');
-
-
-$('#curd option[value="'+se_curd+'"]').prop('selected', true);
-$('#curdfrac option[value="'+se_curd_frac+'"]').prop('selected', true);
-$('#cheese option[value="'+se_cheese+'"]').prop('selected', true);
-$('#cheesefrac option[value="'+se_cheese_frac+'"]').prop('selected', true);
-$('#buttermilk option[value="'+se_buttermilk+'"]').prop('selected', true);
-$('#buttermilkfrac option[value="'+se_buttermilk_frac+'"]').prop('selected', true);
-$('#lassi option[value="'+se_lassi+'"]').prop('selected', true);
-$('#lassifrac option[value="'+se_lassi_frac+'"]').prop('selected', true);
-$('#milkshake option[value="'+se_milkshake+'"]').prop('selected', true);
-$('#milkshakefrac option[value="'+se_milkshakefrac+'"]').prop('selected', true);
-
-
-$("#curd").selectmenu("refresh");
-$("#curdfrac").selectmenu("refresh");
-$("#cheese").selectmenu("refresh");
-$("#cheesefrac").selectmenu("refresh");
-$("#buttermilk").selectmenu("refresh");
-$("#buttermilkfrac").selectmenu("refresh");
-$("#lassi").selectmenu("refresh");
-$("#lassifrac").selectmenu("refresh");
-$("#milkshake").selectmenu("refresh");
-$("#milkshakefrac").selectmenu("refresh");
 
 $(".savenxt").click(function(e) {
  	milk();
@@ -288,7 +242,7 @@ $(".savenxt").click(function(e) {
     </li>
     <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
     </li>
-   <li data-icon="false" class="listitem non-veg"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    <li data-icon="false" class="listitem non-veg"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
     </li>
    </ul>
   </div>

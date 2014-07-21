@@ -17,86 +17,12 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/savevalue.js"></script>
 <script src="js/calculate.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
-			var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-			if(eathabit=='non-veg'){		
-		 $(".non-veg").css("display","block");
-		}	
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-var se_chikki=sessionStorage.getItem('se_chikki');
-var se_chikkifrac=sessionStorage.getItem('se_chikkifrac');
-var se_cake_fruit=sessionStorage.getItem('se_cake_fruit');
-var se_cake_fruitfrac=sessionStorage.getItem('se_cake_fruitfrac');
-var se_breadpudd=sessionStorage.getItem('se_breadpudd');
-var se_breadpudfrac=sessionStorage.getItem('se_breadpudfrac');
-var se_custard=sessionStorage.getItem('se_custard');
-var se_custardfrac=sessionStorage.getItem('se_custardfrac');
-var se_payasam=sessionStorage.getItem('se_payasam');
-var se_payasamfrac=sessionStorage.getItem('se_payasamfrac');
-var se_shrikhand=sessionStorage.getItem('se_shrikhand');
-var se_shrikhandfrac=sessionStorage.getItem('se_shrikhandfrac');
-var se_pooranpoli=sessionStorage.getItem('se_pooranpoli');
-var se_pooranpolifrac=sessionStorage.getItem('se_pooranpolifrac');
-var se_gulabjamun=sessionStorage.getItem('se_gulabjamun');
-var se_gulabjamunfrac=sessionStorage.getItem('se_gulabjamunfrac');
-var se_rasgulla=sessionStorage.getItem('se_rasgulla');
-var se_rasgullafrac=sessionStorage.getItem('se_rasgullafrac');
-var se_icecream=sessionStorage.getItem('se_icecream');
-var se_icecreamfrac=sessionStorage.getItem('se_icecreamfrac');
-
-
-
-$('#chikki option[value="'+se_chikki+'"]').prop('selected', true);
-$('#chikkifrac option[value="'+se_chikkifrac+'"]').prop('selected', true);
-$('#cake_fruit option[value="'+se_cake_fruit+'"]').prop('selected', true);
-$('#cake_fruitfrac option[value="'+se_cake_fruitfrac+'"]').prop('selected', true);
-$('#breadpudd option[value="'+se_breadpudd+'"]').prop('selected', true);
-$('#breadpudfrac option[value="'+se_breadpudfrac+'"]').prop('selected', true);
-$('#custard option[value="'+se_custard+'"]').prop('selected', true);
-$('#custardfrac option[value="'+se_custardfrac+'"]').prop('selected', true);
-$('#payasam option[value="'+se_payasam+'"]').prop('selected', true);
-$('#payasamfrac option[value="'+se_payasamfrac+'"]').prop('selected', true);
-$('#shrikhand option[value="'+se_shrikhand+'"]').prop('selected', true);
-$('#shrikhandfrac option[value="'+se_shrikhandfrac+'"]').prop('selected', true);
-$('#pooranpoli option[value="'+se_pooranpoli+'"]').prop('selected', true);
-$('#pooranpolifrac option[value="'+se_pooranpolifrac+'"]').prop('selected', true);
-$('#gulabjamun option[value="'+se_gulabjamun+'"]').prop('selected', true);
-$('#gulabjamunfrac option[value="'+se_gulabjamunfrac+'"]').prop('selected', true);
-$('#rasgulla option[value="'+se_rasgulla+'"]').prop('selected', true);
-$('#rasgullafrac option[value="'+se_rasgullafrac+'"]').prop('selected', true);
-$('#icecream option[value="'+se_icecream+'"]').prop('selected', true);
-$('#icecreamfrac option[value="'+se_icecreamfrac+'"]').prop('selected', true);
-
-
-$("#chikki").selectmenu("refresh");
-$("#chikkifrac").selectmenu("refresh");
-$("#cake_fruit").selectmenu("refresh");
-$("#cake_fruitfrac").selectmenu("refresh");
-$("#breadpudd").selectmenu("refresh");
-$("#breadpudfrac").selectmenu("refresh");
-$("#custard").selectmenu("refresh");
-$("#custardfrac").selectmenu("refresh");
-$("#payasam").selectmenu("refresh");
-$("#payasamfrac").selectmenu("refresh");
-$("#shrikhand").selectmenu("refresh");
-$("#shrikhandfrac").selectmenu("refresh");
-$("#gulabjamun").selectmenu("refresh");
-$("#gulabjamunfrac").selectmenu("refresh");
-$("#rasgulla").selectmenu("refresh");
-$("#rasgullafrac").selectmenu("refresh");
-$("#icecream").selectmenu("refresh");
-$("#icecreamfrac").selectmenu("refresh");
-
-	
 $(".savenxt").click(function(e) {
 		sweets();
 				var eathabit=localStorage.getItem("eathabit");

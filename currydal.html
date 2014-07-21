@@ -17,85 +17,12 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/savevalue.js"></script>
 <script src="js/calculate.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
-			var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-	if(eathabit=='non-veg'){		
-		 $(".non-veg").css("display","block");
-		}	
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-var se_chanadal=sessionStorage.getItem('se_chanadal');
-var se_chanadalfrac=sessionStorage.getItem('se_chanadalfrac');
-var se_masurdal=sessionStorage.getItem('se_masurdal');
-var se_masurdalfrac=sessionStorage.getItem('se_masurdalfrac');
-var se_turdal=sessionStorage.getItem('se_turdal');
-var se_turdalfrac=sessionStorage.getItem('se_turdalfrac');
-var se_spinach=sessionStorage.getItem('se_spinach');
-var se_spinachfrac=sessionStorage.getItem('se_spinachfrac');
-var se_sambar=sessionStorage.getItem('se_sambar');
-var se_sambarfrac=sessionStorage.getItem('se_sambarfrac');
-var se_kadhi=sessionStorage.getItem('se_kadhi');
-var se_kadhifrac=sessionStorage.getItem('se_kadhifrac');
-var se_chole=sessionStorage.getItem('se_chole');
-var se_cholefrac=sessionStorage.getItem('se_cholefrac');
-var se_mungwhole=sessionStorage.getItem('se_mungwhole');
-var se_mungwholefrac=sessionStorage.getItem('se_mungwholefrac');
-
-var se_rajmah=sessionStorage.getItem('se_rajmah');
-var se_rajmahfrac=sessionStorage.getItem('se_rajmahfrac');
-
-$('#chanadal option[value="'+se_chanadal+'"]').prop('selected', true);
-$('#chanadalfrac option[value="'+se_chanadalfrac+'"]').prop('selected', true);
-$('#masurdal option[value="'+se_masurdal+'"]').prop('selected', true);
-$('#masurdalfrac option[value="'+se_masurdalfrac+'"]').prop('selected', true);
-$('#turdal option[value="'+se_turdal+'"]').prop('selected', true);
-$('#turdalfrac option[value="'+se_turdalfrac+'"]').prop('selected', true);
-$('#spinach option[value="'+se_spinach+'"]').prop('selected', true);
-$('#spinachfrac option[value="'+se_spinachfrac+'"]').prop('selected', true);
-$('#sambar option[value="'+se_sambar+'"]').prop('selected', true);
-$('#sambarfrac option[value="'+se_sambarfrac+'"]').prop('selected', true);
-$('#kadhi option[value="'+se_kadhi+'"]').prop('selected', true);
-$('#kadhifrac option[value="'+se_kadhifrac+'"]').prop('selected', true);
-$('#chole option[value="'+se_chole+'"]').prop('selected', true);
-$('#cholefrac option[value="'+se_cholefrac+'"]').prop('selected', true);
-$('#mungwhole option[value="'+se_mungwhole+'"]').prop('selected', true);
-$('#mungwholefrac option[value="'+se_mungwholefrac+'"]').prop('selected', true);
-
-$('#rajmah option[value="'+se_rajmah+'"]').prop('selected', true);
-$('#rajmahfrac option[value="'+se_rajmahfrac+'"]').prop('selected', true);
-
-
-$("#chanadal").selectmenu("refresh");
-$("#chanadalfrac").selectmenu("refresh");
-$("#masurdal").selectmenu("refresh");
-$("#masurdalfrac").selectmenu("refresh");
-$("#turdal").selectmenu("refresh");
-$("#turdalfrac").selectmenu("refresh");
-$("#spinach").selectmenu("refresh");
-$("#spinachfrac").selectmenu("refresh");
-$("#sambar").selectmenu("refresh");
-$("#sambarfrac").selectmenu("refresh");
-$("#kadhi").selectmenu("refresh");
-$("#kadhifrac").selectmenu("refresh");
-$("#chole").selectmenu("refresh");
-$("#cholefrac").selectmenu("refresh");
-$("#mungwhole").selectmenu("refresh");
-$("#mungwholefrac").selectmenu("refresh");
-
-$("#rajmah").selectmenu("refresh");
-$("#rajmahfrac").selectmenu("refresh");
-
-
-	
-	
 $(".savenxt").click(function(e) {
 	currydal();
   window.location='veg-gravy.html';

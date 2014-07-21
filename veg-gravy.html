@@ -17,77 +17,12 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
+<script src="js/savevalue.js"></script>
 <script src="js/calculate.js"></script>
 <script src="js/phonegap.js"></script>
 <script>
 
 $(document).ready(function (e) {
- 		var eathabit=localStorage.getItem("eathabit");
-		if(eathabit=='veg'){
-    $(".non-veg").css("display","none");
-		}
-	if(eathabit=='non-veg'){		
-		 $(".non-veg").css("display","block");
-		}	
-		var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
-	
-var se_avial=sessionStorage.getItem('se_avial');
-var se_avialfrac=sessionStorage.getItem('se_avialfrac');
-var se_bhagara=sessionStorage.getItem('se_bhagara');
-var se_bhagarafrac=sessionStorage.getItem('se_bhagarafrac');
-var se_matar=sessionStorage.getItem('se_matar');
-var se_matarfrac=sessionStorage.getItem('se_matarfrac');
-var se_aloomatar=sessionStorage.getItem('se_aloomatar');
-var se_aloomatarfrac=sessionStorage.getItem('se_aloomatarfrac');
-
-var se_kofta=sessionStorage.getItem('se_kofta');
-var se_koftafrac=sessionStorage.getItem('se_koftafrac');
-
-var se_soup=sessionStorage.getItem('se_soup');
-var se_soupfrac=sessionStorage.getItem('se_soupfrac');
-var se_paneermas=sessionStorage.getItem('se_paneermas');
-var se_paneermasfrac=sessionStorage.getItem('se_paneermasfrac');
-
-
-$('#avial option[value="'+se_avial+'"]').prop('selected', true);
-$('#avialfrac option[value="'+se_avialfrac+'"]').prop('selected', true);
-$('#bhagara option[value="'+se_bhagara+'"]').prop('selected', true);
-$('#bhagarafrac option[value="'+se_bhagarafrac+'"]').prop('selected', true);
-$('#matar option[value="'+se_matar+'"]').prop('selected', true);
-$('#matarfrac option[value="'+se_matarfrac+'"]').prop('selected', true);
-$('#aloomatar option[value="'+se_aloomatar+'"]').prop('selected', true);
-$('#aloomatarfrac option[value="'+se_aloomatarfrac+'"]').prop('selected', true);
-
-$('#kofta option[value="'+se_kofta+'"]').prop('selected', true);
-$('#koftafrac option[value="'+se_koftafrac+'"]').prop('selected', true);
-
-$('#soup option[value="'+se_soup+'"]').prop('selected', true);
-$('#soupfrac option[value="'+se_soupfrac+'"]').prop('selected', true);
-$('#paneermas option[value="'+se_paneermas+'"]').prop('selected', true);
-$('#paneermasfrac option[value="'+se_paneermasfrac+'"]').prop('selected', true);
-
-
-
-$("#avial").selectmenu("refresh");
-$("#avialfrac").selectmenu("refresh");
-$("#bhagara").selectmenu("refresh");
-$("#bhagarafrac").selectmenu("refresh");
-$("#matar").selectmenu("refresh");
-$("#matarfrac").selectmenu("refresh");
-$("#aloomatar").selectmenu("refresh");
-$("#aloomatarfrac").selectmenu("refresh");
-
-$("#kofta").selectmenu("refresh");
-$("#koftafrac").selectmenu("refresh");
-
-$("#soup").selectmenu("refresh");
-$("#soupfrac").selectmenu("refresh");
-$("#paneermas").selectmenu("refresh");
-$("#paneermasfrac").selectmenu("refresh");
-	
-	
-	
 $(".savenxt").click(function(e) {
 	veg_gravy();
   window.location="veg-dry.html";
