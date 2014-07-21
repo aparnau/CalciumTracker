@@ -534,7 +534,7 @@ top: -1px;
 {
 	clear: both;
 	font-size: 20px;
-	width: 110px;
+	width: 120px;
 	display: block;
 	background-color: #bccbc6;
 	padding: 10px;
@@ -851,7 +851,7 @@ float: left;*/
 #header .ui-icon, #header .ui-btn-icon-notext
 {
 	width: 45px;
-	height: 60px;
+	height: 58px;
 	margin-top: 0px;
 	border: none;
 	top: 0px;
@@ -1197,7 +1197,7 @@ p.resultcom { padding-top: 0px !important; }
 	margin-top: 0px;
 	font-size: 20px;
 	margin-bottom: 0px;
-	padding: 10px;
+	padding: 20px;
 }
 #slideinside #header.ui-header
 {
