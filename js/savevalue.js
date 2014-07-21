@@ -1,13 +1,18 @@
-$(document).ready(function (e) {
-    var name = localStorage.getItem("name");
-    $("#top-bar").append(name);
-
+$(document).on("pagebeforeshow",function(event){
+  alert("pagebeforeshow event fired - the page is about to be shown");
     var eathabit = localStorage.getItem("eathabit");
     if (eathabit == 'veg') {
         $(".listitem#non-veg").css("display", "none");
     }   if (eathabit == 'non-veg') {
         $(".listitem#non-veg").css("display", "block");
     }
+});
+
+$(document).ready(function (e) {
+    var name = localStorage.getItem("name");
+    $("#top-bar").append(name);
+
+
 
     /* MILK */
 
