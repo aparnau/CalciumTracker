@@ -4,10 +4,9 @@ $(document).ready(function (e) {
 
     var eathabit = localStorage.getItem("eathabit");
     if (eathabit == 'veg') {
-        $("#non-veg").css("display", "none");
-    }
-   if (eathabit == 'non-veg') {
-        $("#non-veg").css("display", "block");
+        $(".listitem#non-veg").css("display", "none");
+    }   if (eathabit == 'non-veg') {
+        $(".listitem#non-veg").css("display", "block");
     }
 
     /* MILK */

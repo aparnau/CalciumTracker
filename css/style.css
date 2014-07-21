@@ -832,8 +832,8 @@ float: left;*/
 }
 .btngroup .listitem .ui-link-inherit
 {
-	font-size: 14px !important;
-	padding-left: 34px !important;
+/*	font-size: 14px !important;
+	padding-left: 34px !important;*/
 }
 .btngroup .listitem.ui-last-child { border-bottom: none !important; }
 #header .ui-btn-corner-all
