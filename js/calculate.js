@@ -1,6 +1,3 @@
-$(document).ready(function(e) {
-
-});
 var ricecal;
 var khicharical;
 var pulaocal;

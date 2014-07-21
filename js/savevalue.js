@@ -1,4 +1,4 @@
-$(document).on("pagebeforeshow",function(event){
+/*$(document).on("pagebeforeshow",function(event){
  // alert("pagebeforeshow event fired - the page is about to be shown");
     var eathabit1 = localStorage.getItem("eathabit");
     if (eathabit1 == 'veg') {
@@ -6,7 +6,7 @@ $(document).on("pagebeforeshow",function(event){
     }   if (eathabit1 == 'non-veg') {
         $(".listitem#non-veg").css("display", "block");
     }
-});
+});*/
 
 $(document).ready(function (e) {
     var name = localStorage.getItem("name");
