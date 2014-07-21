@@ -2,11 +2,11 @@ $(document).ready(function (e) {
     var name = localStorage.getItem("name");
     $("#top-bar").append(name);
 
-    var eathabit = localStorage.getItem("eathabit");
+   /*  var eathabit = localStorage.getItem("eathabit");
     if (eathabit == 'veg') {
         $(".non-veg").css("display", "none");
     }
-   /* if (eathabit == 'non-veg') {
+   if (eathabit == 'non-veg') {
         $(".non-veg").css("display", "block");
     }*/
 
