@@ -829,6 +829,7 @@ float: left;*/
 	background-image: -o-linear-gradient(#e1ecf6, #e1ecf6) !important;
 	background-image: linear-gradient(#e1ecf6, #e1ecf6) !important;
 	text-shadow: 0 0 0 !important;
+	white-space: normal !important;
 }
 .btngroup .listitem .ui-link-inherit
 {
