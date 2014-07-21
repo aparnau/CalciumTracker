@@ -21,6 +21,13 @@
 <script>
 
 $(document).ready(function (e) {
+	 		var eathabit=localStorage.getItem("eathabit");
+		if(eathabit=='veg'){
+    $(".non-veg").css("display","none");
+		}
+		else if(eathabit=='non-veg'){
+		 $(".non-veg").css("display","block");
+		}	
 	var name=localStorage.getItem("name");
 	$("#top-bar").append(name);
 
