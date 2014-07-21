@@ -2,9 +2,9 @@ $(document).on("pagebeforeshow",function(event){
  // alert("pagebeforeshow event fired - the page is about to be shown");
     var eathabit1 = localStorage.getItem("eathabit");
     if (eathabit1 == 'veg') {
-        $(".listitem#non-veg").css("display", "none");
+        $(".listitem.non-veg").css("display", "none");
     }   if (eathabit1 == 'non-veg') {
-        $(".listitem#non-veg").css("display", "block");
+        $(".listitem.non-veg").css("display", "block");
     }
 });
 
