@@ -54,10 +54,10 @@ $(".savenxt").click(function(e) {
      <div class="clear"></div>
      <form>
       <div class="ui-field-contain">
-       <label for="poha"><i>Poha</i> (Rice flakes)/ Upma</label>
+       <label for="poha"><i>Poha</i> (Rice flakes)/<i>Upma</i></label>
        <select name="poha" id="poha">
-         <option value="">&nbsp;</option>
- <option value="katori">1 Katori (K) = 150 mL</option>
+        <option value="">&nbsp;</option>
+        <option value="katori" disabled>1 Katori (K) = 150 mL</option>
         <option value="0">0 K</option>
         <option value="1">1 K</option>
         <option value="2">2 K</option>
@@ -77,8 +77,8 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="pohafrac" id="pohafrac">
         <option value="">&nbsp;</option>
- <option value="katori">1 Katori (K) = 150 mL</option>
-        <option value=".0">0 </option>
+        <option value="katori" disabled>1 Katori (K) = 150 mL</option>
+       <option value="0">0 K</option>
         <option value=".25">1/4 K</option>
         <option value=".50">1/2 K</option>
         <option value=".75">3/4 K</option>
@@ -107,7 +107,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="chatfrac" id="chatfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -136,14 +136,14 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="dahivadafrac" id="dahivadafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
        </select>
       </div>
       <div class="ui-field-contain">
-       <label for="vada"><i>Vada</i>/ Potato<i>vada</i></label>
+       <label for="vada"><i>Vada</i>/<i>Aloo vada</i></label>
        <select name="vada" id="vada">
         <option value="">&nbsp;</option>
         <option value="0">0</option>
@@ -165,7 +165,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="vadafrac" id="vadafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -194,7 +194,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="dosafrac" id="dosafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -223,7 +223,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="mas_dosafrac" id="mas_dosafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -252,41 +252,13 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="idlifrac" id="idlifrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
        </select>
       </div>
-      <div class="ui-field-contain">
-       <label for="samosa"><i>Samosa</i></label>
-       <select name="samosa" id="samosa">
-        <option value="">&nbsp;</option>
-        <option value="0">0</option>
-        <option value="1">1 No.</option>
-        <option value="2">2 Nos.</option>
-        <option value="3">3 Nos.</option>
-        <option value="4">4 Nos.</option>
-        <option value="5">5 Nos.</option>
-        <option value="6">6 Nos.</option>
-        <option value="7">7 Nos.</option>
-        <option value="8">8 Nos.</option>
-        <option value="9">9 Nos.</option>
-        <option value="10">10 Nos.</option>
-        <option value="11">11 Nos.</option>
-        <option value="12">12 Nos.</option>
-        <option value="13">13 Nos.</option>
-        <option value="14">14 Nos.</option>
-        <option value="15">15 Nos.</option>
-       </select>
-       <select name="samosafrac" id="samosafrac">
-        <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
-        <option value=".25">1/4 </option>
-        <option value=".50">1/2 </option>
-        <option value=".75">3/4 </option>
-       </select>
-      </div>
+      
       <div class="ui-field-contain">
        <label for="sandwich">Sandwich</label>
        <select name="sandwich" id="sandwich">
@@ -310,7 +282,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="sandwichfrac" id="sandwichfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -339,7 +311,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="veg_pufffrac" id="veg_pufffrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -368,7 +340,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="bajjifrac" id="bajjifrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -397,7 +369,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="purafrac" id="purafrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 </option>
         <option value=".50">1/2 </option>
         <option value=".75">3/4 </option>
@@ -426,7 +398,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="coc_chutneyfrac" id="coc_chutneyfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 tbsp</option>
         <option value=".50">1/2 tbsp</option>
         <option value=".75">3/4 tbsp</option>
@@ -455,7 +427,7 @@ $(".savenxt").click(function(e) {
        </select>
        <select name="tillchutneyfrac" id="tillchutneyfrac">
         <option value="">&nbsp;</option>
-        <option value=".0">0 </option>
+       <option value="0">0</option>
         <option value=".25">1/4 tbsp</option>
         <option value=".50">1/2 tbsp</option>
         <option value=".75">3/4 tbsp</option>

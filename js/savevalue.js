@@ -1,3 +1,5 @@
+
+
 $(document).on("pagebeforeshow",function(event){
  // alert("pagebeforeshow event fired - the page is about to be shown");
     var eathabit1 = localStorage.getItem("eathabit");
@@ -7,7 +9,10 @@ $(document).on("pagebeforeshow",function(event){
         $(".listitem.non-veg").css("display", "block");
     }
 });
-
+$(document).bind("mobileinit", function(){
+    alert('hi');
+		 $.mobile.defaultPageTransition="slide";
+   });
 $(document).ready(function (e) {
     var name = localStorage.getItem("name");
     $("#top-bar").append(name);
@@ -308,8 +313,6 @@ $(document).ready(function (e) {
     var se_idli = sessionStorage.getItem('se_idli');
     var se_idlifrac = sessionStorage.getItem('se_idlifrac');
 
-    var se_samosa = sessionStorage.getItem('se_samosa');
-    var se_samosafrac = sessionStorage.getItem('se_samosafrac');
     var se_sandwich = sessionStorage.getItem('se_sandwich');
     var se_sandwichfrac = sessionStorage.getItem('se_sandwichfrac');
     var se_veg_puff = sessionStorage.getItem('se_veg_puff');
@@ -337,8 +340,6 @@ $(document).ready(function (e) {
     $('#mas_dosafrac option[value="' + se_mas_dosafrac + '"]').prop('selected', true);
     $('#idli option[value="' + se_idli + '"]').prop('selected', true);
     $('#idlifrac option[value="' + se_idlifrac + '"]').prop('selected', true);
-    $('#samosa option[value="' + se_samosa + '"]').prop('selected', true);
-    $('#samosafrac option[value="' + se_samosafrac + '"]').prop('selected', true);
     $('#sandwich option[value="' + se_sandwich + '"]').prop('selected', true);
     $('#sandwichfrac option[value="' + se_sandwichfrac + '"]').prop('selected', true);
     $('#veg_puff option[value="' + se_veg_puff + '"]').prop('selected', true);
@@ -366,8 +367,6 @@ $(document).ready(function (e) {
     $("#mas_dosafrac").selectmenu("refresh");
     $("#idli").selectmenu("refresh");
     $("#idlifrac").selectmenu("refresh");
-    $("#samosa").selectmenu("refresh");
-    $("#samosafrac").selectmenu("refresh");
     $("#sandwich").selectmenu("refresh");
     $("#sandwichfrac").selectmenu("refresh");
     $("#veg_puff").selectmenu("refresh");
@@ -385,8 +384,7 @@ $(document).ready(function (e) {
     /* SWEETS */
     var se_chikki = sessionStorage.getItem('se_chikki');
     var se_chikkifrac = sessionStorage.getItem('se_chikkifrac');
-    var se_cake_fruit = sessionStorage.getItem('se_cake_fruit');
-    var se_cake_fruitfrac = sessionStorage.getItem('se_cake_fruitfrac');
+
     var se_breadpudd = sessionStorage.getItem('se_breadpudd');
     var se_breadpudfrac = sessionStorage.getItem('se_breadpudfrac');
     var se_custard = sessionStorage.getItem('se_custard');
@@ -395,8 +393,7 @@ $(document).ready(function (e) {
     var se_payasamfrac = sessionStorage.getItem('se_payasamfrac');
     var se_shrikhand = sessionStorage.getItem('se_shrikhand');
     var se_shrikhandfrac = sessionStorage.getItem('se_shrikhandfrac');
-    var se_pooranpoli = sessionStorage.getItem('se_pooranpoli');
-    var se_pooranpolifrac = sessionStorage.getItem('se_pooranpolifrac');
+    
     var se_gulabjamun = sessionStorage.getItem('se_gulabjamun');
     var se_gulabjamunfrac = sessionStorage.getItem('se_gulabjamunfrac');
     var se_rasgulla = sessionStorage.getItem('se_rasgulla');
@@ -408,8 +405,7 @@ $(document).ready(function (e) {
 
     $('#chikki option[value="' + se_chikki + '"]').prop('selected', true);
     $('#chikkifrac option[value="' + se_chikkifrac + '"]').prop('selected', true);
-    $('#cake_fruit option[value="' + se_cake_fruit + '"]').prop('selected', true);
-    $('#cake_fruitfrac option[value="' + se_cake_fruitfrac + '"]').prop('selected', true);
+
     $('#breadpudd option[value="' + se_breadpudd + '"]').prop('selected', true);
     $('#breadpudfrac option[value="' + se_breadpudfrac + '"]').prop('selected', true);
     $('#custard option[value="' + se_custard + '"]').prop('selected', true);
@@ -418,8 +414,7 @@ $(document).ready(function (e) {
     $('#payasamfrac option[value="' + se_payasamfrac + '"]').prop('selected', true);
     $('#shrikhand option[value="' + se_shrikhand + '"]').prop('selected', true);
     $('#shrikhandfrac option[value="' + se_shrikhandfrac + '"]').prop('selected', true);
-    $('#pooranpoli option[value="' + se_pooranpoli + '"]').prop('selected', true);
-    $('#pooranpolifrac option[value="' + se_pooranpolifrac + '"]').prop('selected', true);
+ 
     $('#gulabjamun option[value="' + se_gulabjamun + '"]').prop('selected', true);
     $('#gulabjamunfrac option[value="' + se_gulabjamunfrac + '"]').prop('selected', true);
     $('#rasgulla option[value="' + se_rasgulla + '"]').prop('selected', true);
@@ -430,8 +425,7 @@ $(document).ready(function (e) {
 
     $("#chikki").selectmenu("refresh");
     $("#chikkifrac").selectmenu("refresh");
-    $("#cake_fruit").selectmenu("refresh");
-    $("#cake_fruitfrac").selectmenu("refresh");
+
     $("#breadpudd").selectmenu("refresh");
     $("#breadpudfrac").selectmenu("refresh");
     $("#custard").selectmenu("refresh");

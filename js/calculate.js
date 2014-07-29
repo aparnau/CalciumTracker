@@ -179,7 +179,9 @@ function cereal() {
     sessionStorage.setItem('se_phulka', se_phulka);
     sessionStorage.setItem('se_puri', se_puri);
     sessionStorage.setItem('se_bhatura', se_bhatura);
+		sessionStorage.setItem('se_pot_paratha', se_pot_paratha);
     sessionStorage.setItem('se_ragiroti', se_ragiroti);
+		
     sessionStorage.setItem('se_ricefrac', se_ricefrac);
     sessionStorage.setItem('se_khicharifrac', se_khicharifrac);
     sessionStorage.setItem('se_pulaofrac', se_pulaofrac);
@@ -197,13 +199,13 @@ function cereal() {
 function currydal() {
 
     var chanadal = $("#chanadal").val() + $("#chanadalfrac").val();
+    var masurdal = $("#masurdal").val() + $("#masurdalfrac").val();
     var turdal = $("#turdal").val() + $("#turdalfrac").val();
     var spinach = $("#spinach").val() + $("#spinachfrac").val();
     var sambar = $("#sambar").val() + $("#sambarfrac").val();
     var kadhi = $("#kadhi").val() + $("#kadhifrac").val();
     var chole = $("#chole").val() + $("#cholefrac").val();
     var mungwhole = $("#mungwhole").val() + $("#mungwholefrac").val();
-    var masurdal = $("#masurdal").val() + $("#masurdalfrac").val();
     var rajmah = $("#rajmah").val() + $("#rajmahfrac").val();
 
 
@@ -218,7 +220,7 @@ function currydal() {
     rajmahcal = rajmah * 94.2;
 		
 
-    var currydal_total = chanadalcal + turdalcal + spinachcal + sambarcal + kadhical + cholecal + mungwholecal + masurdalcal + rajmahcal;
+    var currydal_total = chanadalcal + masurdalcal + turdalcal + spinachcal + sambarcal + kadhical + cholecal + mungwholecal +  rajmahcal;
 
     var se_chanadal = $("#chanadal option:selected").val();
     var se_masurdal = $("#masurdal option:selected").val();
@@ -253,14 +255,14 @@ function currydal() {
     sessionStorage.setItem('se_rajmah', se_rajmah);
 
 
-  	sessionStorage.setItem('se_chanadalfrac', se_chanadalfrac);			
+  	sessionStorage.setItem('se_chanadalfrac', se_chanadalfrac);	
+		sessionStorage.setItem('se_masurdalfrac', se_masurdalfrac);		
     sessionStorage.setItem('se_turdalfrac', se_turdalfrac);
     sessionStorage.setItem('se_spinachfrac', se_spinachfrac);
     sessionStorage.setItem('se_sambarfrac', se_sambarfrac);
     sessionStorage.setItem('se_kadhifrac', se_kadhifrac);
     sessionStorage.setItem('se_cholefrac', se_cholefrac);
     sessionStorage.setItem('se_mungwholefrac', se_mungwholefrac);
-    sessionStorage.setItem('se_masurdalfrac', se_masurdalfrac);
     sessionStorage.setItem('se_rajmahfrac', se_rajmahfrac);
 
 
@@ -274,7 +276,6 @@ function veg_gravy() {
     var bhagara = $("#bhagara").val() + $("#bhagarafrac").val();
     var matar = $("#matar").val() + $("#matarfrac").val();
     var aloomatar = $("#aloomatar").val() + $("#aloomatarfrac").val();
-
     var kofta = $("#kofta").val() + $("#koftafrac").val();
     var soup = $("#soup").val() + $("#soupfrac").val();
     var paneermas = $("#paneermas").val() + $("#paneermasfrac").val();
@@ -311,14 +312,14 @@ function veg_gravy() {
     sessionStorage.setItem('se_matar', se_matar);
     sessionStorage.setItem('se_aloomatar', se_aloomatar);
     sessionStorage.setItem('se_kofta', se_kofta);
-
     sessionStorage.setItem('se_soup', se_soup);
     sessionStorage.setItem('se_paneermas', se_paneermas);
+		
     sessionStorage.setItem('se_avialfrac', se_avialfrac);
     sessionStorage.setItem('se_bhagarafrac', se_bhagarafrac);
     sessionStorage.setItem('se_matarfrac', se_matarfrac);
     sessionStorage.setItem('se_aloomatarfrac', se_aloomatarfrac);
-
+    sessionStorage.setItem('se_koftafrac', se_koftafrac);
     sessionStorage.setItem('se_soupfrac', se_soupfrac);
     sessionStorage.setItem('se_paneermasfrac', se_paneermasfrac);
 
@@ -343,7 +344,6 @@ function veg_dry() {
     gopigaajarcal = gopigaajar * 59.2;
     bhindical = bhindi * 123.06;
     kadducal = kaddu * 33.1;
-
     cabbagecal = cabbage * 45.8;
     leafyveg1cal = leafyveg1 * 396;
     leafyveg2cal = leafyveg2 * 1017;
@@ -357,7 +357,6 @@ function veg_dry() {
     var se_gopigaajar = $("#gopigaajar option:selected").val();
     var se_bhindi = $("#bhindi option:selected").val();
     var se_kaddu = $("#kaddu option:selected").val();
-
     var se_cabbage = $("#cabbage option:selected").val();
     var se_leafyveg1 = $("#leafyveg1 option:selected").val();
     var se_leafyveg2 = $("#leafyveg2 option:selected").val();
@@ -369,7 +368,6 @@ function veg_dry() {
     var se_gopigaajarfrac = $("#gopigaajarfrac option:selected").val();
     var se_bhindifrac = $("#bhindifrac option:selected").val();
     var se_kaddufrac = $("#kaddufrac option:selected").val();
-
     var se_cabbagefrac = $("#cabbagefrac option:selected").val();
     var se_leafyveg1frac = $("#leafyveg1frac option:selected").val();
     var se_leafyveg2frac = $("#leafyveg2frac option:selected").val();
@@ -381,7 +379,6 @@ function veg_dry() {
     sessionStorage.setItem('se_gopigaajar', se_gopigaajar);
     sessionStorage.setItem('se_bhindi', se_bhindi);
     sessionStorage.setItem('se_kaddu', se_kaddu);
-
     sessionStorage.setItem('se_cabbage', se_cabbage);
     sessionStorage.setItem('se_leafyveg1', se_leafyveg1);
     sessionStorage.setItem('se_leafyveg2', se_leafyveg2);
@@ -392,7 +389,6 @@ function veg_dry() {
     sessionStorage.setItem('se_gopigaajarfrac', se_gopigaajarfrac);
     sessionStorage.setItem('se_bhindifrac', se_bhindifrac);
     sessionStorage.setItem('se_kaddufrac', se_kaddufrac);
-
     sessionStorage.setItem('se_cabbagefrac', se_cabbagefrac);
     sessionStorage.setItem('se_leafyveg1frac', se_leafyveg1frac);
     sessionStorage.setItem('se_leafyveg2frac', se_leafyveg2frac);
@@ -409,13 +405,11 @@ function snacks() {
     var vada = $("#vada").val() + $("#vadafrac").val();
     var dosa = $("#dosa").val() + $("#dosafrac").val();
     var mas_dosa = $("#mas_dosa").val() + $("#mas_dosafrac").val();
-    var idli = $("#idli").val() + $("#idlifrac").val();
-    var samosa = $("#samosa").val() + $("#samosafrac").val();
+    var idli = $("#idli").val() + $("#idlifrac").val();   
     var sandwich = $("#sandwich").val() + $("#sandwichfrac").val();
     var veg_puff = $("#veg_puff").val() + $("#veg_pufffrac").val();
     var bajji = $("#bajji").val() + $("#bajjifrac").val();
     var pura = $("#pura").val() + $("#purafrac").val();
-
     var coc_chutney = $("#coc_chutney").val() + $("#coc_chutneyfrac").val();
     var tillchutney = $("#tillchutney").val() + $("#tillchutneyfrac").val();
 
@@ -425,8 +419,7 @@ function snacks() {
     vadacal = vada * 18.35;
     dosacal = dosa * 1.3;
     mas_dosacal = mas_dosa * 37.2;
-    idlical = idli * 10;
-    samosacal = samosa * 5.8;
+    idlical = idli * 10; 
     sandwichcal = sandwich * 7.15;
     veg_puffcal = veg_puff * 19.6;
     bajjical = bajji * 1.9625;
@@ -434,7 +427,7 @@ function snacks() {
     coc_chutneycal = coc_chutney * 60;
     tillchutneycal = tillchutney * 218;
 
-    var snacks_total = pohacal + chatcal + dahivadacal + vadacal + dosacal + mas_dosacal + idlical + samosacal + sandwichcal + veg_puffcal + bajjical + puracal + coc_chutneycal + tillchutneycal;
+    var snacks_total = pohacal + chatcal + dahivadacal + vadacal + dosacal + mas_dosacal + idlical + sandwichcal + veg_puffcal + bajjical + puracal + coc_chutneycal + tillchutneycal;
 
 
     var se_poha = $("#poha option:selected").val();
@@ -444,7 +437,6 @@ function snacks() {
     var se_dosa = $("#dosa option:selected").val();
     var se_mas_dosa = $("#mas_dosa option:selected").val();
     var se_idli = $("#idli option:selected").val();
-    var se_samosa = $("#samosa option:selected").val();
     var se_sandwich = $("#sandwich option:selected").val();
     var se_veg_puff = $("#veg_puff option:selected").val();
     var se_bajji = $("#bajji option:selected").val();
@@ -459,7 +451,6 @@ function snacks() {
     var se_dosafrac = $("#dosafrac option:selected").val();
     var se_mas_dosafrac = $("#mas_dosafrac option:selected").val();
     var se_idlifrac = $("#idlifrac option:selected").val();
-    var se_samosafrac = $("#samosafrac option:selected").val();
     var se_sandwichfrac = $("#sandwichfrac option:selected").val();
     var se_veg_pufffrac = $("#veg_pufffrac option:selected").val();
     var se_bajjifrac = $("#bajjifrac option:selected").val();
@@ -471,102 +462,91 @@ function snacks() {
     sessionStorage.setItem('se_chat', se_chat);
     sessionStorage.setItem('se_dahivada', se_dahivada);
     sessionStorage.setItem('se_vada', se_vada);
-    sessionStorage.setItem('se_dosa', se_dosa);
+    sessionStorage.setItem('se_dosa', se_dosa);		
+		sessionStorage.setItem('se_mas_dosa', se_mas_dosa);
     sessionStorage.setItem('se_idli', se_idli);
-    sessionStorage.setItem('se_samosa', se_samosa);
     sessionStorage.setItem('se_sandwich', se_sandwich);
     sessionStorage.setItem('se_veg_puff', se_veg_puff);
     sessionStorage.setItem('se_bajji', se_bajji);
-    sessionStorage.setItem('se_pohafrac', se_pohafrac);
-    sessionStorage.setItem('se_coc_chutney', se_coc_chutney);
-    sessionStorage.setItem('se_coc_chutneyfrac', se_coc_chutneyfrac);
-
+	  sessionStorage.setItem('se_pura', se_pura);
+	  sessionStorage.setItem('se_coc_chutney', se_coc_chutney);
+	  sessionStorage.setItem('se_tillchutney', se_tillchutney);
+   
+	  sessionStorage.setItem('se_pohafrac', se_pohafrac);
     sessionStorage.setItem('se_chatfrac', se_chatfrac);
     sessionStorage.setItem('se_dahivadafrac', se_dahivadafrac);
     sessionStorage.setItem('se_vadafrac', se_vadafrac);
     sessionStorage.setItem('se_dosafrac', se_dosafrac);
     sessionStorage.setItem('se_mas_dosafrac', se_mas_dosafrac);
     sessionStorage.setItem('se_idlifrac', se_idlifrac);
-    sessionStorage.setItem('se_samosafrac', se_samosafrac);
     sessionStorage.setItem('se_sandwichfrac', se_sandwichfrac);
     sessionStorage.setItem('se_veg_pufffrac', se_veg_pufffrac);
     sessionStorage.setItem('se_bajjifrac', se_bajjifrac);
     sessionStorage.setItem('se_purafrac', se_purafrac);
-    sessionStorage.setItem('se_tillchutney', se_tillchutney);
+   sessionStorage.setItem('se_coc_chutneyfrac', se_coc_chutneyfrac);
     sessionStorage.setItem('se_tillchutneyfrac', se_tillchutneyfrac);
 
     localStorage.setItem("snacks_total", snacks_total);
 }
 
 function sweets() {
-    var chikki = $("#chikki").val() + $("#chikkifrac").val();
-    var cake_fruit = $("#cake_fruit").val() + $("#cake_fruitfrac").val();
+    var chikki = $("#chikki").val() + $("#chikkifrac").val();    
     var breadpudd = $("#breadpudd").val() + $("#breadpudfrac").val();
     var custard = $("#custard").val() + $("#custardfrac").val();
     var payasam = $("#payasam").val() + $("#payasamfrac").val();
     var shrikhand = $("#shrikhand").val() + $("#shrikhandfrac").val();
-    var pooranpoli = $("#pooranpoli").val() + $("#pooranpolifrac").val();
     var gulabjamun = $("#gulabjamun").val() + $("#gulabjamunfrac").val();
     var rasgulla = $("#rasgulla").val() + $("#rasgullafrac").val();
     var icecream = $("#icecream").val() + $("#icecreamfrac").val();
 
 
     chikkical = chikki * 11.55;
-    cake_fruitcal = cake_fruit * 13.9;
+
     breadpuddcal = breadpudd * 125.6;
     custardcal = custard * 78.9;
     payasamcal = payasam * 81.7;
     shrikhandcal = shrikhand * 313.4666667;
-    pooranpolical = pooranpoli * 15.5;
     gulabjamuncal = gulabjamun * 239;
     rasgullacal = rasgulla * 52;
     icecreamcal = icecream * 156;
 		
-    var sweets_total = chikkical + cake_fruitcal + breadpuddcal + custardcal + payasamcal + shrikhandcal + pooranpolical + gulabjamuncal + rasgullacal + icecreamcal;
+    var sweets_total = chikkical + breadpuddcal + custardcal + payasamcal + shrikhandcal + gulabjamuncal + rasgullacal + icecreamcal;
 
 
-    var se_chikki = $("#chikki option:selected").val();
-    var se_cake_fruit = $("#cake_fruit option:selected").val();
+    var se_chikki = $("#chikki option:selected").val();  
     var se_breadpudd = $("#breadpudd option:selected").val();
     var se_custard = $("#custard option:selected").val();
     var se_payasam = $("#payasam option:selected").val();
     var se_shrikhand = $("#shrikhand option:selected").val();
-    var se_pooranpoli = $("#pooranpoli option:selected").val();
     var se_gulabjamun = $("#gulabjamun option:selected").val();
     var se_rasgulla = $("#rasgulla option:selected").val();
     var se_icecream = $("#icecream option:selected").val();
 
 
     var se_chikkifrac = $("#chikkifrac option:selected").val();
-    var se_cake_fruitfrac = $("#cake_fruitfrac option:selected").val();
     var se_breadpudfrac = $("#breadpudfrac option:selected").val();
     var se_custardfrac = $("#custardfrac option:selected").val();
     var se_payasamfrac = $("#payasamfrac option:selected").val();
-    var se_shrikhandfrac = $("#shrikhandfrac option:selected").val();
-    var se_pooranpolifrac = $("#pooranpolifrac option:selected").val();
+    var se_shrikhandfrac = $("#shrikhandfrac option:selected").val(); 
     var se_gulabjamunfrac = $("#gulabjamunfrac option:selected").val();
     var se_rasgullafrac = $("#rasgullafrac option:selected").val();
     var se_icecreamfrac = $("#icecreamfrac option:selected").val();
 
     sessionStorage.setItem('se_chikki', se_chikki);
-    sessionStorage.setItem('se_cake_fruit', se_cake_fruit);
     sessionStorage.setItem('se_breadpudd', se_breadpudd);
     sessionStorage.setItem('se_custard', se_custard);
     sessionStorage.setItem('se_payasam', se_payasam);
     sessionStorage.setItem('se_shrikhand', se_shrikhand);
-    sessionStorage.setItem('se_pooranpoli', se_pooranpoli);
     sessionStorage.setItem('se_gulabjamun', se_gulabjamun);
     sessionStorage.setItem('se_rasgulla', se_rasgulla);
     sessionStorage.setItem('se_icecream', se_icecream);
 
 
     sessionStorage.setItem('se_chikkifrac', se_chikkifrac);
-    sessionStorage.setItem('se_cake_fruitfrac', se_cake_fruitfrac);
     sessionStorage.setItem('se_breadpudfrac', se_breadpudfrac);
     sessionStorage.setItem('se_custardfrac', se_custardfrac);
     sessionStorage.setItem('se_payasamfrac', se_payasamfrac);
     sessionStorage.setItem('se_shrikhandfrac', se_shrikhandfrac);
-    sessionStorage.setItem('se_pooranpolifrac', se_pooranpolifrac);
     sessionStorage.setItem('se_gulabjamunfrac', se_gulabjamunfrac);
     sessionStorage.setItem('se_rasgullafrac', se_rasgullafrac);
     sessionStorage.setItem('se_icecreamfrac', icecreamfrac);
