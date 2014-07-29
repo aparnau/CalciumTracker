@@ -161,7 +161,7 @@ p.mid_two
 .ui-controlgroup-controls .ui-radio
 {
 	text-align: center;
-	width: 110px;
+	width: 170px;
 	float: left;
 	clear: none;
 }
@@ -865,7 +865,7 @@ float: left;*/
 #header .ui-icon, #header .ui-btn-icon-notext
 {
 	width: 45px;
-	height: 58px;
+	height: 60px;
 	margin-top: 0px;
 	border: none;
 	top: 0px;
@@ -1595,7 +1595,7 @@ margin-top: 23px !important;
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup
 {
 	margin: 0;
-	width: 55%;
+	width: 65%;
 }
 .ui-page { -webkit-backface-visibility: hidden; }
 #header .homeicon .ui-icon, #header .homeicon .ui-btn-icon-notext
