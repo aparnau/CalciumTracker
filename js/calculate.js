@@ -625,7 +625,7 @@ function calculate() {
         /* Children */
         function children() {
 
-            $('#calrecomm').text('600 mg/day');
+            $('#calrecomm').text('600 mg');
         }
 
         /* adult */
@@ -633,7 +633,7 @@ function calculate() {
 
             var age = localStorage.getItem("age");
             if ((age >= 10) && (age <= 18)) {
-                $('#calrecomm').text('800 mg/day');
+                $('#calrecomm').text('800 mg');
             }
         }
 
@@ -641,7 +641,7 @@ function calculate() {
         function men() {
             var age = localStorage.getItem("age");
             if ((age >= 19)) {
-                $('#calrecomm').text('600 mg/day');
+                $('#calrecomm').text('600 mg');
 
             }
 
@@ -652,16 +652,16 @@ function calculate() {
             var preg = localStorage.getItem("preg");
             var lact = localStorage.getItem("lact");
             var menopause = localStorage.getItem("menopause");
-            $('#calrecomm').text('600 mg/day');
+            $('#calrecomm').text('600 mg');
 
             if (preg == 'yes') {
-                $('#calrecomm').text('1200 mg/day');
+                $('#calrecomm').text('1200 mg');
             }
             if (lact == 'yes') {
-                $('#calrecomm').text('1200 mg/day');
+                $('#calrecomm').text('1200 mg');
             }
             if (menopause == 'yes') {
-                $('#calrecomm').text('800 mg/day');
+                $('#calrecomm').text('800 mg');
 
             }
 
