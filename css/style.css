@@ -1578,6 +1578,10 @@ margin-top: 23px !important;
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+#slidecontainer h5{
+	font-size:17px;
+}
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup
 {
 	margin: 0;
@@ -1631,3 +1635,4 @@ margin-top: 23px !important;
 	border: none !important;
 	background: none !important;
 }
+
