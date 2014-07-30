@@ -102,7 +102,7 @@ height: 0.2em;
 /*Default styles section end*/
 
 
-.checkradios-checkbox.checkradios.custom.checked.unchecked {
+.checkradios-checkbox.checkradios.custom.unchecked {
 background-color: #FFF;
 border: 5px solid #f3d7e2;
 width: 0.2em;
