@@ -439,7 +439,6 @@ label.css-label { }
 	width: 100%;
 	display: block;
 }
-
 }
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 
@@ -527,7 +526,8 @@ label.css-label { }
 	width: 80%;
 	display: block;
 	margin: 0 auto;
-	margin-top: 6%;
+	margin-top: 14%;
+	position: relative;
 }
 #resultname
 {
@@ -846,7 +846,7 @@ float: left;*/
 #header .ui-icon, #header .ui-btn-icon-notext
 {
 	width: 45px;
-	height: 60px;
+	height: 58px;
 	margin-top: 0px;
 	border: none;
 	top: 0px;
@@ -1126,6 +1126,8 @@ p.resultcom { padding-top: 0px !important; }
 #aboutform label { width: 300px; }
 }
 @media only screen and (max-width: 760px) {
+#headcontainer { font-size: 14px; }
+#menu-main { margin-top: 8%; }
 #aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
 .ui-field-contain .ui-select
@@ -1614,14 +1616,12 @@ p.mid_two
 }*/
 .ui-checkbox .ui-btn-up-c, .ui-checkbox .ui-btn-hover-c
 {
-	border: none !important;	
+	border: none !important;
 	background: none !important;
 }
 .genderstyle, .eatingstyle { padding-left: 42px !important; }
-
- @media only screen and (min-device-width :740px) and (max-device-width :1600px){
+ @media only screen and (min-device-width :740px) and (max-device-width :1600px) {
 .genderstyle, .eatingstyle { padding-left: 34px !important; }
-
 }
 @media only screen and (min-width: 740px) {
 .pregnantblock, .lactatingblock, .menopauseblock { left: 35px; }
