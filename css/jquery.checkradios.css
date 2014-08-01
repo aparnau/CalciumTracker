@@ -59,8 +59,8 @@
 	text-align: center;
 	border: 5px solid #f3d7e2;
 	color:#858585;
-width: 0.2em;
-height: 0.2em;
+width: 0.1em;
+height: 0.1em;
 	cursor: pointer;
 	padding: 0.2em;
 	-moz-box-sizing: content-box;
@@ -105,6 +105,6 @@ height: 0.2em;
 .checkradios-checkbox.checkradios.custom.unchecked {
 background-color: #FFF;
 border: 5px solid #f3d7e2;
-width: 0.2em;
-height: 0.2em;
+width: 0.1em;
+height: 0.1em;
 }

@@ -40,7 +40,7 @@ $("input[type='checkbox']").attr("checked",false).checkboxradio("refresh");
     var eathabitsel = localStorage.getItem("eathabit");
 
   if (pregsel == 'no' && lactsel == 'no' && menopausesel == 'no') {
-        $("input[type='checkbox']").attr("checked", true).checkboxradio("refresh");
+        $("#othercheck").attr("checked", true).checkboxradio("refresh");
     }
     if (namesel !== null) {
         $('#name').val(namesel);
@@ -211,7 +211,7 @@ if (eathabitsel == 'veg') {
       <input name="name" type="text" id="name">
      </div>
      <div data-role="fieldcontain">
-      <label>Age(Years)</label>
+      <label>Age (Years)</label>
       <input name="age" type="number" id="age" >
      </div>
      <div data-role="fieldcontain">
@@ -243,7 +243,7 @@ if (eathabitsel == 'veg') {
       </fieldset>
      </div>
      <div data-role="fieldcontain" class="menopauseblock">
-      <label>Have you achieved menopause(cessation of monthly periods)?</label>
+      <label>Have you achieved menopause (cessation of monthly periods)?</label>
       <fieldset data-role="controlgroup">
        <input type="radio" name="menopause" value="no" id="menopause_0" class="menopause">
        <label for="menopause_0"> No &nbsp; &nbsp;</label>

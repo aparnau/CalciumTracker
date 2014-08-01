@@ -167,24 +167,18 @@ p.mid_two
 }
 .ui-icon-checkbox-off
 {
-	background-position:-682px -1px !important;
+	background-position: -682px -1px !important;
 	background-color: transparent !important;
 }
 .ui-icon-checkbox-on
 {
-	background-position:-648px -1px !important;
+	background-position: -648px -1px !important;
 	background-color: transparent !important;
 }
 input[type=checkbox].css-checkbox { display: none; }
-input[type=checkbox].css-checkbox + label.css-label
-{
-
-}
-input[type=checkbox].css-checkbox:checked + label.css-label {}
-label.css-label
-{
-
-}
+input[type=checkbox].css-checkbox + label.css-label { }
+input[type=checkbox].css-checkbox:checked + label.css-label { }
+label.css-label { }
 #maincontainer
 {
 	clear: both;
@@ -261,7 +255,6 @@ label.css-label
 	display: block;
 	text-align: center;
 }
-
 #top-bar
 {
 	clear: both;
@@ -306,7 +299,7 @@ label.css-label
 	display: block;
 }
  @media only screen and (min-width: 769px) {
-	 #menu-main
+#menu-main
 {
 	clear: both;
 	width: 80%;
@@ -404,7 +397,6 @@ label.css-label
 	display: block;
 	text-align: center;
 }
-
 #top-bar
 {
 	clear: both;
@@ -447,6 +439,7 @@ label.css-label
 	width: 100%;
 	display: block;
 }
+
 }
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 
@@ -602,7 +595,7 @@ label.css-label
 	word-spacing: 1px;
 	border: none;
 	background: #0054a5;
-	text-shadow:0 0px 0 #000;
+	text-shadow: 0 0px 0 #000;
 	top: 29px;
 }
 #header p
@@ -705,11 +698,14 @@ float: left;*/
 }
 #aboutform .ui-radio label
 {
-	float: none;
-	width: auto;
+	float: none !important;
 	border-radius: 0px;
 	background: transparent;
 	border: none;
+	width: 170px;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0px;
 }
 #aboutform table { display: inline-block; }
 .ui-input-text.ui-body-c, .ui-input-text.ui-overlay-c
@@ -833,8 +829,7 @@ float: left;*/
 }
 .btngroup .listitem a:visited { color: #2f3e46; }
 .btngroup .listitem .ui-link-inherit { /*	font-size: 14px !important;
-	padding-left: 34px !important;*/
-}
+	padding-left: 34px !important;*/ }
 .btngroup .listitem.ui-last-child { border-bottom: none !important; }
 #header .ui-btn-corner-all
 {
@@ -941,7 +936,6 @@ width:12%;
 	font-size: 15px;
 	height: 10px !important;
 }
-
  @media screen and (max-device-width : 770px) {
 #aboutform label
 {
@@ -968,7 +962,6 @@ width:12%;
 	height: 40px;
 }
 .head1 span, .head2 span { margin-left: 20px; }
-
 }
 .head1
 {
@@ -1114,24 +1107,23 @@ p.resultcom { padding-top: 0px !important; }
 
 /* Tablet Layout: 426px to 600px. Inherits styles from: Mobile Layout. */
 @media only screen and (min-device-width : 490px) and (max-device-width : 760px) {
-	#aboutform .ui-field-contain { text-align: left !important; }
+#aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
 .ui-field-contain .ui-select
 {
 	width: 20% !important; /*78%;*/
 	display: inline-block;
 }
-#aboutform label {
-font-size: 17px;
-display: inline-block;
-text-align: left;
-color: #231f20;
-cursor: auto;
-margin-top: 4px;
+#aboutform label
+{
+	font-size: 17px;
+	display: inline-block;
+	text-align: left;
+	color: #231f20;
+	cursor: auto;
+	margin-top: 4px;
 }
-#aboutform label {
-width: 300px;
-}
+#aboutform label { width: 300px; }
 }
 @media only screen and (max-width: 760px) {
 #aboutform .ui-field-contain { text-align: left !important; }
@@ -1157,7 +1149,7 @@ width: 300px;
 #header p
 {
 	padding-left: 0px;
-/*	margin-top: 20px !important;*/
+	/*	margin-top: 20px !important;*/
 	font-size: 16px !important;
 }
 .recallhome #header p
@@ -1239,7 +1231,7 @@ width: 300px;
 }
 #slidecontainer p
 {
-	padding: 10px;
+	padding: 20px 0px 0px 0px;
 	color: #231f20;
 	text-align: left;
 }
@@ -1555,12 +1547,10 @@ p.mid_two
 	margin-top: 0px;
 	font-size: 20px;
 	margin-bottom: 0px;
-padding: 0px 0px 0px 50px;
-margin-top: 23px !important;
-
+	padding: 0px 0px 0px 50px;
+	margin-top: 23px !important;
 }
 }
-
 .resultcom a
 {
 	color: #eb008b;
@@ -1578,10 +1568,7 @@ margin-top: 23px !important;
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
-#slidecontainer h5{
-	font-size:17px;
-}
+#slidecontainer h5 { font-size: 17px; }
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup
 {
 	margin: 0;
@@ -1613,13 +1600,8 @@ margin-top: 23px !important;
 	margin-bottom: 0px;
 }
 #header a.homeicon.ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all.ui-btn-inline.ui-btn-icon-notext.ui-btn-hover-a { background: none !important; }
-
-
 .homeheader { position: static !important; }
-
-
 .ui-page { -webkit-backface-visibility: hidden; }
-
 /*#othercheck {
 	-webkit-appearance: none;
 	background-color: #fafafa;
@@ -1632,7 +1614,23 @@ margin-top: 23px !important;
 }*/
 .ui-checkbox .ui-btn-up-c, .ui-checkbox .ui-btn-hover-c
 {
-	border: none !important;
+	border: none !important;	
 	background: none !important;
 }
+.genderstyle, .eatingstyle { padding-left: 42px !important; }
 
+ @media only screen and (min-device-width :740px) and (max-device-width :1600px){
+.genderstyle, .eatingstyle { padding-left: 34px !important; }
+
+}
+@media only screen and (min-width: 740px) {
+.pregnantblock, .lactatingblock, .menopauseblock { left: 35px; }
+}
+#otherblock { margin-top: 9%; }
+#otherblock .ui-field-contain fieldset.ui-controlgroup { width: 65%; }
+#aboutform .ui-checkbox label
+{
+	width: 317px;
+	vertical-align: middle;
+	margin: 0px;
+}
