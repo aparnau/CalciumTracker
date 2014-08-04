@@ -1626,7 +1626,7 @@ p.mid_two
 @media only screen and (min-width: 740px) {
 .pregnantblock, .lactatingblock, .menopauseblock { left: 35px; }
 }
-#otherblock { margin-top: 9%; }
+#otherblock { margin-top: 5%; }
 #otherblock .ui-field-contain fieldset.ui-controlgroup { width: 65%; }
 #aboutform .ui-checkbox label
 {
