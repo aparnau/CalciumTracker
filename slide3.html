@@ -21,7 +21,7 @@
 
 $(document).ready(function (e) {
 	var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
+	$(".inner_text_right").append(name);
 	$(".homebutton").click(function(e) {
     window.location='index.html';
   });
@@ -35,32 +35,39 @@ $(document).ready(function (e) {
 <body>
 <div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
-  <div id="slideinside">
-   <div id="top-bar" class="top-bar">
+  <div id="insidecont">
+   <div id="header"  data-role="header" >
+    <div class="headimg">
+     <div class="home_icon"><a href="index.html" rel="external"> Home </a>
+     </div></div>
+    <div class="inner_calcium_mid">
+     <div class="inner_text_left"></div>
+     <div class="inner_tick_mid">
+     </div>
+     <div class="inner_text_right" id="name">
+     </div>
+    </div>
    </div>
    <div class="clear">
    </div>
-   <div id="header"  data-role="header">
-    <p>What  are the foods that provide calcium? </p>
-    <a href="index.html" rel="external" class="homeicon" ata-role="button" data-icon="home" data-inline="true" data-iconpos="notext"></a>
-   </div>
-   <div class="clear">
-   </div>
-   <div id="slidecontainer">
-    <p>
-    </p>
-    <ul>
-     <li>Cereals and pulses such as <i>ragi</i>, bengal gram (whole), horse gram (whole), <i>rajmah</i> and soya bean </li>
-     <li>Green leafy vegetables such as amaranth, cauliflower greens, curry leaves, <i>agathi</i> and colocasia leaves </li>
-     <li>Nuts and oilseeds such as coconut dry, almond, mustard seeds and sunflower seeds, gingelly seeds, cumin seeds </li>
-     <li>Seafoods such as <i>bacha, katla, mrigal</i>, <i>rohu </i>and prawns </li>
-     <li>Milk, curd, <i>paneer</i>, cheese, skimmed milk powder and whole milk powder </li>
-    </ul>
-    <h4><b>Source: </b>NIN. Dietary guidelines for Indians: A manual. National Institute of Nutrition, Hyderabad. 2010. Available at: <a href="http://ninindia.org/DietaryguidelinesforIndians-Finaldraft.pdf" target="_blank">http://ninindia.org/DietaryguidelinesforIndians-Finaldraft.pdf</a>
-    </h4>
-    <h5>For further information or in case of any queries, call on Toll Free No. 1800 3000 2022 or email at Web master: <a href="mailto:webmaster@abbott.co.in">webmaster@abbott.co.in</a>
-    </h5>
-    <input name="prevbtn" type="button" value="Previous" class="prevbutton" data-role="none">
+   <div class="slide_cont">
+    <div class="slide_content">
+     <p class="slide1_que">What  are the foods that provide calcium?</p>
+     <ul>
+      <li>Cereals and pulses such as <i>ragi</i>, bengal gram (whole), horse gram (whole), <i>rajmah</i> and soya bean </li>
+      <li>Green leafy vegetables such as amaranth, cauliflower greens, curry leaves, <i>agathi</i> and colocasia leaves </li>
+      <li>Nuts and oilseeds such as coconut dry, almond, mustard seeds and sunflower seeds, gingelly seeds, cumin seeds </li>
+      <li>Seafoods such as <i>bacha, katla, mrigal</i>, <i>rohu </i>and prawns </li>
+      <li>Milk, curd, <i>paneer</i>, cheese, skimmed milk powder and whole milk powder </li>
+     </ul>
+     <h4>Source:NIN. Dietary guidelines for Indians: A manual. National Institute of Nutrition, Hyderabad. 2010. Available at: <a href="http://ninindia.org/DietaryguidelinesforIndians-Finaldraft.pdf" target="_blank">http://ninindia.org/DietaryguidelinesforIndians-Finaldraft.pdf</a>
+     </h4>
+     <h5>For further information or in case of any queries, call on Toll Free No. 1800 3000 2022 or email at Web master: <a href="mailto:webmaster@abbott.co.in">webmaster@abbott.co.in</a>
+     </h5>
+     <div class="btn-cont">
+      <input name="prevbtn" type="button" value="Previous" class="prevbutton" data-role="none">
+     </div>
+    </div>
    </div>
   </div>
  </div>

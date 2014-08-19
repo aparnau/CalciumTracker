@@ -138,16 +138,8 @@ if (eathabitsel == 'veg') {
             localStorage.setItem("menopause", menopause);
         }
         var regex = /^[a-zA-Z]*$/;
-        var nameregex = /^[A-Za-z ]+$/
-        if (age == '') {
-            alert('Please enter valid age');
-            document.aboutform.age.focus();
-        }
-				else if ( age > 150) {
-            alert('Please enter valid age');
-            document.aboutform.age.focus();
-        }				
-				 else if (name == '') {
+        var nameregex = /^[A-Za-z ]+$/;
+				 if (name == '') {
             alert('Please enter valid name');
             document.aboutform.name.focus();
         } 
@@ -155,16 +147,25 @@ if (eathabitsel == 'veg') {
             alert('Please enter valid name');
             document.aboutform.name.focus();
         }
+				else if (age == '') {
+            alert('Please enter valid age');
+            document.aboutform.age.focus();
+        }
+				else if ( age > 150) {
+            alert('Please enter valid age');
+            document.aboutform.age.focus();
+        }				
+				 	else if (!$("input[name='gender']:checked").val()) {
+       alert('Please select your gender!');		
+        return false;
+    }
 				 else if (!$("input[name='eathabit']:checked").val()) {
        alert('Please select your eating habit!');			
         return false;
     }
-   	else if (!$("input[name='gender']:checked").val()) {
-       alert('Please select your gender!');		
-        return false;
-    }
+   
 				else {
-            window.location = 'recallentery.html';
+            window.location = 'recallhome.html';
         }
     });
 /*    $("#age").bind("change", function () {
@@ -201,8 +202,12 @@ if (eathabitsel == 'veg') {
 <div class="gridContainer clearfix">
  <div id="maincontainer">
   <div id="insidecont">
-   <div id="header"  data-role="header" class="homeheader">
-    <p>Tell us about yourself</p>
+   <div id="header"  data-role="header" class="inner_header"> 
+    <div class="inner_calcium_mid">
+    <div class="inner_text_left">Tell us about yourself </div>
+    <div class="inner_tick_mid"> </div>
+    <div class="inner_text_right"> </div>
+    </div>
    </div>
    <div id="formcontent">
     <form action="" method="" name="aboutform" id="aboutform">

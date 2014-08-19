@@ -604,36 +604,32 @@ function calculate() {
         var name = localStorage.getItem("name");
         var age = localStorage.getItem("age");
         var gender = localStorage.getItem("gender");
+
         if (age <= 9) {
             children();
-
         }
 
         if ((age >= 10) && (age <= 18)) {
             adult();
-
         }
         if ((age >= 19) && (gender == 'male')) {
-
             men();
-
         }
         if ((age >= 19) && (gender == 'female')) {
             women();
-
         }
         /* Children */
         function children() {
-
-            $('#calrecomm').text('600 mg');
+			
+            $('.recom_txt').append('600 mg/day');
         }
 
         /* adult */
         function adult() {
-
             var age = localStorage.getItem("age");
             if ((age >= 10) && (age <= 18)) {
-                $('#calrecomm').text('800 mg');
+               // $('.avg_val').text('800 mg');
+							  $('.recom_txt').append('800 mg/day');
             }
         }
 
@@ -641,10 +637,8 @@ function calculate() {
         function men() {
             var age = localStorage.getItem("age");
             if ((age >= 19)) {
-                $('#calrecomm').text('600 mg');
-
+                $('.recom_txt').append('600 mg/day');
             }
-
         }
 
         /* Women */
@@ -652,20 +646,23 @@ function calculate() {
             var preg = localStorage.getItem("preg");
             var lact = localStorage.getItem("lact");
             var menopause = localStorage.getItem("menopause");
-            $('#calrecomm').text('600 mg');
+           
 
             if (preg == 'yes') {
-                $('#calrecomm').text('1200 mg');
+                $('.recom_txt').append('1200 mg/day');
             }
-            if (lact == 'yes') {
-                $('#calrecomm').text('1200 mg');
+            else if (lact == 'yes') {
+                $('.recom_txt').append('1200 mg/day');
             }
-            if (menopause == 'yes') {
-                $('#calrecomm').text('800 mg');
-
+            else if (menopause == 'yes') {
+                $('.recom_txt').append('800 mg/day');
             }
-
+						else
+						{
+							 $('.recom_txt').append('600 mg/day');
+						}
         }
+				
         var cereal_tot = parseFloat(localStorage.getItem("cereal_total"));
         var currydal_tot = parseFloat(localStorage.getItem("currydal_total"));
         var veg_gravy_tot = parseFloat(localStorage.getItem("veg_gravy_total"));
@@ -714,7 +711,7 @@ function calculate() {
         totalcalcium = totalcalcium.toFixed(2);
         totalcalcium = Math.ceil(totalcalcium);
 
-        $("#resultval").text(totalcalcium + " mg");
+        $(".result_right").text(totalcalcium + " mg");
 
         var agesel = localStorage.getItem("age");
         var gensel = localStorage.getItem("gender");
@@ -727,10 +724,10 @@ function calculate() {
 
             if (totalcalcium <= 600) {
 
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 600) {
 
-                $(".resultcom").html("<span> YES!  <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
 
@@ -738,10 +735,10 @@ function calculate() {
         if (agesel >= 10 || agesel <= 18) {
 
             if (totalcalcium <= 800) {
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 800) {
 
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
         //adult women
@@ -749,10 +746,10 @@ function calculate() {
 
             if (totalcalcium <= 600) {
 
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 600) {
 
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
         //pregnant women
@@ -760,10 +757,10 @@ function calculate() {
 
             if (totalcalcium <= 1200) {
 
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 1200) {
 
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
 
@@ -772,10 +769,10 @@ function calculate() {
 
             if (totalcalcium <= 1200) {
 
-                $(".resultcom").html("<span'>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 1200) {
 
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
 
@@ -785,10 +782,10 @@ function calculate() {
 
             if (totalcalcium <= 800) {
 
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 800) {
 
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
 
@@ -797,9 +794,9 @@ function calculate() {
 
             if (totalcalcium <= 600) {
 
-                $(".resultcom").html("<span>NO! <img src='images/sadicon.png'/> You need  to improve your intake of calcium. Please consult your doctor for further advice or <a href='slide1.html' data-ajax='false'>tap here</a> to know more. </span>");
+                $(".resultcom").html("<span><img src='images/no-calcium.png'/></span><p class='result_txt'> You need  to improve your intake of calcium. Please consult your doctor for further advice or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more. </p>");
             } else if (totalcalcium > 600) {
-                $(".resultcom").html("<span> YES! <img src='images/smileicon.png'/> Congratulations!! </span> <p>Continue to include calcium-rich foods in your diet or <a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
+                $(".resultcom").html("<span><img src='images/congo.png'/> </span> <p class='result_txt'>Continue to include calcium-rich foods in your diet or <br/><a href='slide1.html' data-ajax='false'>tap here</a> to know more.</p>");
             }
         }
         //adult men 65+

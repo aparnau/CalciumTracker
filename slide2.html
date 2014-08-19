@@ -21,7 +21,7 @@
 
 $(document).ready(function (e) {
 	var name=localStorage.getItem("name");
-	$("#top-bar").append(name);
+	$(".inner_text_right").append(name);
 	$(".nextbutton").click(function(e) {
     window.location='slide3.html';
   });
@@ -34,29 +34,36 @@ $(document).ready(function (e) {
 <body>
 <div class="gridContainer clearfix" data-role="page">
  <div id="maincontainer">
-  <div id="slideinside">
-   <div id="top-bar" class="top-bar">
-   </div>
-   <div class="clear">
-   </div>
+  <div id="insidecont">
    <div id="header"  data-role="header">
-    <p>What happens if you don't get enough calcium?</p>
-    <a href="index.html" rel="external" class="homeicon" ata-role="button" data-icon="home" data-inline="true" data-iconpos="notext"></a>
+   <div class="headimg">
+     <div class="home_icon"><a href="index.html" rel="external"> Home </a>
+     </div></div>
+    <div class="inner_calcium_mid">
+     <div class="inner_text_left"></div>
+     <div class="inner_tick_mid">
+     </div>
+     <div class="inner_text_right" id="name">
+     </div>
+    </div>
    </div>
    <div class="clear">
    </div>
-   <div id="slidecontainer">
-    <p>
-    </p>
-    <ul>
-     <li>There may not be any obvious symptoms of inadequate calcium intake over a short-term period because human body takes calcium from the bones and maintains calcium level in the blood. </li>
-     <li>Over a long-term period, calcium intake below the recommended level can lead to low bone mass (osteopenia) and increase the risks of osteoporosis and bone fractures. </li>
-     <li>Symptoms of severe calcium deficiency include numbness and tingling in the fingers, convulsions and abnormal heart rhythms. </li>
-    </ul>
-    <h4><b>Source:</b> NIH. Calcium: Fact sheet for consumers. Available at: <a href="http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6" target="_blank">http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6</a>
-    </h4>
-    <input name="prevbtn" type="button" value="Previous" class="prevbutton" data-role="none">
-    <input name="nextbtn" type="button" value="Next" class="nextbutton" data-role="none">
+   <div class="slide_cont">
+    <div class="slide_content">
+     <p class="slide1_que"> What happens if you don't get enough calcium?</p>
+     <ul>
+      <li>There may not be any obvious symptoms of inadequate calcium intake over a short-term period because human body takes calcium from the bones and maintains calcium level in the blood. </li>
+      <li>Over a long-term period, calcium intake below the recommended level can lead to low bone mass (osteopenia) and increase the risks of osteoporosis and bone fractures. </li>
+      <li>Symptoms of severe calcium deficiency include numbness and tingling in the fingers, convulsions and abnormal heart rhythms. </li>
+     </ul>
+     <h4>Source:NIH. Calcium: Fact sheet for consumers. Available at: <a href="http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6" target="_blank">http://ods.od.nih.gov/factsheets/Calcium-QuickFacts/#h6</a>
+     </h4>
+     <div class="btn-cont">
+      <input name="prevbtn" type="button" value="Previous" class="prevbutton" data-role="none">
+      <input name="nextbtn" type="button" value="Next" class="nextbutton" data-role="none">
+     </div>
+    </div>
    </div>
   </div>
  </div>

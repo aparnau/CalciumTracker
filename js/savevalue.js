@@ -9,15 +9,10 @@ $(document).on("pagebeforeshow",function(event){
         $(".listitem.non-veg").css("display", "block");
     }
 });
-$(document).bind("mobileinit", function(){
-    alert('hi');
-		 $.mobile.defaultPageTransition="slide";
-   });
+
 $(document).ready(function (e) {
     var name = localStorage.getItem("name");
-    $("#top-bar").append(name);
-
-
+    $(".name").append(name);
 
     /* MILK */
 

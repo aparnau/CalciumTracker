@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
@@ -6,49 +6,73 @@
 <html class="">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
 <title>Home</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
 <script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/respond.min.js"></script>
 
+</head>
+<body>
+<div class="gridContainer clearfix">
+<div id="maincontainer">
+ <div id="insidecont">
+  <div id="header"  data-role="header" >
+    <div class="headimg">    </div>
+    <div class="inner_calcium_mid">
+     <div class="inner_text_left"></div>
+     <div class="inner_tick_mid">
+     </div>
+     <div class="inner_text_right" id="name">
+     </div>
+    </div>
+   </div>
+  <div class="clear"></div>
+  <div class="discl_cont">
+  <h4> Disclaimer</h4>
+   <p>The Calcium Tracker has been developed by qualified nutritionists and health professionals.
+    The food list included in the tracker represents commonly consumed foods in India but is not all inclusive. 
+    The accuracy of the report rendered by the tracker is based on the correctness of the data entered by the user.
+    The report on adequacy of the calcium intake is for an indicative purpose only. 
+    The tracker is not designed to and does not provide medical advice, professional diagnosis or treatment. </p>
+   <p>While we strive to provide accurate and timely information, there may be inadvertent technical/factual/typographical
+    errors on this tracker. The developers do not warrant the completeness of the information contained on the tracker 
+    and expressly disclaim liability for any shortcomings in these materials. </p>
+   <p> The information provided in this tracker, or through linkages to other sites, is not a substitute for medical or
+    professional care, and you should not use the information in place of a visit, call consultation or the advice 
+    of your physician or other healthcare provider. The developers of this tracker do not recommend or endorse any 
+    specific tests, products, procedures, opinions or other information that may be provided on the linked websites 
+    and accept no responsibility for the content provided on the linked websites. It is important that you consult your 
+    physician or other healthcare professional for individual medical advice. </p>
+   <p> The information about physiological state of the user is used only for calculating the recommended intake of calcium 
+    and is not being stored at the back end or shared with any outside partners. By clicking ‘Yes’, the user is providing 
+    his/her consent for sharing the information for calculation purpose only. </p>
+  <div class="clear"> </div>
+   <div class="calcium_btm1">
+
+<a href="#" onClick="decline();" id="disagree">Decline</a>
+   <a href="landing.html" rel="external" id="agree">Accept</a>
+
+   </div>
+  </div>
+ </div>
+</div>
+</div>
 <script>
 
 $(document).ready(function(e) {
     localStorage.clear();
 		sessionStorage.clear();
-});
 
+});
+function decline() { alert('Please click on Accept to start using the Calcium Tracker. '); }
 </script>
-</head>
-<body>
-<div class="gridContainer clearfix" data-role="page">
- <div id="maincontainer" class="bgstripresult">
-  <div id="insidecont">
-   <div id="contentsection">
-    <div class="calcium_head">
-     <div class="logo_home"></div>
-    </div>
-    <div class="clear">
-    </div>
-    <div class="calcium_mid">
-     <p class="linetwo">Are you getting enough calcium from the foods you eat? </p>
-     <p class="mid_one">Check It Out</p>
-     <p class="mid_two">Your bones will thank you!</p>
-    </div>
-    <div class="clear">
-    </div>
-    <div class="calcium_btm">
-     <div id="enterbtn"><a href="home.html" data-transition="slide">Enter </a>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
-</div>
+
 </body>
 </html>
