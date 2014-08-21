@@ -161,20 +161,19 @@ background-position: center center;
 {
 	color: #e2ecf6;
 	font-weight: bold;
-	font-size: 23px;
+	font-size:13px;
 	text-align: left;
 	text-transform: capitalize;
 	float: left;
 }
-#name_disp
+#nameslide
 {
-	color: #e2ecf6;
-	font-weight: bold;
-	font-size: 23px;
-	text-align: left;
-	text-transform: capitalize;
-	float: left;
-	padding-top: 13px;
+color: #e2ecf6;
+font-weight: bold;
+font-size: 15px;
+text-align: left;
+text-transform: capitalize;
+float: left;
 }
 #aboutform label
 {
@@ -301,6 +300,7 @@ background-position: center center;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
 }
  @media screen and (max-device-width : 770px) {
 #aboutform label
@@ -347,17 +347,14 @@ background-position: center center;
 	margin-top: 4px;
 }
 #aboutform label { width: 300px; }
+
 }
  @media only screen and (max-width: 760px) {
 #headcontainer { font-size: 14px; }
 #menu-main { margin-top: 8%; }
 #aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
-.ui-field-contain .ui-select
-{
-	width: 15% !important; /*20% 78%;*/
-	display: inline-block;
-}
+
 .head2
 {
 	width: 42%;
@@ -459,6 +456,7 @@ font-size: 16px;
 	font-size: 18px;
 	top: 5px;
 }
+
 .recall, .savenxt, .homebtn
 {
 	background-color: #eb008b !important;
@@ -612,6 +610,12 @@ font-size: 16px;
 	height: 49px;
 	background-position: center center;
 }
+.ui-select .ui-btn select
+{
+	min-width: 40% !important;
+	height: auto !important;
+}
+
 }
  @media screen and (max-device-width: 500px) {
 .submit-btn
@@ -684,6 +688,17 @@ p.mid_two
 }
 }
  @media only screen and (max-width: 440px) {
+	 .result_left {
+width: 46.5%;
+float: left;
+text-align: center;
+background-color: #accdec;
+padding-top: 5px !important;
+height: 60px !important;
+color: #0054a6;
+font-size: 17px;
+font-weight: bold;
+}
 #slideinside #header p
 {
 	text-align: left;
@@ -696,9 +711,19 @@ p.mid_two
 }
  @media only screen and (min-device-width :780px) and (max-device-width :1600px) {
 .genderstyle, .eatingstyle { padding-left: 34px !important; }
+.optcontainer .ui-field-contain label.ui-select
+{
+	width:50% !important;
+	margin: 6px 2% 0 1%;
+}
 }
 @media only screen and (min-width: 740px) {
 .pregnantblock, .lactatingblock, .menopauseblock { left: 42px; }
+.optcontainer .ui-field-contain label.ui-select
+{
+	width: 40% !important; /*20% 78%;*/
+	display: inline-block;
+}
 }
 /* end of screenresolution */
 body
@@ -795,6 +820,7 @@ body
 	color: #0054a6;
 	font-size: 15px;
 	font-weight: bold;
+	padding-left: 2px;
 }
 .inner_text_right
 {
@@ -1179,20 +1205,19 @@ label.css-label { }
 {
 	color: #e2ecf6;
 	font-weight: bold;
-	font-size: 23px;
+	font-size: 13px;
 	text-align: left;
 	text-transform: capitalize;
 	float: left;
 }
-#name_disp
+#nameslide
 {
-	color: #e2ecf6;
-	font-weight: bold;
-	font-size: 23px;
-	text-align: left;
-	text-transform: capitalize;
-	float: left;
-	padding-top: 13px;
+color: #e2ecf6;
+font-weight: bold;
+font-size: 15px;
+text-align: left;
+text-transform: capitalize;
+float: left;
 }
 .slide_content h5
 {
@@ -1624,11 +1649,7 @@ width:23%;
 {
 width:12%;
 }*/
-.optcontainer .ui-field-contain label.ui-select
-{
-	width: 50% !important;
-	margin: 6px 2% 0 1%;
-}
+
 .optcontainer .ui-field-contain
 {
 	border-bottom: 1px solid #E7B4D1 !important;
@@ -1688,7 +1709,7 @@ width:12%;
 }
 .head2
 {
-	width: 40%;
+	width: 37%;
 	float: left;
 	text-align: center;
 	padding: 8px;
@@ -1741,7 +1762,7 @@ width:12%;
 {
 	background-color: #e1ecf6;
 	min-height: 100%;
-	height: 270px;
+	height: 310px;
 	width: 100%;
 	margin: auto;
 	text-align: center;
@@ -1965,3 +1986,18 @@ p.linetwo
 .recom_txt { color: #ec008c !important; }
 .slide_content ul { margin-left: 0px;text-align: justify;margin: 13px; }
 
+
+.home_icon  {
+background-color: transparent !important;
+background-image: url(../images/homeicon_small.png) !important;
+width: 40px;
+height: 40px;
+background-repeat: no-repeat !important;
+border: none !important;
+box-shadow: none !important;
+}
+
+
+.home_icon .ui-btn-inner {
+border-top: none;
+}
