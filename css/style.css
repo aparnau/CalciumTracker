@@ -24,6 +24,18 @@ img, object, embed, video { /*max-width: 100%;
 
 /* Mobile Layout: 480px and below. */
 .clear { clear: both; }
+@font-face
+{
+	font-family: MyriadPro;
+	src: url('../MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+	src: url('../MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../MyriadPro-Regular.woff') format('woff'), /* Modern Browsers */ url('../MyriadPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face
+{
+	font-family: arcade;
+	src: url('../ARCADE.eot'); /* IE9 Compat Modes */
+	src: url('../ARCADE.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../ARCADE.woff') format('woff'), /* Modern Browsers */ url('../ARCADE.ttf') format('truetype'), /* Safari, Android, iOS */
+}}
 /* start screen resolution */
 @media only screen and (min-width: 481px) {
 #aboutform label
@@ -346,30 +358,9 @@ img, object, embed, video { /*max-width: 100%;
 .head1 span, .head2 span { margin-left: 20px; }
 }
  @media only screen and (min-device-width : 490px) and (max-device-width : 768px) {
-.home_head
-{
-background-image: url(../images/head_home_small.png) !important;
-min-height: 207px !important;
-background-repeat: no-repeat !important;
-background-position: top center !important;
--webkit-background-size: contain !important;
--moz-background-size: contain !important;
--o-background-size: contain !important;
-background-size: contain !important;
-background-color: transparent !important;
-}
-
 .landing_head
 {
-background-image: url(../images/head_small.png) !important;
-min-height: 207px !important;
-background-repeat: no-repeat !important;
-background-position:top center !important;
--webkit-background-size: contain !important;
--moz-background-size: contain !important;
--o-background-size: contain !important;
-background-size: contain !important;
-background-color: transparent !important;
+
 }
 #aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
@@ -388,6 +379,24 @@ background-color: transparent !important;
 	margin-top: 4px;
 }
 #aboutform label { width: 300px; }
+.text1 {
+font-family: arcade !important;
+font-size: 5em !important;
+color: #aecdec !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
+.text2 {
+font-family: arcade !important;
+font-size: 3em !important;
+color: #ed008c !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
 }
  @media only screen and (max-width: 760px) {
 #headcontainer { font-size: 14px; }
@@ -557,7 +566,7 @@ background-color: transparent !important;
 {
 	background-color: #0054a5;
 	text-align: center;
-	height: 140px;/* 210px;*/
+	/*height: 140px; 210px;*/
 }
 #enterbtn a { font-size: 20px; }
 #aboutform .ui-field-contain { text-align: left !important; }
@@ -651,8 +660,26 @@ background-color: transparent !important;
 	min-width: 40% !important;
 	height: auto !important;
 }
+
 }
  @media screen and (max-device-width: 500px) {
+	 .text1 {
+font-family: arcade !important;
+font-size: 3em !important;
+color: #aecdec !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
+.text2 {
+font-family: arcade !important;
+font-size: 1em !important;
+color: #ed008c !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
 .submit-btn
 {
 	background-color: #eb008b !important;
@@ -721,6 +748,12 @@ p.mid_two
 	height: 140px !important;
 	background-position: center center;
 }
+.landing_banner {
+background-image: url('../images/home_strip_small.png') !important;
+height: 35px !important;
+background-repeat: no-repeat;
+background-position: center center;
+}
 }
  @media only screen and (max-width: 440px) {
 .result_left
@@ -755,27 +788,28 @@ p.mid_two
 .inner_text_right_pdt { width: 120px !important; }
 .home_head
 {
-background-image: url(../images/head_home.png) !important;
-background-repeat: no-repeat !important;
-background-position: top center !important;
--webkit-background-size: 100% !important;
--moz-background-size: 100% !important;
--o-background-size: 100% !important;
-min-height: 305px !important;
-background-color: transparent !important;
-background-size: 100% !important;
+
 }
 .landing_head
 {
-background-image: url(../images/head.png) !important;
-background-repeat: no-repeat !important;
-background-position:top center !important;
--webkit-background-size: 100% !important;
--moz-background-size: 100% !important;
--o-background-size: 100% !important;
-min-height: 305px !important;
-background-color: transparent !important;
-background-size: 100% !important;
+
+}
+.text1 {
+font-family: arcade !important;
+font-size: 5em !important;
+color: #aecdec !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
+.text2 {
+font-family: arcade !important;
+font-size: 3em !important;
+color: #ed008c !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
 }
 }
 @media only screen and (min-width: 740px) {
@@ -790,27 +824,11 @@ background-size: 100% !important;
 @media only screen and (max-width: 600px) 
 {
 .home_head {
-background-image: url(../images/head_home_xsmall.png) !important;
-min-height: 180px !important;
-background-repeat: no-repeat !important;
-background-position: top center !important;
-background-color: transparent !important;
--webkit-background-size: contain !important;
--moz-background-size: contain !important;
--o-background-size: contain !important;
-background-size: contain !important;
+
 }
 .landing_head
 {
-background-image: url(../images/head_xsmall.png) !important;
-min-height: 180px !important;
-background-repeat: no-repeat !important;
-background-position:top center !important;
-background-color: transparent !important;
--webkit-background-size: contain !important;
--moz-background-size: contain !important;
--o-background-size: contain !important;
-background-size: contain !important;
+
 }
 }
 /* end of screenresolution */
@@ -829,15 +847,7 @@ body
 .bgstriphome { /*background-image: url('../images/bgstriphome.png'); background-color:#eb008b;*/ margin-top: -13px; }
 .landing_banner
 {
-	background-image: url(../images/home_strip_small.png);
-	height: 35px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: #adcdec;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+
 }
 .calcium_head
 {
@@ -965,12 +975,7 @@ body
 	font-size: 20px;
 	font-weight: normal;
 }
-@font-face
-{
-	font-family: MyriadPro;
-	src: url('../MyriadPro-Regular.eot'); /* IE9 Compat Modes */
-	src: url('../MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../MyriadPro-Regular.woff') format('woff'), /* Modern Browsers */ url('../MyriadPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
+
 .calcium_head .lineone
 {
 	font-family: MyriadPro;
@@ -2131,3 +2136,40 @@ p.resultcom { padding-top: 0px !important; }
 	font-weight: normal;
 }
 
+
+.text1 {
+font-family: arcade !important;
+font-size: 5em;
+color: #aecdec !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
+.text2 {
+font-family: arcade !important;
+font-size: 3em;
+color: #ed008c !important;
+padding: 0px !important;
+margin: 0px !important;
+text-transform: uppercase;
+}
+
+.banner {
+background-image: url('../images/banner.png');
+height: 46px;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+ .landing_banner {
+background-image: url('../images/home_strip.png');
+height: 46px;
+background-repeat: no-repeat;
+background-position: center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-color: #adcdec;
+}
