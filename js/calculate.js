@@ -501,7 +501,6 @@ function sweets() {
 
 
     chikkical = chikki * 11.55;
-
     breadpuddcal = breadpudd * 125.6;
     custardcal = custard * 78.9;
     payasamcal = payasam * 81.7;
@@ -563,7 +562,6 @@ function nonveg() {
     var prawncurry = $("#prawncurry").val() + $("#prawncurryfrac").val();
     var egg = $("#egg").val() + $("#eggfrac").val();
 
-
     fishfilletcal = fishfillet * 104;
     meatcal = meat * 10;
     prawncurrycal = prawncurry * 32.33333333;
@@ -571,6 +569,7 @@ function nonveg() {
 
 
     var nonveg_total = fishfilletcal + meatcal + prawncurrycal + eggcal;
+
 
     var se_fishfillet = $("#fishfillet option:selected").val();
     var se_meat = $("#meat option:selected").val();
@@ -595,6 +594,7 @@ function nonveg() {
 
 
     localStorage.setItem("nonveg_total", nonveg_total);
+		
     window.location = "result.html";
 }
 
@@ -706,6 +706,7 @@ function calculate() {
 
 
         var totalcalcium = cereal_tot + currydal_tot + veg_gravy_tot + veg_dry_tot + snacks_tot + sweets_tot + nonveg_tot + milk_tot + others_tot;
+
 
         totalcalcium = totalcalcium / 3;
         totalcalcium = totalcalcium.toFixed(2);
