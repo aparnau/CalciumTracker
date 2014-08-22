@@ -42,9 +42,7 @@ img, object, embed, video { /*max-width: 100%;
 	border: none;
 }
 .inner_text_left { font-size: 15px; }
-.inner_text_right {
-width: 90px !important;
-}
+.inner_text_right { width: 90px !important; }
 .landing_banner
 {
 	background-image: url(../images/home_strip_medium.png) !important;
@@ -52,9 +50,9 @@ width: 90px !important;
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 }
  @media only screen and (min-width: 769px) {
@@ -72,7 +70,6 @@ background-size: contain;
 	background-repeat: no-repeat;
 	height: 140px !important;
 	background-position: center center;
-	
 }
 .inner_header { height: 60px !important; }
 /*#header.ui-header { height: 259px !important; }*/
@@ -84,22 +81,22 @@ background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 .calcium_head
 {
 	padding-top: 50px;
 	background-color: #0054a5;
-	text-align: center;
-/*	height: 180px !important;*/
+	text-align: center;/*	height: 180px !important;*/
 }
-.logo_result {
-background-image: url('../images/logo_big.png') !important;
-height: 200px !important;
-background-repeat: no-repeat;
-background-position: center center;
+.logo_result
+{
+	background-image: url('../images/logo_big.png') !important;
+	height: 200px !important;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .discl_cont p
 {
@@ -180,19 +177,19 @@ background-position: center center;
 {
 	color: #e2ecf6;
 	font-weight: bold;
-	font-size:13px;
+	font-size: 13px;
 	text-align: left;
 	text-transform: capitalize;
 	float: left;
 }
 #nameslide
 {
-color: #e2ecf6;
-font-weight: bold;
-font-size: 15px;
-text-align: left;
-text-transform: capitalize;
-float: left;
+	color: #e2ecf6;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
+	text-transform: capitalize;
+	float: left;
 }
 #aboutform label
 {
@@ -348,7 +345,32 @@ float: left;
 }
 .head1 span, .head2 span { margin-left: 20px; }
 }
- @media only screen and (min-device-width : 490px) and (max-device-width : 760px) {
+ @media only screen and (min-device-width : 490px) and (max-device-width : 768px) {
+.home_head
+{
+background-image: url(../images/head_home_small.png) !important;
+min-height: 207px !important;
+background-repeat: no-repeat !important;
+background-position: top center !important;
+-webkit-background-size: contain !important;
+-moz-background-size: contain !important;
+-o-background-size: contain !important;
+background-size: contain !important;
+background-color: transparent !important;
+}
+
+.landing_head
+{
+background-image: url(../images/head_small.png) !important;
+min-height: 207px !important;
+background-repeat: no-repeat !important;
+background-position:top center !important;
+-webkit-background-size: contain !important;
+-moz-background-size: contain !important;
+-o-background-size: contain !important;
+background-size: contain !important;
+background-color: transparent !important;
+}
 #aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
 .ui-field-contain .ui-select
@@ -366,14 +388,12 @@ float: left;
 	margin-top: 4px;
 }
 #aboutform label { width: 300px; }
-
 }
  @media only screen and (max-width: 760px) {
 #headcontainer { font-size: 14px; }
 #menu-main { margin-top: 8%; }
 #aboutform .ui-field-contain { text-align: left !important; }
 #aboutform label { width: 300px; }
-
 .head2
 {
 	width: 42%;
@@ -389,8 +409,8 @@ float: left;
 }
 #headcontainer
 {
-font-size: 10px !important;
-font-weight: normal !important;
+	font-size: 10px !important;
+	font-weight: normal !important;
 }
 #header p
 {
@@ -398,13 +418,13 @@ font-weight: normal !important;
 	/*	margin-top: 20px !important;*/
 	font-size: 16px;
 }
-.linetwo {
-font-size: 30px;
-color: #e2ecf6;
-text-transform: uppercase;
-
-text-align: center;
-font-size: 16px;
+.linetwo
+{
+	font-size: 30px;
+	color: #e2ecf6;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
 }
 .recallhome #header p
 {
@@ -474,7 +494,6 @@ font-size: 16px;
 	font-size: 18px;
 	top: 5px;
 }
-
 .recall, .savenxt, .homebtn
 {
 	background-color: #eb008b !important;
@@ -632,7 +651,6 @@ font-size: 16px;
 	min-width: 40% !important;
 	height: auto !important;
 }
-
 }
  @media screen and (max-device-width: 500px) {
 .submit-btn
@@ -705,16 +723,17 @@ p.mid_two
 }
 }
  @media only screen and (max-width: 440px) {
-	 .result_left {
-width: 46.5%;
-float: left;
-text-align: center;
-background-color: #accdec;
-padding-top:2px !important;
-height: 60px !important;
-color: #0054a6;
-font-size: 17px;
-font-weight: bold;
+.result_left
+{
+	width: 46.5%;
+	float: left;
+	text-align: center;
+	background-color: #accdec;
+	padding-top: 2px !important;
+	height: 60px !important;
+	color: #0054a6;
+	font-size: 17px;
+	font-weight: bold;
 }
 #slideinside #header p
 {
@@ -726,16 +745,37 @@ font-weight: bold;
 	margin-top: 23px !important;
 }
 }
- @media only screen and (min-device-width :780px) and (max-device-width :1600px) {
+ @media only screen and (min-device-width :770px) and (max-device-width :1600px) {
 .genderstyle, .eatingstyle { padding-left: 34px !important; }
 .optcontainer .ui-field-contain label.ui-select
 {
-	width:50% !important;
+	width: 50% !important;
 	margin: 6px 2% 0 1%;
 }
-
-.inner_text_right_pdt {
-width: 120px !important;
+.inner_text_right_pdt { width: 120px !important; }
+.home_head
+{
+background-image: url(../images/head_home.png) !important;
+background-repeat: no-repeat !important;
+background-position: top center !important;
+-webkit-background-size: 100% !important;
+-moz-background-size: 100% !important;
+-o-background-size: 100% !important;
+min-height: 305px !important;
+background-color: transparent !important;
+background-size: 100% !important;
+}
+.landing_head
+{
+background-image: url(../images/head.png) !important;
+background-repeat: no-repeat !important;
+background-position:top center !important;
+-webkit-background-size: 100% !important;
+-moz-background-size: 100% !important;
+-o-background-size: 100% !important;
+min-height: 305px !important;
+background-color: transparent !important;
+background-size: 100% !important;
 }
 }
 @media only screen and (min-width: 740px) {
@@ -745,7 +785,33 @@ width: 120px !important;
 	width: 40% !important; /*20% 78%;*/
 	display: inline-block;
 }
+}
 
+@media only screen and (max-width: 600px) 
+{
+.home_head {
+background-image: url(../images/head_home_xsmall.png) !important;
+min-height: 180px !important;
+background-repeat: no-repeat !important;
+background-position: top center !important;
+background-color: transparent !important;
+-webkit-background-size: contain !important;
+-moz-background-size: contain !important;
+-o-background-size: contain !important;
+background-size: contain !important;
+}
+.landing_head
+{
+background-image: url(../images/head_xsmall.png) !important;
+min-height: 180px !important;
+background-repeat: no-repeat !important;
+background-position:top center !important;
+background-color: transparent !important;
+-webkit-background-size: contain !important;
+-moz-background-size: contain !important;
+-o-background-size: contain !important;
+background-size: contain !important;
+}
 }
 /* end of screenresolution */
 body
@@ -768,10 +834,10 @@ body
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #adcdec;
-	 -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .calcium_head
 {
@@ -854,7 +920,7 @@ body
 	float: left;
 	text-align: center;
 	/*width: 50px;*/
-	padding-top: 19px;
+	padding-top: 5px;
 	height: 39px;
 	color: #FFFFFF;
 	font-size: 20px;
@@ -870,14 +936,14 @@ body
 }
 .result_mid
 {
-background-image: url(../images/tick_small.png);
-background-repeat: no-repeat;
-background-position: top center;
-height: 65px;
-width: 67px;
-float: left;
+	background-image: url(../images/tick_small.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 65px;
+	width: 67px;
+	float: left;
 }
- .result_left
+.result_left
 {
 	width: 42.5%;
 	float: left;
@@ -893,7 +959,7 @@ float: left;
 {
 	float: left;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 10px;
 	height: 45px;
 	color: #FFFFFF;
 	font-size: 20px;
@@ -995,9 +1061,9 @@ p.mid_two
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 .calcium_btm1
 {
@@ -1126,10 +1192,10 @@ label.css-label { }
 	background-repeat: no-repeat;
 	height: 83px;
 	background-position: center center;
-	 -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 .logo_result
 {
@@ -1137,10 +1203,10 @@ label.css-label { }
 	background-repeat: no-repeat;
 	height: 90px;
 	background-position: center center;
-		 -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 #recomm
 {
@@ -1253,19 +1319,19 @@ label.css-label { }
 }
 #nameslide
 {
-color: #e2ecf6;
-font-weight: bold;
-font-size: 15px;
-text-align: left;
-text-transform: capitalize;
-float: left;
+	color: #e2ecf6;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
+	text-transform: capitalize;
+	float: left;
 }
 .slide_content h5
 {
-font-weight: normal;
-font-size: 15px;
-margin: 5px;
-text-align: center;
+	font-weight: normal;
+	font-size: 15px;
+	margin: 5px;
+	text-align: center;
 }
 .slide_content h5 a { font-weight: normal !important; }
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
@@ -1402,9 +1468,8 @@ text-align: center;
 		word-spacing: 1px;*/
 	color: #accdec;
 	font-size: 25px;
-
 	border: none;
-	background: #0054a5;
+	background-color: #0054a5;
 	text-shadow: 0 0px 0 #000;
 }
 #header p
@@ -2019,50 +2084,50 @@ p.resultcom { padding-top: 0px !important; }
 {
 	color: #e2ecf6;
 	text-transform: uppercase;
-
 	text-align: center;
 	font-size: 25px;
 }
 .recom_txt { color: #ec008c !important; }
-.slide_content ul { margin-left: 0px;text-align: justify;margin: 13px; }
-
-
-.home_icon  {
-background-color: transparent !important;
-background-image: url(../images/homeicon_small.png) !important;
-width: 40px;
-height: 40px;
-background-repeat: no-repeat !important;
-border: none !important;
-box-shadow: none !important;
+.slide_content ul
+{
+	margin-left: 0px;
+	text-align: justify;
+	margin: 13px;
+}
+.home_icon
+{
+	background-color: transparent !important;
+	background-image: url(../images/homeicon_small.png) !important;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+.home_icon .ui-btn-inner { border-top: none; }
+.inner_text_left_slide
+{
+	float: left;
+	text-align: left;
+	background-color: #accdec;
+	padding-top: 19px;
+	height: 40px;
+	color: #0054a6;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 2px;
+	width: 20px;
+}
+.inner_text_right_pdt
+{
+	float: left;
+	text-align: center;
+	width: 60px;
+	padding-top: 19px;
+	height: 39px;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-transform: capitalize;
+	font-weight: normal;
 }
 
-
-.home_icon .ui-btn-inner {
-border-top: none;
-}
-
-.inner_text_left_slide{
-float: left;
-text-align: left;
-background-color: #accdec;
-padding-top: 19px;
-height: 40px;
-color: #0054a6;
-font-size: 15px;
-font-weight: bold;
-padding-left: 2px;
-width: 20px;
-}
-
-.inner_text_right_pdt {
-float: left;
-text-align: center;
- width: 60px;
-padding-top: 19px;
-height: 39px;
-color: #FFFFFF;
-font-size: 20px;
-text-transform: capitalize;
-font-weight: normal;
-}
